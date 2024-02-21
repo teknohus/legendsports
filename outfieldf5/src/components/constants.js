@@ -592,7 +592,7 @@ export const meshOptions = {
   export const Options = {
     size: {
       textbox: false,
-      options: ["11", "11.25", "11.5", "11.75", "12", "12.25"],
+      options: ["12.5", "12.75", "13"],
       icons: null,
       colors: null,
     },
