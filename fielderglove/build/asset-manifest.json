@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/wp-content/reactpress/apps/fielderglove/build/static/css/main.392ea31e.css",
+    "main.js": "/wp-content/reactpress/apps/fielderglove/build/static/js/main.23849bfd.js",
+    "static/media/bg-layer.jpg": "/wp-content/reactpress/apps/fielderglove/build/static/media/bg-layer.2d1dd15bf34b188410ea.jpg",
+    "index.html": "/wp-content/reactpress/apps/fielderglove/build/index.html",
+    "static/media/left.svg": "/wp-content/reactpress/apps/fielderglove/build/static/media/left.1cea82937e55ba1e2fc0.svg",
+    "static/media/right.svg": "/wp-content/reactpress/apps/fielderglove/build/static/media/right.58128f2b0162a21c36e9.svg",
+    "static/media/right-arrow.svg": "/wp-content/reactpress/apps/fielderglove/build/static/media/right-arrow.2c34fafc5c6c64f43cb8.svg",
+    "static/media/left-arrow.svg": "/wp-content/reactpress/apps/fielderglove/build/static/media/left-arrow.d833be4a83b41ea0bc4a.svg",
+    "static/media/check-list-icon.svg": "/wp-content/reactpress/apps/fielderglove/build/static/media/check-list-icon.6845dc6fcf127640e50d.svg",
+    "main.392ea31e.css.map": "/wp-content/reactpress/apps/fielderglove/build/static/css/main.392ea31e.css.map",
+    "main.23849bfd.js.map": "/wp-content/reactpress/apps/fielderglove/build/static/js/main.23849bfd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.392ea31e.css",
+    "static/js/main.23849bfd.js"
+  ]
+}

@@ -1,0 +1,79 @@
+[
+    {
+      "name": "Legend Edition",
+      "image": "/wp-content/reactpress/apps/fielderinfield/build/images/fielder.png",
+      "price": "$225",
+      "redirect-url": "https://legendsportspro.com/infield-legend/",
+      "highlights": [
+        "The Signature Special Edition 'Legend Series'",
+        "Most Customizable Model",
+        "Exclusive leather colors/prints",
+        "Mesh and Inlay available",
+        "Available in Sizes: 11, 11.25, 11.5, 11.75, 12, 12.25",
+        "Best available option"
+      ]
+    },
+    {
+      "name": "Crown Style Glove",
+      "image": "/wp-content/reactpress/apps/fielderinfield/build/images/fielder.png",
+      "price": "$199",
+      "redirect-url": "https://legendsportspro.com/infield-crown/",
+      "highlights": [
+        "Special edition Crown design glove",
+        "Good For: Youth to Pro Level",
+        "Available in sizes: 11.25, 11.5, 11.75, 12"
+      ]
+    },
+    {
+      "name": "Youth Legend Edition",
+      "image": "/wp-content/reactpress/apps/fielderinfield/build/images/fielder.png",
+      "price": "$199",
+      "redirect-url": "https://legendsportspro.com/infield-youth/",
+      "highlights": [
+        "Tapered Fit",
+        "Reduced Palm Size To Achieve Perfect Youth Fit",
+        "Good For: Any youth player",
+        "Available in sizes: 11, 11.25, 11.75"
+      ]
+    },
+    {
+      "name": "Pro Star Edition",
+      "image": "/wp-content/reactpress/apps/fielderinfield/build/images/fielder.png",
+      "price": "$185",
+      "redirect-url": "https://legendsportspro.com/infield-prostar/",
+      "highlights": [
+        "US Steerhide",
+        "Available in Single or Dual Welting",
+        "Inlay Options Available",
+        "Select special colors/prints available",
+        "Available in sizes: 11.25, 11.5, 11.75, 12, 12.25"
+      ]
+    },
+    {
+      "name": "F-5 Fast Custom",
+      "image": "/wp-content/reactpress/apps/fielderinfield/build/images/fielder.png",
+      "price": "$160",
+      "redirect-url": "https://legendsportspro.com/infield-f5/",
+      "highlights": [
+          "The Fastest Custom Available",
+          "With shipping times as soon as 2 to 3 weeks, this is the fastest Legend glove you can own!",
+          "US Steerhide",
+          "Minimal Color options",
+          "Short and Quick Break-in Time having your glove game ready in no time!",
+          "Available in sizes: 11.25, 11.5, 11.75, 12, 12,25"
+        ]
+    },
+    {
+      "name": "Mini Trainers Mitt",
+      "image": "/wp-content/reactpress/apps/fielderinfield/build/images/fielder.png",
+      "price": "$120",
+      "redirect-url": "https://legendsportspro.com/infield-minimitt/",
+      "highlights": [
+          "Prepare For Greatness",
+          "Hone your skills at your postion with this mini trainers mitt",
+          "Customization Options Available",
+          "Available in size: 9.5"
+      ]
+    }
+]
+  
