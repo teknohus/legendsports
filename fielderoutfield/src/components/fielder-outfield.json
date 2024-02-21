@@ -1,0 +1,55 @@
+[
+  {
+      "name": "Legend Edition",
+      "image": "/wp-content/reactpress/apps/fielderoutfield/build/images/fielder.png",
+      "price": "$225",
+      "redirect-url": "https://legendsportspro.com/outfield-legend/",
+      "highlights": [
+          "The Signature Special Edition 'Legend Series'",
+          "Most Customizable Model",
+          "Exclusive leather colors/prints",
+          "Mesh and Inlay available",
+          "Available in Sizes: 12.5, 12.75, 13",
+          "Best available option"
+      ]
+  },
+  {
+      "name": "Youth Legend Edition",
+      "image": "/wp-content/reactpress/apps/fielderoutfield/build/images/fielder.png",
+      "price": "$199",
+      "redirect-url": "https://legendsportspro.com/outfield-youth/",
+      "highlights": [
+          "Tapered Fit",
+          "Reduced Palm Size To Achieve Perfect Youth Fit",
+          "Good For: Any youth player",
+          "Available in sizes: 12.25, 12.5"
+      ]
+  },
+  {
+      "name": "Pro Star Edition",
+      "image": "/wp-content/reactpress/apps/fielderoutfield/build/images/fielder.png",
+      "price": "$185",
+      "redirect-url": "https://legendsportspro.com/outfield-prostar/",
+      "highlights": [
+          "US Steerhide",
+          "Available in Single or Dual Welting",
+          "Inlay Options Available",
+          "Select special colors/prints available",
+          "Available in sizes: 12.5, 12.75, 13"
+      ]
+  },
+  {
+      "name": "F-5 Fast Custom",
+      "image": "/wp-content/reactpress/apps/fielderoutfield/build/images/fielder.png",
+      "price": "$160",
+      "redirect-url": "https://legendsportspro.com/outfield-f5/",
+      "highlights": [
+          "The Fastest Custom Available",
+          "With shipping times as soon as 2 to 3 weeks, this is the fastest Legend glove you can own!",
+          "US Steerhide",
+          "Minimal Color options",
+          "Short and Quick Break-in Time having your glove game ready in no time!",
+          "Available in sizes: 12.5, 12.75, 13"
+      ]
+  }
+]
