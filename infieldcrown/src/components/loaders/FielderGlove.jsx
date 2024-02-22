@@ -233,7 +233,7 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
       {personalize["Pinky Text"] && (
         <Text
         font={fonts[personalize["Text Font"]]}
-        position={[-0.0666, 0.127, -0.0063]}
+        position={[-0.0666, 0.127, base.dual_welting ? -0.004 : -0.0063]}
         rotation={[-0.12765*Math.PI, -0.34375*Math.PI, -0.56375*Math.PI]}
         color={personalize["Pinky Text Color"]}
         scale={
