@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import ProductSlideshow from "./FielderSlider";
 import { meshOptions, baseReq, colorReq, personlizationReq, colorData, colorPalette, allColors, texturePalette, tabs, textureData, colorStepsConfig, baseOptions, personlizationOptions, personlizationConfig, Options, baseStepsConfig } from "../constants";
-import Controls from "../controls"
+// import Controls from "../controls"
 
 function usePricing(baseConfig, personalizeConfig) {
 
@@ -96,12 +96,12 @@ export default function Main() {
     );
   }, [personlizeConfig, personilzeSteps]) 
   
-  const [xPosition, setXPosition] = useState(9.25);
-  const [yPosition, setYPosition] = useState(0.039);
-  const [zPosition, setZPosition] = useState(0.023);
-  const [xRotation, setXRotation] = useState(2.915);
-  const [yRotation, setYRotation] = useState(1.132);
-  const [zRotation, setZRotation] = useState(-0.6625);
+  // const [xPosition, setXPosition] = useState(9.25);
+  // const [yPosition, setYPosition] = useState(0.039);
+  // const [zPosition, setZPosition] = useState(0.023);
+  // const [xRotation, setXRotation] = useState(2.915);
+  // const [yRotation, setYRotation] = useState(1.132);
+  // const [zRotation, setZRotation] = useState(-0.6625);
   
   useEffect(() =>{
     if (personlizeConfig["Thumb Text"] === "Thumb Text" && personlizeConfig["Thumb Text Text"] !== ""){
@@ -1487,22 +1487,6 @@ export default function Main() {
                   className="tab-content position-relative"
                   id="pills-tabContent"
                 >
-                  <Controls
-                    controls={{
-                      xPosition,
-                      yPosition,
-                      zPosition,
-                      xRotation,
-                      yRotation,
-                      zRotation,
-                      setXPosition,
-                      setYPosition,
-                      setZPosition,
-                      setXRotation,
-                      setYRotation,
-                      setZRotation,
-                    }}
-                  />
 
                 </div>
               </div>
@@ -1520,7 +1504,8 @@ export default function Main() {
               </div>
             </div>
             
-            <ProductSlideshow baseConfig={baseConfig} colors={colors} textures={textures} personlizeConfig={personlizeConfig} personlizationConfig={personlizationConfig} xPosition={xPosition} yPosition={yPosition} zPosition={zPosition} xRotation={xRotation} yRotation={yRotation} zRotation={zRotation} />
+            {/* <ProductSlideshow baseConfig={baseConfig} colors={colors} textures={textures} personlizeConfig={personlizeConfig} personlizationConfig={personlizationConfig} xPosition={xPosition} yPosition={yPosition} zPosition={zPosition} xRotation={xRotation} yRotation={yRotation} zRotation={zRotation} /> */}
+            <ProductSlideshow baseConfig={baseConfig} colors={colors} textures={textures} personlizeConfig={personlizeConfig} personlizationConfig={personlizationConfig} />
           </div>
           {/* <button onClick={captureScreenshot}>Capture Screenshot</button> */}
         </div>
