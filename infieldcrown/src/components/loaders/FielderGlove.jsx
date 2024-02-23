@@ -263,10 +263,10 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
       {(personalize["Flag"] !== null && personalize["Flag"] !== "Other" && personalize["Flag"] !== "None") && (
         <>
           {base.finger_hood_or_pad_placement === "Index Finger" ? (
-            <BackFlag nodes={nodes} materials={materials} position={[0.006, 0.133, 0.0666]} rotation={[Math.PI*0.256, Math.PI*0.4375, Math.PI*-0.84375]} scale={[0.03, 0.015, 0.02]} personalize={personalize} />
+            <BackFlag nodes={nodes} materials={materials} position={[0.005, 0.136, 0.0662]} rotation={[Math.PI*0.256, Math.PI*0.4375, Math.PI*-0.84375]} scale={[0.03, 0.015, 0.02]} personalize={personalize} />
             
           ) : (
-            <BackFlag nodes={nodes} materials={materials} position={[0.006, 0.133, 0.0662]} rotation={[Math.PI*0.256, Math.PI*0.4375, Math.PI*-0.84375]} scale={[0.03, 0.015, 0.02]} personalize={personalize} />
+            <BackFlag nodes={nodes} materials={materials} position={[0.005, 0.136, 0.0662]} rotation={[Math.PI*0.256, Math.PI*0.4375, Math.PI*-0.84375]} scale={[0.03, 0.015, 0.02]} personalize={personalize} />
           )}
         </>
       )}

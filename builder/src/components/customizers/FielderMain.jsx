@@ -102,6 +102,22 @@ export default function Main() {
   // const [xRotation, setXRotation] = useState(2.915);
   // const [yRotation, setYRotation] = useState(1.132);
   // const [zRotation, setZRotation] = useState(-0.6625);
+
+  // const controls = {
+  //   xPosition,
+  //   yPosition,
+  //   zPosition,
+  //   xRotation,
+  //   yRotation,
+  //   zRotation,
+  //   setXPosition,
+  //   setYPosition,
+  //   setZPosition,
+  //   setXRotation,
+  //   setYRotation,
+  //   setZRotation,
+  // };
+
   
   useEffect(() =>{
     if (personlizeConfig["Thumb Text"] === "Thumb Text" && personlizeConfig["Thumb Text Text"] !== ""){
@@ -1487,6 +1503,7 @@ export default function Main() {
                   className="tab-content position-relative"
                   id="pills-tabContent"
                 >
+                  {/* <Controls controls={controls} /> */}
 
                 </div>
               </div>
