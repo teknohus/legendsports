@@ -3,13 +3,13 @@ import React from "react";
 export default function Product() {
 
   const handleCatcher = () => {
-    window.location.href = 'https://legendsportspro.com/fielder/';
+    window.location.href = 'https://legendsportspro.com/catcher/';
   }
   const handleFielder = () => {
     window.location.href = 'https://legendsportspro.com/fielder/';
   }
   const handleFB = () => {
-     window.location.href = 'https://legendsportspro.com/fielder/';
+     window.location.href = 'https://legendsportspro.com/firstbase/';
   }
 
    return(
@@ -36,7 +36,7 @@ export default function Product() {
               <img src={`/wp-content/reactpress/apps/products/build/images/catcher.png`} className="mx-auto" alt="layer-45" />
               </div>
               <div className="btn-box text-center">
-                <button onClick={handleCatcher} className="btn" disabled>Coming Soon</button>
+                <button onClick={handleCatcher} className="btn" >Select</button>
               </div>
             </div>
           </div>
@@ -74,7 +74,7 @@ export default function Product() {
               <img src={`/wp-content/reactpress/apps/products/build/images/firstbase.png`} className="mx-auto" alt="layer-45" />
               </div>
               <div className="btn-box text-center">
-                <button onClick={handleFB} className="btn" disabled>Coming Soon</button>
+                <button onClick={handleFB} className="btn">Select</button>
               </div>
             </div>
           </div>
