@@ -571,13 +571,15 @@ export default function Main() {
       setColorSteps(prevSteps => ({
         ...prevSteps,
         "Square Patch": true,
-        "Square Patch Lines": true
+        "Patch Inner Lines": true,
+        "Patch Outer Lines": true
       }));
     } else if(option === 'wrist_logo' && value !== "Square Patch") {
       setColorSteps(prevSteps => ({
         ...prevSteps,  
         "Square Patch": false,
-        "Square Patch LInes": false
+        "Patch Inner Lines": false,
+        "Patch Outer Lines": false
       }));
     }
 
@@ -644,12 +646,14 @@ export default function Main() {
     if(option === 'inlay' && value === 'Inlay') {
       setColorSteps(prevSteps => ({
         ...prevSteps,
-        inlay: true
+        inlay: true,
+        wrist: false,
       }));
     } else if(option === 'inlay' && value !== 'Inlay') {
       setColorSteps(prevSteps => ({
         ...prevSteps,
-        inlay: false
+        inlay: false,
+        wrist: true,
       }));
     }
 

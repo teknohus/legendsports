@@ -2,6 +2,7 @@ import React, { useRef, useMemo } from 'react'
 import { useGLTF,  useTexture, Text } from '@react-three/drei'
 import { useFrame, useThree } from '@react-three/fiber';
 import * as THREE from 'three';
+import blackmesh from '../../assets/textures/black.jpg'
 
 const MeshWithTexture = ({ geometry, material, color, position, rotation, scale, texture, tsize=9.25 }) => {
   const textureMap = useTexture(texture);
@@ -34,19 +35,21 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
     ref.current.rotation.z = 0.2
   })
 
-  const matBinding = materials.VRayMtl7.clone();
-  const matCrown = materials.VRayMtl7.clone();
-  const matLaces= materials.VRayMtl7.clone();
-  const matLaces1= materials.VRayMtl1.clone();
-  const matleather1= materials.VRayMtl7.clone();
-  const matStitches= materials.VRayMtl7.clone();
-  const matPalm= materials.VRayMtl7.clone();
-  const matWrist= materials.VRayMtl7.clone();
-  const matWeb= materials.VRayMtl7.clone();
+  // const matBinding = materials.VRayMtl7.clone();
+  // const matCrown = materials.VRayMtl7.clone();
+  // const matLaces= materials.VRayMtl7.clone();
+  // const matLaces1= materials.VRayMtl1.clone();
+  // const matleather1= materials.VRayMtl7.clone();
+  // const matStitches= materials.VRayMtl7.clone();
+  // const matPalm= materials.VRayMtl7.clone();
+  // const matWrist= materials.VRayMtl7.clone();
+  // const matWeb= materials.VRayMtl7.clone();
   const matGuard= materials.lambert1.clone();
   const matLogoOutline= materials.pasted__logo_without_outline_fr.clone();
-  const matPad= materials.lambert1.clone();
-  const matHood= materials.lambert1.clone();
+  const matInnerLines= materials.blinn11.clone();
+  const matOuterLines= materials.blinn12.clone();
+  // const matPad= materials.lambert1.clone();
+  // const matHood= materials.lambert1.clone();
   
   const { viewport } = useThree();
   const width = viewport.width;
@@ -61,11 +64,11 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
     <group dispose={null} position={[rot === 0 ? 0.6 : rot === 2* (-Math.PI / 2) ? -0.6: 0, -4.5, 0]} scale={[scale, scale, scale]} ref={ref}>
       <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
         {base.finger_hood_or_pad === "Pad" && (
-          <mesh geometry={nodes.pasted__polySurface1.geometry} material-color={colors["Finger Pad"]} material={matPad} />
+          <mesh geometry={nodes.pasted__polySurface1.geometry} material-color={colors["Finger Pad"]} material={materials.hood} />
         )}
 
         {base.finger_hood_or_pad === "Hood" && (
-          <mesh geometry={nodes.pasted__polySurface2.geometry} material-color={colors["Finger Hood"]} material={matHood} />
+          <mesh geometry={nodes.pasted__polySurface2.geometry} material-color={colors["Finger Hood"]} material={materials.pad} />
         )}
 
         {/*Wrist Guard*/}
@@ -81,13 +84,15 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
         {/*Back Upper Logo*/}
         <group position={[41.558, 7.027, -16.35]} rotation={[-2.442, 1.336, 3.113]} scale={1.4}>
           <mesh geometry={nodes.logo_backup1001.geometry} material-color={colors["Logo"]} material={materials.pasted__logo_without_outline_fr} />
-          <mesh geometry={nodes.polySurface111001.geometry} material-color={"#fefefe"} material={materials.blinn13} /> {/*Logo back */}
-          {/*Outer Lines */}
-          <mesh geometry={nodes.polySurface112001.geometry} material-color={"#fefefe"} material={materials.blinn11} />
-          <mesh geometry={nodes.polySurface115001.geometry} material-color={"#fefefe"} material={materials.blinn11} />
-          {/*Inner Lines */}
-          <mesh geometry={nodes.polySurface113001.geometry} material-color={"#fefefe"} material={materials.blinn12} />
-          <mesh geometry={nodes.polySurface114001.geometry} material-color={"#fefefe"} material={materials.blinn12} />
+          {base.wrist_logo === "Square Patch" && (
+            <>
+              <mesh geometry={nodes.polySurface111001.geometry} material-color={colors["Square Patch"]} material={materials.blinn13} /> 
+              <mesh geometry={nodes.polySurface112001.geometry} material-color={colors["Patch Inner Lines"]} material={matInnerLines} />
+              <mesh geometry={nodes.polySurface115001.geometry} material-color={colors["Patch Inner Lines"]} material={matInnerLines} />
+              <mesh geometry={nodes.polySurface113001.geometry} material-color={colors["Patch Outer Lines"]} material={matOuterLines} />
+              <mesh geometry={nodes.polySurface114001.geometry} material-color={colors["Patch Outer Lines"]} material={matOuterLines} />
+            </>
+          )}
         </group>
 
         {base.wrist_logo === "Embroidered" && (
@@ -117,61 +122,117 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
         {base.wrist_logo === "Square Patch" && (
           <>
             <mesh geometry={nodes.logo_backup1.geometry} material-color={colors["Logo"]} material={materials.pasted__logo_without_outline_fr} position={[0.486, 1.025, -1.894]} rotation={[-0.058, 0.045, -0.048]} scale={0.921} />
-            <mesh geometry={nodes.polySurface111.geometry} material-color={"#fefefe"} material={materials.blinn13} position={[-0.529, -3.843, -16.009]} rotation={[-2.256, 0.252, -0.051]} scale={[3.666, 2.288, 2.055]} />
-            <mesh geometry={nodes.polySurface113.geometry} material-color={"#fefefe"} material={materials.blinn12} position={[-0.529, -3.843, -16.009]} rotation={[-2.256, 0.252, -0.051]} scale={[3.666, 2.288, 2.055]} />
-            <mesh geometry={nodes.polySurface114.geometry} material-color={"#fefefe"} material={materials.blinn12} position={[-0.529, -3.843, -16.009]} rotation={[-2.256, 0.252, -0.051]} scale={[3.666, 2.288, 2.055]} />
-            <mesh geometry={nodes.polySurface112.geometry} material-color={"#fefefe"} material={materials.blinn11} position={[-0.529, -3.843, -16.009]} rotation={[-2.256, 0.252, -0.051]} scale={[3.666, 2.288, 2.055]} />
-            <mesh geometry={nodes.polySurface115.geometry} material-color={"#fefefe"} material={materials.blinn11} position={[-0.529, -3.843, -16.009]} rotation={[-2.256, 0.252, -0.051]} scale={[3.666, 2.288, 2.055]} />
+            <mesh geometry={nodes.polySurface111.geometry} material-color={colors["Square Patch"]} material={materials.blinn13} position={[-0.529, -3.843, -16.009]} rotation={[-2.256, 0.252, -0.051]} scale={[3.666, 2.288, 2.055]} />
+            <mesh geometry={nodes.polySurface113.geometry} material-color={colors["Patch Inner Lines"]} material={matOuterLines} position={[-0.529, -3.843, -16.009]} rotation={[-2.256, 0.252, -0.051]} scale={[3.666, 2.288, 2.055]} />
+            <mesh geometry={nodes.polySurface114.geometry} material-color={colors["Patch Inner Lines"]} material={matOuterLines} position={[-0.529, -3.843, -16.009]} rotation={[-2.256, 0.252, -0.051]} scale={[3.666, 2.288, 2.055]} />
+            <mesh geometry={nodes.polySurface112.geometry} material-color={colors["Patch Outer Lines"]} material={matInnerLines} position={[-0.529, -3.843, -16.009]} rotation={[-2.256, 0.252, -0.051]} scale={[3.666, 2.288, 2.055]} />
+            <mesh geometry={nodes.polySurface115.geometry} material-color={colors["Patch Outer Lines"]} material={matInnerLines} position={[-0.529, -3.843, -16.009]} rotation={[-2.256, 0.252, -0.051]} scale={[3.666, 2.288, 2.055]} />
           </>
         )}
       </group>
       {/*Binding*/}
       <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
-        <mesh geometry={nodes.sweep1.geometry} material-color={colors.binding} material={matBinding} />
-        <mesh geometry={nodes.sweep3.geometry} material-color={colors.binding} material={matBinding} />
-        <mesh geometry={nodes.sweep6.geometry} material-color={colors.binding} material={matBinding} />
-        <mesh geometry={nodes.sweep7.geometry} material-color={colors.binding} material={matBinding} />
+        {textures.binding != null ? (
+          <MeshWithTexture geometry={nodes.sweep1.geometry} material-color={colors.binding} material={materials.binding} texture={textures.binding}/>
+        ) : (
+          <mesh geometry={nodes.sweep1.geometry} material-color={colors.binding} material={materials.binding} />
+        )}
+        {textures.binding != null ? (
+          <MeshWithTexture geometry={nodes.sweep3.geometry} material-color={colors.binding} material={materials.binding} texture={textures.binding}/>
+        ) : (
+          <mesh geometry={nodes.sweep3.geometry} material-color={colors.binding} material={materials.binding} />
+        )}
+        {textures.binding != null ? (
+          <MeshWithTexture geometry={nodes.sweep6.geometry} material-color={colors.binding} material={materials.binding} texture={textures.binding}/>
+        ) : (
+          <mesh geometry={nodes.sweep6.geometry} material-color={colors.binding} material={materials.binding} />
+        )}
+        {textures.binding != null ? (
+          <MeshWithTexture geometry={nodes.sweep7.geometry} material-color={colors.binding} material={materials.binding} texture={textures.binding}/>
+        ) : (
+          <mesh geometry={nodes.sweep7.geometry} material-color={colors.binding} material={materials.binding} />
+        )}
       </group>
 
       <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
         {/*Palm*/}
         {textures.palm }
-        <mesh geometry={nodes.polySurface19.geometry} material-color={colors.palm} material={matPalm} />
+        <mesh geometry={nodes.polySurface19.geometry} material-color={colors.palm} material={materials.palm} />
         
         {/*Leather1*/}
-        <mesh geometry={nodes.polySurface6.geometry} material-color={colors.leather1} material={matleather1} />
-        <mesh geometry={nodes.polySurface7.geometry} material-color={colors.leather1} material={matleather1} />
+        {textures.leather1 != null ? (
+          <MeshWithTexture geometry={nodes.polySurface6.geometry} material-color={colors.leather1} material={materials.leather1} texture={textures.leather1} tsize={3} />
+        ) :(
+          <mesh geometry={nodes.polySurface6.geometry} material-color={colors.leather1} material={materials.leather1} />
+        )}
+        {textures.leather1 != null ? (
+          <MeshWithTexture geometry={nodes.polySurface7.geometry} material-color={colors.leather1} material={materials.leather1_1} texture={textures.leather1} tsize={3}/>
+        ) : (
+          <mesh geometry={nodes.polySurface7.geometry} material-color={colors.leather1} material={materials.leather1_1} />
+        )}
       </group>
       <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
         {/*Wrist*/}
-        <mesh geometry={nodes.polySurface108.geometry} material-color={colors.wrist} material={materials['VRayMtl7.002']} />
+        {base.inlay !== null ? (
+            <MeshWithTexture geometry={nodes.polySurface108.geometry} material-color={colors.wrist} material={materials.Wrist} texture={blackmesh} tsize={2}/>
+        ):(
+          <>
+          {textures.wrist != null ? (
+            <MeshWithTexture geometry={nodes.polySurface108.geometry} material-color={colors.wrist} material={materials.Wrist} texture={textures.wrist} tsize={1} />
+          ) : (
+            <mesh geometry={nodes.polySurface108.geometry} material-color={colors.wrist} material={materials.Wrist} />
+          )}
+          </>
+        )}
         
         {/*leather1*/}
-        {textures.leather1 != null ? (
-          <MeshWithTexture geometry={nodes.polySurface9.geometry} material-color={colors.leather1} material={materials['VRayMtl7.001']} texture={textures.leather1}/>
-        ): (
-          <mesh geometry={nodes.polySurface9.geometry} material-color={colors.leather1} material={materials['VRayMtl7.001']} />
+        {base.inlay === null ? (
+          <>
+            {textures.leather1 != null ? (
+              <MeshWithTexture geometry={nodes.polySurface9.geometry} material-color={colors.leather1} material={materials.leather1_2} texture={textures.leather1} tsize={3}/>
+            ): (
+              <mesh geometry={nodes.polySurface9.geometry} material-color={colors.leather1} material={materials.leather1_2} />
+            )}
+          </>
+        ) : (
+          <MeshWithTexture geometry={nodes.polySurface9.geometry} material-color={colors.leather1} material={materials.leather1_2} texture={blackmesh} tsize={5}/>
         )}
       </group>
       <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
         {/*Laces*/}
-        <mesh geometry={nodes.Mesh033.geometry} material-color={colors.laces} material={matLaces} />
-        <mesh geometry={nodes.Mesh033_1.geometry} material-color={colors.laces} material={matLaces1} />
+        <mesh geometry={nodes.Mesh033.geometry} material-color={colors.laces} material={materials.laces1} />
+        <mesh geometry={nodes.Mesh033_1.geometry} material-color={colors.laces} material={materials.laces2} />
       </group>
       <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
         {/*Stiches*/}
-        <mesh geometry={nodes.Mesh034.geometry} material-color={colors.Stitches} material={materials.lambert1} />
-        <mesh geometry={nodes.Mesh034_1.geometry} material-color={colors.Stitches} material={matStitches} />
+        {textures.Stitches ? (
+          <MeshWithTexture geometry={nodes.Mesh034.geometry} material-color={colors.Stitches} material={materials.Stitches2} texture={textures.Stitches}/>
+        ) : (
+          <mesh geometry={nodes.Mesh034.geometry} material-color={colors.Stitches} material={materials.Stitches2} />
+        )}
+        {textures.Stitches ? (
+          <MeshWithTexture geometry={nodes.Mesh034_1.geometry} material-color={colors.Stitches} material={materials.Stitches1} texture={textures.Stitches}/>
+        ) : (
+          <mesh geometry={nodes.Mesh034_1.geometry} material-color={colors.Stitches} material={materials.Stitches1} />
+        )}
       </group>
       <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
         {/*Palm*/}
-        <mesh geometry={nodes.Mesh036.geometry} material-color={colors.palm} material={matPalm} />
+        {textures.palm ? (
+          <MeshWithTexture geometry={nodes.Mesh036.geometry} material-color={colors.palm} material={materials.Palm} texture={textures.palm}/>
+        ) : (
+          <mesh geometry={nodes.Mesh036.geometry} material-color={colors.palm} material={materials.Palm} />
+        )}
         <mesh geometry={nodes.Mesh036_1.geometry} material-color={colors["Logo"]} material={materials.pasted__logo_without_outline_fr} />
       </group>
       {/*Crown*/}
-      <mesh geometry={nodes.polySurface10.geometry} material-color={colors["Crown"]} material={matCrown} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
+      <mesh geometry={nodes.polySurface10.geometry} material-color={colors["Crown"]} material={materials.crown} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
       {/*WebStyle*/}
-      <mesh geometry={nodes.polySurface14.geometry} material-color={colors.web} material={matWeb} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
+      {textures.web ? (
+        <MeshWithTexture geometry={nodes.polySurface14.geometry} material-color={colors.web} material={materials.web} rotation={[Math.PI / 2, 0, 0]} scale={0.01} texture={textures.web} tsize={1.5}/>
+      ) : (
+        <mesh geometry={nodes.polySurface14.geometry} material-color={colors.web} material={materials.web} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
+      )}
     </group>
   )
 }
