@@ -3,6 +3,8 @@ import { useGLTF,  useTexture, Text } from '@react-three/drei'
 import { useFrame, useThree } from '@react-three/fiber';
 import * as THREE from 'three';
 import blackmesh from '../../assets/textures/black.jpg'
+import { thumb_graphics, thumb_premium_graphics, stamp_flags, LegendLogo, stamp_palm } from "../constants"
+import Outlinefont from "../../assets/fonts/Milestone Outline.otf"
 
 const MeshWithTexture = ({ geometry, material, color, position, rotation, scale, texture, tsize=9.25 }) => {
   const textureMap = useTexture(texture);
@@ -22,9 +24,73 @@ const MeshWithTexture = ({ geometry, material, color, position, rotation, scale,
   );
 };
 
+const ThumbGraphic = ({ nodes, materials, position, rotation, scale, personalize}) => {
+  const graphicTexture = useTexture(thumb_graphics[personalize['Thumb Graphic']]);
+  graphicTexture.encoding = THREE.sRGBEncoding;
+  materials.Graphic.map = graphicTexture
+
+  return (
+    //  <mesh geometry={nodes.cross.geometry} material={materials.Graphic} position={[-0.07, 0.207, 0.022]} rotation={[0.131, -0.422, -1.208]} scale={0.05} />
+     <mesh geometry={nodes.cross.geometry} material={materials.Graphic} material-color={"#D1D3D0"} position={position} rotation={rotation} scale={scale}  />
+    //  <mesh geometry={nodes.shaka.geometry} material={materials.shaka} material-color={"#D1D3D0"} position={position} rotation={rotation} scale={scale} /> 
+  );
+};
+const ThumbPremiumGraphic = ({ nodes, materials, position, rotation, scale, personalize}) => {
+  const graphicTexture = useTexture(thumb_premium_graphics[personalize['Premium Graphic']]);
+  graphicTexture.encoding = THREE.sRGBEncoding;
+  materials.Graphic.map = graphicTexture
+
+  if(personalize['Premium Graphic'] === "Banana"){
+    scale = [0.0482, 0.025, 0.0482]
+  }
+  if(personalize['Premium Graphic'] === "Tween Treasure"){
+    scale = [0.0512, 0.025, 0.0314]
+  }
+  if(personalize['Premium Graphic'] === "Champion"){
+    scale = [0.0483, 0.025, 0.0318]
+  }
+
+  return (
+    //  <mesh geometry={nodes.cross.geometry} material={materials.Graphic} position={[-0.07, 0.207, 0.022]} rotation={[0.131, -0.422, -1.208]} scale={0.05} />
+     <mesh geometry={nodes.cross.geometry} material={materials.Graphic} material-color={"#D1D3D0"} position={position} rotation={rotation} scale={scale}  />
+    //  <mesh geometry={nodes.shaka.geometry} material={materials.shaka} material-color={"#D1D3D0"} position={position} rotation={rotation} scale={scale} /> 
+  );
+};
+const StampedFlag = ({ nodes, materials, position, rotation, scale, personalize }) => {
+  
+  const graphicTexture = useTexture(stamp_flags[personalize['Stamped Flag']]);
+  graphicTexture.encoding = THREE.sRGBEncoding;
+  const Copy =  materials.Graphic.clone();
+  Copy.map = graphicTexture
+
+  return (
+    <mesh geometry={nodes.cross.geometry} material-color={"#18191A"} material={Copy} position={position} rotation={rotation} scale={scale} />
+  );
+};
+
+const PalmGraphic = ({ nodes, materials, position, rotation, scale, personalize }) => {
+  const graphicTexture = useTexture(stamp_palm[personalize['Palm Graphic']]);
+  graphicTexture.encoding = THREE.sRGBEncoding;
+  const Copy =  materials.Graphic.clone();
+  Copy.map = graphicTexture
+
+  return (
+    <mesh geometry={nodes.cross.geometry} material={Copy} position={position} rotation={rotation} scale={scale} />
+  );
+};
+const PalmText = ({ nodes, materials, position, rotation, scale, personalize }) => {
+  const graphicTexture = useTexture(LegendLogo);
+  graphicTexture.encoding = THREE.sRGBEncoding;
+  const Copy =  materials.Graphic.clone();
+  Copy.map = graphicTexture
+
+  return (
+    <mesh geometry={nodes.cross.geometry} material={Copy} position={position} rotation={rotation} scale={scale} />
+  );
+};
 
 export function New({rot, base, colors, personalize, personalizeConfig, xPosition, yPosition, zPosition, xRotation, yRotation, zRotation, textures }) {
-  const { nodes, materials } = useGLTF("/wp-content/reactpress/apps/catcherlegend/build/Model/catcher1.glb")
+  const { nodes, materials } = useGLTF("/wp-content/reactpress/apps/catcherlegend/build/Model/catcher2.glb")
   
   console.log(textures)
 
@@ -62,6 +128,39 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
 
   return (
     <group dispose={null} position={[rot === 0 ? 0.6 : rot === 2* (-Math.PI / 2) ? -0.6: 0, -4.5, 0]} scale={[scale, scale, scale]} ref={ref}>
+      {personalize["Thumb Logo/Graphic"] === "Graphic (+$7)" && (
+        <ThumbGraphic nodes={nodes} materials={materials} position={[-0.052, 0.181, 0.006]} rotation={[Math.PI*-1, Math.PI*0.09375, Math.PI*-0.61425]} scale={[0.035, 0.025, 0.021]} personalize={personalize}/>
+      )}
+      {personalize["Thumb Logo/Graphic"] === "Premium Graphic (+$15)" && (
+        <ThumbPremiumGraphic nodes={nodes} materials={materials} position={[-0.052, 0.181, 0.006]} rotation={[Math.PI*-1, Math.PI*0.09375, Math.PI*-0.61425]} scale={[0.0382, 0.025, 0.0342]} personalize={personalize}/>
+      )}
+      {personalize["Thumb Logo/Graphic"] === "Stamped Flag (+$7)" && (
+        <StampedFlag nodes={nodes} materials={materials} position={[-0.052, 0.181, 0.006]} rotation={[Math.PI*-1, Math.PI*0.0625, Math.PI*-0.63125]} scale={[0.0440, 0.025, 0.0204]} personalize={personalize}/>
+      )}
+      {personalize["Palm Stamp"] === "Graphic" && (
+        // <PalmGraphic nodes={nodes} materials={materials} position={[xPosition, yPosition, zPosition]} rotation={[Math.PI*xRotation, Math.PI*yRotation, Math.PI*zRotation]} scale={[0.0602, 0.025, 0.0447]} personalize={personalize}/>
+        <PalmGraphic nodes={nodes} materials={materials} position={[0.016, 0.236, 0.068]} rotation={[Math.PI*-0.59375, Math.PI*0, Math.PI*-0.0625]} scale={[0.0602, 0.025, 0.0447]} personalize={personalize}/>
+      )}
+      {personalize["Palm Stamp"] === "Legend Logo" && (
+        // <PalmText nodes={nodes} materials={materials} position={[xPosition, yPosition, zPosition]} rotation={[Math.PI*xRotation, Math.PI*yRotation, Math.PI*zRotation]} scale={[0.0800, 0.025, 0.0337]} personalize={personalize}/>
+        <PalmText nodes={nodes} materials={materials} position={[0.021, 0.235, 0.069]} rotation={[Math.PI*-0.53125, Math.PI*-0.1875, Math.PI*0]} scale={[0.0800, 0.025, 0.0337]} personalize={personalize}/>
+      )}
+      {personalize["Palm Stamp"] === "Custom Number" && (
+        <>
+          <Text
+            font={Outlinefont}
+            position={[0.017, 0.233, 0.069]}
+            rotation={[Math.PI*0, Math.PI*0, Math.PI*-0.21875]}
+            // position={[xPosition, yPosition, zPosition]}
+            // rotation={[Math.PI*xRotation, Math.PI*yRotation, Math.PI*zRotation]}
+            color={"#707070"}
+            scale={0.038}
+          >
+            {personalize["Palm Custom Number"]}
+          </Text>
+        </>
+      )}
+      
       <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
         {base.finger_hood_or_pad === "Pad" && (
           <mesh geometry={nodes.pasted__polySurface1.geometry} material-color={colors["Finger Pad"]} material={materials.hood} />
@@ -191,7 +290,9 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
             {textures.leather1 != null ? (
               <MeshWithTexture geometry={nodes.polySurface9.geometry} material-color={colors.leather1} material={materials.leather1_2} texture={textures.leather1} tsize={3}/>
             ): (
-              <mesh geometry={nodes.polySurface9.geometry} material-color={colors.leather1} material={materials.leather1_2} />
+              <>
+                <mesh geometry={nodes.polySurface9.geometry} material-color={colors.leather1} material={materials.leather1_2} />
+              </>
             )}
           </>
         ) : (

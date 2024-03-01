@@ -1,11 +1,11 @@
 import React, { useEffect, useMemo, useState } from "react";
 import ProductSlideshow from "./FielderSlider";
 import { meshOptions, baseReq, colorReq, personlizationReq, colorData, colorPalette, allColors, texturePalette, tabs, textureData, colorStepsConfig, baseOptions, personlizationOptions, personlizationConfig, Options, baseStepsConfig } from "../constants";
-// import Controls from "../controls"
+import Controls from "../controls"
 
 function usePricing(baseConfig, personalizeConfig) {
 
-  const [price, setPrice] = useState(199);
+  const [price, setPrice] = useState(225);
 
   
   useEffect(() => {
@@ -16,7 +16,7 @@ function usePricing(baseConfig, personalizeConfig) {
       thumb: personalizeConfig["Thumb Logo/Graphic"]
     }
 
-    let newPrice = 199;
+    let newPrice = 225;
     
     if(priceAffectingOptions.logoStyle === "Embroidered Flag (+$7)") {
        newPrice += 7; 
@@ -96,27 +96,27 @@ export default function Main() {
     );
   }, [personlizeConfig, personilzeSteps]) 
   
-  // const [xPosition, setXPosition] = useState(9.25);
-  // const [yPosition, setYPosition] = useState(0.039);
-  // const [zPosition, setZPosition] = useState(0.023);
-  // const [xRotation, setXRotation] = useState(2.915);
-  // const [yRotation, setYRotation] = useState(1.132);
-  // const [zRotation, setZRotation] = useState(-0.6625);
+  const [xPosition, setXPosition] = useState(-0.052);
+  const [yPosition, setYPosition] = useState(0.181);
+  const [zPosition, setZPosition] = useState(0.006);
+  const [xRotation, setXRotation] = useState(-1);
+  const [yRotation, setYRotation] = useState(0.09375);
+  const [zRotation, setZRotation] = useState(-0.6625);
 
-  // const controls = {
-  //   xPosition,
-  //   yPosition,
-  //   zPosition,
-  //   xRotation,
-  //   yRotation,
-  //   zRotation,
-  //   setXPosition,
-  //   setYPosition,
-  //   setZPosition,
-  //   setXRotation,
-  //   setYRotation,
-  //   setZRotation,
-  // };
+  const controls = {
+    xPosition,
+    yPosition,
+    zPosition,
+    xRotation,
+    yRotation,
+    zRotation,
+    setXPosition,
+    setYPosition,
+    setZPosition,
+    setXRotation,
+    setYRotation,
+    setZRotation,
+  };
 
   
   useEffect(() =>{
@@ -341,6 +341,9 @@ export default function Main() {
 
     if (option === 'Thumb Logo/Graphic' && value === null){
       value = 'Circle Logo'; 
+    }
+    if (option === 'Stamped Flag' && value === null){
+      value = 'USA'; 
     }
 
     setPersonlizeConfig((prevOption) => ({
@@ -1411,7 +1414,7 @@ export default function Main() {
                   className="tab-content position-relative"
                   id="pills-tabContent"
                 >
-                  {/* <Controls controls={controls} /> */}
+                  <Controls controls={controls} />
 
                 </div>
               </div>
@@ -1429,8 +1432,8 @@ export default function Main() {
               </div>
             </div>
             
-            {/* <ProductSlideshow baseConfig={baseConfig} colors={colors} textures={textures} personlizeConfig={personlizeConfig} personlizationConfig={personlizationConfig} xPosition={xPosition} yPosition={yPosition} zPosition={zPosition} xRotation={xRotation} yRotation={yRotation} zRotation={zRotation} /> */}
-            <ProductSlideshow baseConfig={baseConfig} colors={colors} textures={textures} personlizeConfig={personlizeConfig} personlizationConfig={personlizationConfig} />
+            <ProductSlideshow baseConfig={baseConfig} colors={colors} textures={textures} personlizeConfig={personlizeConfig} personlizationConfig={personlizationConfig} xPosition={xPosition} yPosition={yPosition} zPosition={zPosition} xRotation={xRotation} yRotation={yRotation} zRotation={zRotation} />
+            {/* <ProductSlideshow baseConfig={baseConfig} colors={colors} textures={textures} personlizeConfig={personlizeConfig} personlizationConfig={personlizationConfig} /> */}
           </div>
           {/* <button onClick={captureScreenshot}>Capture Screenshot</button> */}
         </div>

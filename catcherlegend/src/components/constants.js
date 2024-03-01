@@ -768,7 +768,7 @@ export const colorData = {
   }
 
   export const personlizationOptions = {
-    "Thumb Logo/Graphic" : "Circle Logo",
+    "Thumb Logo/Graphic" : "None",
     "Thumb Graphic": "Cross",
     "Premium Graphic": "Hot Dog", 
     "Jumbo Number": "",
@@ -857,7 +857,7 @@ export const colorData = {
     },
     "Thumb Logo/Graphic": {
       textbox: false,
-      options: ["Logo", "Circle Logo", "Graphic (+$7)", "Premium Graphic (+$15)", "Jumbo Number (+$7)", "Stamped Flag (+$7)", "Thumb Flag (+$7)", "Custom Plate Number (+$7)"],
+      options: ["None", "Graphic (+$7)", "Premium Graphic (+$15)", "Stamped Flag (+$7)"],
       icons: null,
       colors: null,
     },
@@ -899,7 +899,7 @@ export const colorData = {
     },
     "Palm Stamp": {
       textbox: false,
-      options: ["None", "Legend Logo", "Custom Number", "Graphic", "Legend Horse Stamp"],
+      options: ["None", "Legend Logo", "Custom Number", "Graphic"],
       icons: null,
       colors: null,
     },
