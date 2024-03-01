@@ -3,7 +3,7 @@ import { useGLTF,  useTexture, Text } from '@react-three/drei'
 import { useFrame, useThree } from '@react-three/fiber';
 import * as THREE from 'three';
 import blackmesh from '../../assets/textures/black.jpg'
-import { thumb_graphics, thumb_premium_graphics, stamp_flags, LegendLogo, stamp_palm } from "../constants"
+import { thumb_graphics, thumb_premium_graphics, stamp_flags, LegendLogo, stamp_palm, fonts, back_flags } from "../constants"
 import Outlinefont from "../../assets/fonts/Milestone Outline.otf"
 
 const MeshWithTexture = ({ geometry, material, color, position, rotation, scale, texture, tsize=9.25 }) => {
@@ -88,6 +88,16 @@ const PalmText = ({ nodes, materials, position, rotation, scale, personalize }) 
     <mesh geometry={nodes.cross.geometry} material={Copy} position={position} rotation={rotation} scale={scale} />
   );
 };
+const BackFlag = ({ nodes, materials, position, rotation, scale, personalize }) => {
+  const graphicTexture = useTexture(back_flags[personalize['Flag']]);
+  graphicTexture.encoding = THREE.sRGBEncoding;
+  const Copy =  materials.Graphic.clone();
+  Copy.map = graphicTexture
+
+  return (
+    <mesh  geometry={nodes.cross.geometry} material={Copy} position={position} rotation={rotation} scale={scale} />
+  );
+};
 
 export function New({rot, base, colors, personalize, personalizeConfig, xPosition, yPosition, zPosition, xRotation, yRotation, zRotation, textures }) {
   const { nodes, materials } = useGLTF("/wp-content/reactpress/apps/catcherlegend/build/Model/catcher2.glb")
@@ -160,6 +170,38 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
           </Text>
         </>
       )}
+       {personalize["Thumb Text"] === "Thumb Text" && (
+        <Text
+          font={fonts[personalize["Text Font"]]}
+          position={[-0.068, 0.196, 0.032]}
+          rotation={[Math.PI*-0.48, Math.PI*-0.6875, Math.PI*0]}
+          color={personalize["Thumb Text Color"]}
+          scale={personalize["Thumb Text Text"]?.length > 10  
+          ? 0.012 - 0.0005 * (personalize["Thumb Text Text"]?.length - 10)  
+          : 0.012}
+        >
+          {personalize["Thumb Text Text"]}
+        </Text>
+      )}
+       {personalize["Palm Text"] === "Palm Text" && (
+        <Text
+          font={fonts[personalize["Text Font"]]}
+          // position={[-0.068, 0.196, 0.032]}
+          // rotation={[Math.PI*-0.48, Math.PI*-0.6875, Math.PI*0]}
+          position={[0.014, 0.19, -0.042]}
+          rotation={[Math.PI*0, Math.PI*1, Math.PI*0.07]}
+          color={personalize["Palm Text Color"]}
+          scale={personalize["Palm Text Text"]?.length > 10  
+          ? 0.012 - 0.0010 * (personalize["Palm Text Text"]?.length - 10)  
+          : 0.012}
+        >
+          {personalize["Palm Text Text"]}
+        </Text>
+      )}
+      {(personalize["Flag"] !== null && personalize["Flag"] !== "Other" && personalize["Flag"] !== "None") && (
+        <BackFlag nodes={nodes} materials={materials} position={[0.093, 0.29, -0.061]} rotation={[Math.PI*-0.4375, Math.PI*-0.46875, Math.PI*0.9375]} scale={[0.08, 0.015, 0.03]} personalize={personalize} />
+      )}
+
       
       <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
         {base.finger_hood_or_pad === "Pad" && (
