@@ -62,7 +62,7 @@ const ProductSlideshow = ({ baseConfig, colors, personlizeConfig, personlization
     <div className="col-lg-6 col-xl-7">
       <div className="slideshow-area">
         <Slider {...sliderSettings} className="product-slideshow" ref={mainSlider}>
-          {[0, 1, 2, 3].map((index) => (
+          {[0, 2, 1].map((index) => (
             <div key={index} className="slide slick-slide slick-cloned">
               <div className="product-img-box">
                 <Scene3D

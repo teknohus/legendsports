@@ -101,14 +101,27 @@ const BackFlag = ({ nodes, materials, position, rotation, scale, personalize }) 
 
 export function New({rot, base, colors, personalize, personalizeConfig, xPosition, yPosition, zPosition, xRotation, yRotation, zRotation, textures }) {
   const { nodes, materials } = useGLTF("/wp-content/reactpress/apps/catcherlegend/build/Model/catcher2.glb")
-  
-  console.log(textures)
+
+  const pos0 = 0
+  const pos1 = 1*(-Math.PI / 2)
+  const pos2 = 2*(-Math.PI / 2)
+
 
   const ref = useRef();
   
   useFrame(() => {
     ref.current.rotation.y = rot
-    ref.current.rotation.z = 0.2
+    if (rot === pos2){
+      ref.current.rotation.z = pos1
+      ref.current.rotation.x = pos1
+    }
+    else if(rot === pos1){
+      ref.current.rotation.y = pos2
+      ref.current.rotation.z = 0.2
+    }
+    else{
+      ref.current.rotation.z = 0.2
+    }
   })
 
   // const matBinding = materials.VRayMtl7.clone();
@@ -129,15 +142,23 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
   
   const { viewport } = useThree();
   const width = viewport.width;
-  const minWidth = 2.835;
+  const minWidth = 2.25;
   const maxWidth = 6.75;
-  const scaleFactor = (20 - 10) / (maxWidth - minWidth);
-  const positionFactor = (2.1 - 1.05) / (maxWidth - minWidth);
-  const scale = 10 + (width - minWidth) * scaleFactor;
-  const position = 1.05 + (width - minWidth) * positionFactor;
+  const scaleFactor = (20 - 6) / (maxWidth - minWidth);
+  const scale = 6 + (width - minWidth) * scaleFactor;
+  const position0xFactor = (0.6 - 0.2) / (maxWidth - minWidth);
+  const position0yFactor = (4.5 - 1.6) / (maxWidth - minWidth);
+  const position0_x = 0.2 + (width - minWidth) * position0xFactor;
+  const position0_y = 1.6 + (width - minWidth) * position0yFactor
+  const position2xFactor = (4.8 - 1.4) / (maxWidth - minWidth);
+  const position2_x = 1.4 + (width - minWidth) * position2xFactor;
+
+  const scaledXPosition = rot === pos0 ? position0_x : rot === pos1 ? -position0_x : position2_x;
+  const scaledYPosition = rot === pos0 || rot === pos1 ? -position0_y : 0;
+
 
   return (
-    <group dispose={null} position={[rot === 0 ? 0.6 : rot === 2* (-Math.PI / 2) ? -0.6: 0, -4.5, 0]} scale={[scale, scale, scale]} ref={ref}>
+    <group dispose={null} position={[scaledXPosition, scaledYPosition, 0]} scale={[scale, scale, scale]} ref={ref}>
       {personalize["Thumb Logo/Graphic"] === "Graphic (+$7)" && (
         <ThumbGraphic nodes={nodes} materials={materials} position={[-0.052, 0.181, 0.006]} rotation={[Math.PI*-1, Math.PI*0.09375, Math.PI*-0.61425]} scale={[0.035, 0.025, 0.021]} personalize={personalize}/>
       )}
