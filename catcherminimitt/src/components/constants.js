@@ -697,7 +697,7 @@ export const colorData = {
     embroidered_flag: false,
     logo_outline: true,
     finger_hood_or_pad: true,
-    inlay: true,
+    inlay: false,
     lace_length: true,
     wrist_linning: true,
     throwing_hand: true,
@@ -795,7 +795,7 @@ export const colorData = {
   export const Options = {
     size: {
       textbox: false,
-      options: ["32.5","33","33.5","34","35"],
+      options: ["28.5"],
       icons: null,
       colors: null,
     },

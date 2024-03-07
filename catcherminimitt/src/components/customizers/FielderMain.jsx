@@ -5,7 +5,7 @@ import Controls from "../controls"
 
 function usePricing(baseConfig, personalizeConfig) {
 
-  const [price, setPrice] = useState(225);
+  const [price, setPrice] = useState(150);
 
   
   useEffect(() => {
@@ -14,7 +14,7 @@ function usePricing(baseConfig, personalizeConfig) {
       thumb: personalizeConfig["Thumb Logo/Graphic"]
     }
 
-    let newPrice = 225;
+    let newPrice = 150;
     
     if(priceAffectingOptions.wristGuard === "Wrist Guard (+$10)") {
        newPrice += 10; 
@@ -822,9 +822,9 @@ export default function Main() {
     const screenshot = captureScreenshot();
 
     return {
-      "Glove Model": "Legend Edition",
-      "Glove Sport": "Fielder",
-      "Glove Type": "Infield",
+      "Glove Model": "Mini Trainer Mitt",
+      "Glove Sport": "Baseball",
+      "Glove Type": "Catcher",
       "Price": price,
       ...enabledBaseOptions,
       ...enabledColorOptions,
@@ -886,7 +886,7 @@ export default function Main() {
                   type="button"
                   onClick={BarNavToggle}
                 >
-                  <img src={`/wp-content/reactpress/apps/catcherlegend/build/images/menu.svg`} alt="Ham" />
+                  <img src={`/wp-content/reactpress/apps/catcherminimitt/build/images/menu.svg`} alt="Ham" />
                 </button>
                 <button type="button" className="btn" onClick={resetConfig}>
                   reset
@@ -1089,7 +1089,7 @@ export default function Main() {
                           >
                             <img
                               className="me-1"
-                              src={`/wp-content/reactpress/apps/catcherlegend/build/images/help.svg`}
+                              src={`/wp-content/reactpress/apps/catcherminimitt/build/images/help.svg`}
                               alt="Help"
                             />
                             help
@@ -1184,7 +1184,7 @@ export default function Main() {
                           >
                             <img
                               className="me-1"
-                              src={`/wp-content/reactpress/apps/catcherlegend/build/images/help.svg`}
+                              src={`/wp-content/reactpress/apps/catcherminimitt/build/images/help.svg`}
                               alt="Help"
                             />
                             help
@@ -1294,7 +1294,7 @@ export default function Main() {
                           >
                             <img
                               className="me-1"
-                              src={`/wp-content/reactpress/apps/catcherlegend/build/images/help.svg`}
+                              src={`/wp-content/reactpress/apps/catcherminimitt/build/images/help.svg`}
                               alt="Help"
                             />
                             help
