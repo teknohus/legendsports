@@ -5,28 +5,21 @@ import Controls from "../controls"
 
 function usePricing(baseConfig, personalizeConfig) {
 
-  const [price, setPrice] = useState(225);
+  const [price, setPrice] = useState(185);
 
   
   useEffect(() => {
     const priceAffectingOptions = {
-      logoStyle: baseConfig.wrist_logo,  
-      inlay: baseConfig.inlay,  
-      kippalm: baseConfig["Kip Palm Liner"],
-      thumb: personalizeConfig["Thumb Logo/Graphic"]
+      wristGuard: baseConfig["Wrist Guard"],
+      thumb: personalizeConfig["Thumb Logo/Graphic"],
+      flag: personalizeConfig["Flag"]
     }
 
-    let newPrice = 225;
+    let newPrice = 185;
     
-    if(priceAffectingOptions.logoStyle === "Embroidered Flag (+$7)") {
-       newPrice += 7; 
-    }
-    if(priceAffectingOptions.inlay === "Inlay (+$15)") {
-       newPrice += 15; 
-    }
-    if(priceAffectingOptions.kippalm === "Kip Palm Liner (+$15)") {
-       newPrice += 15; 
-    }
+    if(priceAffectingOptions.wristGuard === "Wrist Guard (+$10)") {
+       newPrice += 10; 
+    }  
     if(priceAffectingOptions.thumb === "Graphic (+$7)") {
        newPrice += 7; 
     }
@@ -45,10 +38,13 @@ function usePricing(baseConfig, personalizeConfig) {
     if(priceAffectingOptions.thumb === "Custom Plate Number (+$7)") {
        newPrice += 7; 
     }
+    if(priceAffectingOptions.flag !== null && priceAffectingOptions.flag !== "None") {
+       newPrice += 10; 
+    }
 
     setPrice(newPrice);
 
-  }, [baseConfig.wrist_logo, baseConfig.inlay, baseConfig.kippalm, baseConfig, personalizeConfig])
+  }, [baseConfig, personalizeConfig])
 
   return { price }; // return price for usage
 
@@ -534,13 +530,13 @@ export default function Main() {
       [option]: value,
     }));
     
-    if(option === 'Wrist Guard' && value === "Wrist Guard") {
+    if(option === 'Wrist Guard' && value === "Wrist Guard (+$10)") {
       console.log("here")
       setColorSteps(prevSteps => ({
         ...prevSteps,
         "Wrist Guard": true
       }));
-    } else if(option === 'Wrist Guard' && value !== "Wrist Guard") {
+    } else if(option === 'Wrist Guard' && value !== "Wrist Guard (+$10)") {
       setColorSteps(prevSteps => ({
         ...prevSteps,  
         "Wrist Guard": false
