@@ -103,7 +103,7 @@ const BackFlag = ({ nodes, materials, position, rotation, scale, personalize }) 
 };
 
 export function New({rot, base, colors, personalize, personalizeConfig, xPosition, yPosition, zPosition, xRotation, yRotation, zRotation, textures }) {
-  const { nodes, materials } = useGLTF("/wp-content/reactpress/apps/catcherlegend/build/Model/catcher3.glb")
+  const { nodes, materials } = useGLTF("/wp-content/reactpress/apps/catcherprostar/build/Model/catcher3.glb")
 
   const ref = useRef();
   const pos0 = 0;
@@ -424,4 +424,4 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
   )
 }
 
-useGLTF.preload("/wp-content/reactpress/apps/catcherlegend/build/Model/catcher3.glb")
+useGLTF.preload("/wp-content/reactpress/apps/catcherprostar/build/Model/catcher3.glb")

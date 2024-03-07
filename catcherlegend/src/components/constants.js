@@ -801,7 +801,7 @@ export const colorData = {
     },
     "Wrist Guard": {
       textbox: false,
-      options: ["Wrist Guard"],
+      options: ["Wrist Guard (+$10)"],
       icons: null,
       colors: null,
     },

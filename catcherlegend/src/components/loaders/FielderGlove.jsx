@@ -136,7 +136,6 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
   // const matWeb= materials.VRayMtl7.clone();
   const matGuard= materials.lambert1.clone();
   const matLogoOutline= materials.pasted__logo_without_outline_fr.clone();
-  const matLogoPalm= materials.pasted__logo_without_outline_fr.clone();
   const matInnerLines= materials.blinn11.clone();
   const matOuterLines= materials.blinn12.clone();
   // const matPad= materials.lambert1.clone();
@@ -243,7 +242,7 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
         </Text>
       )}
       {(personalize["Flag"] !== null && personalize["Flag"] !== "Other" && personalize["Flag"] !== "None") && (
-        <BackFlag nodes={nodes} materials={materials} position={[0.093, 0.29, -0.061]} rotation={[Math.PI*-0.4375, Math.PI*-0.46875, Math.PI*0.9375]} scale={[0.08, 0.015, 0.03]} personalize={personalize} />
+        <BackFlag nodes={nodes} materials={materials} position={[0.093, 0.241, -0.061]} rotation={[Math.PI*-0.4375, Math.PI*-0.46875, Math.PI*0.9375]} scale={[0.09, 0.015, 0.03]} personalize={personalize} />
       )}
 
       
@@ -267,18 +266,20 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
       </group>
       <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
         {/*Back Upper Logo*/}
-        <group position={[41.558, 7.027, -16.35]} rotation={[-2.442, 1.336, 3.113]} scale={1.4}>
-          <mesh geometry={nodes.logo_backup1001.geometry} material-color={colors["Logo"]} material={materials.pasted__logo_without_outline_fr} />
-          {base.wrist_logo === "Square Patch" && (
-            <>
-              <mesh geometry={nodes.polySurface111001.geometry} material-color={colors["Square Patch"]} material={materials.blinn13} /> 
-              <mesh geometry={nodes.polySurface112001.geometry} material-color={colors["Patch Inner Lines"]} material={matInnerLines} />
-              <mesh geometry={nodes.polySurface115001.geometry} material-color={colors["Patch Inner Lines"]} material={matInnerLines} />
-              <mesh geometry={nodes.polySurface113001.geometry} material-color={colors["Patch Outer Lines"]} material={matOuterLines} />
-              <mesh geometry={nodes.polySurface114001.geometry} material-color={colors["Patch Outer Lines"]} material={matOuterLines} />
-            </>
-          )}
-        </group>
+        {(personalize["Flag"] === null || personalize["Flag"] === "Other" || personalize["Flag"] === "None") && (
+          <group position={[41.558, 7.027, -16.35]} rotation={[-2.442, 1.336, 3.113]} scale={1.4}>
+            <mesh geometry={nodes.logo_backup1001.geometry} material-color={colors["Logo"]} material={materials.pasted__logo_without_outline_fr} />
+            {base.wrist_logo === "Square Patch" && (
+              <>
+                <mesh geometry={nodes.polySurface111001.geometry} material-color={colors["Square Patch"]} material={materials.blinn13} /> 
+                <mesh geometry={nodes.polySurface112001.geometry} material-color={colors["Patch Inner Lines"]} material={matInnerLines} />
+                <mesh geometry={nodes.polySurface115001.geometry} material-color={colors["Patch Inner Lines"]} material={matInnerLines} />
+                <mesh geometry={nodes.polySurface113001.geometry} material-color={colors["Patch Outer Lines"]} material={matOuterLines} />
+                <mesh geometry={nodes.polySurface114001.geometry} material-color={colors["Patch Outer Lines"]} material={matOuterLines} />
+              </>
+            )}
+          </group>
+        )}
 
         {base.wrist_logo === "Embroidered" && (
           <>

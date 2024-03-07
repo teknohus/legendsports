@@ -894,7 +894,7 @@ export default function Main() {
                   type="button"
                   onClick={BarNavToggle}
                 >
-                  <img src={`/wp-content/reactpress/apps/catcherlegend/build/images/menu.svg`} alt="Ham" />
+                  <img src={`/wp-content/reactpress/apps/catcherprostar/build/images/menu.svg`} alt="Ham" />
                 </button>
                 <button type="button" className="btn" onClick={resetConfig}>
                   reset
@@ -1097,7 +1097,7 @@ export default function Main() {
                           >
                             <img
                               className="me-1"
-                              src={`/wp-content/reactpress/apps/catcherlegend/build/images/help.svg`}
+                              src={`/wp-content/reactpress/apps/catcherprostar/build/images/help.svg`}
                               alt="Help"
                             />
                             help
@@ -1192,7 +1192,7 @@ export default function Main() {
                           >
                             <img
                               className="me-1"
-                              src={`/wp-content/reactpress/apps/catcherlegend/build/images/help.svg`}
+                              src={`/wp-content/reactpress/apps/catcherprostar/build/images/help.svg`}
                               alt="Help"
                             />
                             help
@@ -1302,7 +1302,7 @@ export default function Main() {
                           >
                             <img
                               className="me-1"
-                              src={`/wp-content/reactpress/apps/catcherlegend/build/images/help.svg`}
+                              src={`/wp-content/reactpress/apps/catcherprostar/build/images/help.svg`}
                               alt="Help"
                             />
                             help
