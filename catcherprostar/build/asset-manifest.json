@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/wp-content/reactpress/apps/catcherprostar/build/static/css/main.af0efccf.css",
-    "main.js": "/wp-content/reactpress/apps/catcherprostar/build/static/js/main.5a57243f.js",
+    "main.js": "/wp-content/reactpress/apps/catcherprostar/build/static/js/main.3278238d.js",
     "static/media/Hot Pink Snakeskin Art Spots.png": "/wp-content/reactpress/apps/catcherprostar/build/static/media/Hot Pink Snakeskin Art Spots.5d024125c1f223c7321f.png",
     "static/media/Pink Snakeskin Art Spots.png": "/wp-content/reactpress/apps/catcherprostar/build/static/media/Pink Snakeskin Art Spots.729afb2b28386d110305.png",
     "static/media/Teal Snakeskin Art Spots.png": "/wp-content/reactpress/apps/catcherprostar/build/static/media/Teal Snakeskin Art Spots.027269bef9d21274a9d2.png",
@@ -134,10 +134,10 @@
     "static/media/slick.woff": "/wp-content/reactpress/apps/catcherprostar/build/static/media/slick.295183786cd8a1389865.woff",
     "static/media/check-list-icon.svg": "/wp-content/reactpress/apps/catcherprostar/build/static/media/check-list-icon.de00f8427d14a7d63cef.svg",
     "main.af0efccf.css.map": "/wp-content/reactpress/apps/catcherprostar/build/static/css/main.af0efccf.css.map",
-    "main.5a57243f.js.map": "/wp-content/reactpress/apps/catcherprostar/build/static/js/main.5a57243f.js.map"
+    "main.3278238d.js.map": "/wp-content/reactpress/apps/catcherprostar/build/static/js/main.3278238d.js.map"
   },
   "entrypoints": [
     "static/css/main.af0efccf.css",
-    "static/js/main.5a57243f.js"
+    "static/js/main.3278238d.js"
   ]
 }

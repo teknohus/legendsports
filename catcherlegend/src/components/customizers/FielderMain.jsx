@@ -823,8 +823,8 @@ export default function Main() {
 
     return {
       "Glove Model": "Legend Edition",
-      "Glove Sport": "Fielder",
-      "Glove Type": "Infield",
+      "Glove Sport": "Baseball",
+      "Glove Type": "Catcher",
       "Price": price,
       ...enabledBaseOptions,
       ...enabledColorOptions,

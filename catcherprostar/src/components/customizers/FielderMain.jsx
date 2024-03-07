@@ -826,9 +826,9 @@ export default function Main() {
     const screenshot = captureScreenshot();
 
     return {
-      "Glove Model": "Legend Edition",
-      "Glove Sport": "Fielder",
-      "Glove Type": "Infield",
+      "Glove Model": "Pro Star Edition",
+      "Glove Sport": "Baseball",
+      "Glove Type": "Catcher",
       "Price": price,
       ...enabledBaseOptions,
       ...enabledColorOptions,
