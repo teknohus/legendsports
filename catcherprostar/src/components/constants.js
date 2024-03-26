@@ -500,6 +500,7 @@ export const imagePaths = {
 "Red Elephant Skin": redelephantskin ,
 "Rainbow": rainbow,
 "Black Mesh": blackmesh,
+"New Snake Skin": newsnakeskin,
 };
 
 export const colorOptions = {
@@ -528,7 +529,7 @@ export const colorOptions = {
   
   export const allColors = {"Black": "#1a1a1a", "Gray": "#84837E", "White": "#FFFFFF", "Blonde": "#FCD48F", "Yellow": "#EFD115", "Tan": "#E57E00", "Orange": "#FF6D1F", "Orange Tan": "#D3480F", "Oiled Chestnut": "#9B4E2B", "Brown": "#694E3B", "Red": "#D21E1E", "Maroon": "#943535", "Pink": "#F07693", "Purple": "#58357D", "Navy Blue": "#262740", "Royal Blue": "#2143BF", "Sky Blue": "#0BB4C7", "Forest Green": "#334F30", "Mint": "#65DDA3", "Light Gray": "#9D9D99", "Lime Green": "#29E600",}
   export const colorPalette = {"Black": "#1a1a1a", "Gray": "#84837E", "White": "#FFFFFF", "white": "#fefefe", "Blonde": "#FCD48F", "Yellow": "#EFD115", "Tan": "#E57E00", "Orange": "#FF6D1F", "Orange Tan": "#D3480F", "Oiled Chestnut": "#9B4E2B", "Brown": "#694E3B", "Red": "#D21E1E", "Maroon": "#943535", "Pink": "#F07693", "Purple": "#58357D", "Navy Blue": "#262740", "Royal Blue": "#2143BF", "Sky Blue": "#0BB4C7", "Forest Green": "#334F30", "Mint": "#65DDA3", "Light Gray": "#9D9D99", "Lime Green": "#29E600",}
-  export const texturePalette = {"Shiny Silver": silvershiny, "Shiny Gold": goldshiny , "Shiny Red": redshiny , "Shiny Blue": blueshiny, "Royal Blue Metallic": royalbluemetallic,  "Blue Pink Tie": bluepinktie , "Green Camo": greencamo , "Gray Camo": graycamo , "Red Camo": redcamo , "Green Gradient": greengradient, "Shiny Chameleon": shinychameleon, "Reptile Skin": reptileskin , "Aligator Skin": alligatorskin, "Elephant Skin": elephantskin, "Lime Green Paint Spots": limegreenpaintspots, "Teal Art Spots": tealartspots, "Sky Blue Art Spots": skyblueartspots, "Pink Art Spots": pinkartspots, "Black Snake": snakeblack , "Gray Snake": snakegray , "White Snake": snakewhite, "Red Snake": snakered, "Blue Snake": snakelblue , "Blonde Snake": snakeblonde , "Brown Snake": snakebrown , "Pink Snake": snakepink , "Purple Snake": snakepurple , "Tan Snake": snaketan , "Teal Snake": snaketeal , "Pink Snakeskin Art Spots": pinksnakeskinartspots, "Hot Pink Snakeskin Art Spots": hotpinksnakeskinartspots, "Teal Snakeskin Art Spots": tealsnakeskinartspots, "White Vintage": whitevintage, "Black Vintage": blackvintage, "Gray Vintage": grayvintage, "Mint Vintage": mintvintage, "Red Vintage": redvintage, "Cross Pattern": crosspattern , "Stripe Pattern": stripepattern, "Midnight City Edition": midnightcityedition, "Furred Cow Skin": furredskincow, "Inverted Elephant Skin": invertedelephaantskin, "Red Elephant Skin": redelephantskin, "White Ostrich": whiteostrich, }
+  export const texturePalette = {"Shiny Silver": silvershiny, "Shiny Gold": goldshiny , "Shiny Red": redshiny , "Shiny Blue": blueshiny, "Royal Blue Metallic": royalbluemetallic,  "Blue Pink Tie": bluepinktie , "Green Camo": greencamo , "Gray Camo": graycamo , "Red Camo": redcamo , "Green Gradient": greengradient, "Shiny Chameleon": shinychameleon, "Reptile Skin": reptileskin , "Aligator Skin": alligatorskin, "Elephant Skin": elephantskin, "Lime Green Paint Spots": limegreenpaintspots, "Teal Art Spots": tealartspots, "Sky Blue Art Spots": skyblueartspots, "Pink Art Spots": pinkartspots, "Black Snake": snakeblack , "Gray Snake": snakegray , "White Snake": snakewhite, "Red Snake": snakered, "Blue Snake": snakelblue , "Blonde Snake": snakeblonde , "Brown Snake": snakebrown , "Pink Snake": snakepink , "Purple Snake": snakepurple , "Tan Snake": snaketan , "Teal Snake": snaketeal , "Pink Snakeskin Art Spots": pinksnakeskinartspots, "Hot Pink Snakeskin Art Spots": hotpinksnakeskinartspots, "Teal Snakeskin Art Spots": tealsnakeskinartspots, "White Vintage": whitevintage, "Black Vintage": blackvintage, "Gray Vintage": grayvintage, "Mint Vintage": mintvintage, "Red Vintage": redvintage, "Cross Pattern": crosspattern , "Stripe Pattern": stripepattern, "Midnight City Edition": midnightcityedition, "Furred Cow Skin": furredskincow, "Inverted Elephant Skin": invertedelephaantskin, "Red Elephant Skin": redelephantskin, "White Ostrich": whiteostrich, "New Snake Skin": newsnakeskin,}
 
   export const meshOptions = {
   binding: {
@@ -544,12 +545,12 @@ export const colorOptions = {
   "Finger Hood": {
     colors: {"Black": "#1a1a1a", "White": "#FFFFFF", "Blonde": "#FCD48F", "Tan": "#E57E00", "Brown": "#694E3B",},
     textures: {},
-    exclusive_textures: {"Furred Cow Skin": furredskincow, "Inverted Elephant Skin": invertedelephaantskin, "Red Elephant Skin": redelephantskin, "White Ostrich": whiteostrich, },
+    exclusive_textures: null,
   },
   "Finger Pad": {
     colors: {"Black": "#1a1a1a", "White": "#FFFFFF", "Blonde": "#FCD48F", "Tan": "#E57E00", "Brown": "#694E3B",},
     textures: {},
-    exclusive_textures: {"Furred Cow Skin": furredskincow, "Inverted Elephant Skin": invertedelephaantskin, "Red Elephant Skin": redelephantskin, "White Ostrich": whiteostrich, },
+    exclusive_textures: null,
   },
   inlay: {
     colors: {},
@@ -637,7 +638,7 @@ export const colorOptions = {
     exclusive_textures: null,
   },
   "Triangular Patch": {
-    colors: {"Black": "#1a1a1a", "Gray": "#84837E", "White": "#FFFFFF", "Blonde": "#FCD48F", "Yellow": "#EFD115", "Tan": "#E57E00", "Orange": "#FF6D1F", "Brown": "#694E3B", "Red": "#D21E1E", "Maroon": "#943535", "Pink": "#F07693", "Purple": "#58357D", "Navy Blue": "#262740", "Royal Blue": "#2143BF", "Turquoise": "#06C7DE", "Forest Green": "#334F30", "Seatle Green": "#508E88" , "Electric Green": "#96EB6B", "Light Gray": "#9D9D99", "Lime Green": "#29E600",},
+    colors: {"Black": "#1a1a1a", "White": "#FFFFFF", "Blonde": "#FCD48F", "Tan": "#E57E00", "Brown": "#694E3B"},
     textures: {},
     exclusive_textures: null,
   }
@@ -820,7 +821,7 @@ export const colorData = {
 
   export const personlizationOptions = {
     "Thumb Logo/Graphic" : "None",
-    "Thumb Graphic": "Cross",
+    "Thumb Graphic": "Clover",
     "Premium Graphic": "Hot Dog", 
     "Jumbo Number": "",
     "Jumbo Number Color": "#1a1a1a",
@@ -830,7 +831,7 @@ export const colorData = {
     "Custom Plate Number Color" : "#1a1a1a",
     "Palm Stamp": "None",
     "Palm Custom Number": "",
-    "Palm Graphic" : "Baseball",
+    "Palm Graphic" : "Clover",
     "Thumb Text" : "Thumb Text",
     "Thumb Text Text" : "",
     "Thumb Text Color" : "#1a1a1a",

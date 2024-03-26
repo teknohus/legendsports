@@ -103,7 +103,7 @@ const BackFlag = ({ nodes, materials, position, rotation, scale, personalize }) 
 };
 
 export function New({rot, base, colors, personalize, personalizeConfig, xPosition, yPosition, zPosition, xRotation, yRotation, zRotation, textures }) {
-  const { nodes, materials } = useGLTF("/wp-content/reactpress/apps/catcherprostar/build/Model/CatcherLatest.glb")
+  const { nodes, materials } = useGLTF("/wp-content/reactpress/apps/catcherprostar/build/Model/CatcherWristFixed.glb")
 
   const ref = useRef();
   const pos0 = 0;
@@ -245,17 +245,29 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
         </Text>
       )}
       {(personalize["Flag"] !== null && personalize["Flag"] !== "Other" && personalize["Flag"] !== "None") && (
-        <BackFlag nodes={nodes} materials={materials} position={[0.093, 0.241, -0.061]} rotation={[Math.PI*-0.4375, Math.PI*-0.46875, Math.PI*0.9375]} scale={[0.09, 0.015, 0.03]} personalize={personalize} />
+        <BackFlag nodes={nodes} materials={materials} position={[0.093, 0.241, -0.035]} rotation={[Math.PI*-0.4375, Math.PI*-0.46875, Math.PI*0.9375]} scale={[0.09, 0.015, 0.03]} personalize={personalize} />
       )}
 
       
       <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
         {base.finger_hood_or_pad === "Pad" && (
-          <mesh geometry={nodes.pasted__polySurface1.geometry} material-color={colors["Finger Pad"]} material={materials.hood} />
+          <>
+            {textures["Finger Pad"] != null ? (
+              <MeshWithTexture geometry={nodes.pasted__polySurface1.geometry} material-color={colors["Finger Pad"]} material={materials.hood} texture={textures["Finger Pad"]} tsize={0.4}/>
+            ):(
+              <mesh geometry={nodes.pasted__polySurface1.geometry} material-color={colors["Finger Pad"]} material={materials.hood} />
+            )}
+          </>
         )}
 
         {base.finger_hood_or_pad === "Hood" && (
-          <mesh geometry={nodes.pasted__polySurface2.geometry} material-color={colors["Finger Hood"]} material={materials.pad} />
+          <>
+            {textures["Finger Hood"] != null ? (
+              <MeshWithTexture geometry={nodes.pasted__polySurface2.geometry} material-color={colors["Finger Hood"]} material={materials.pad} texture={textures["Finger Hood"]} tsize={1}/>
+            ):(
+              <mesh geometry={nodes.pasted__polySurface2.geometry} material-color={colors["Finger Hood"]} material={materials.pad} />
+            )}
+          </>
         )}
 
         {/*Wrist Guard*/}
@@ -296,11 +308,11 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
         {/*Circle Logo*/}
         {base.wrist_logo === "Circle Patch" && (
           <>
-            <mesh geometry={nodes.logo_backup.geometry} material-color={colors["Logo"]} material={materials.pasted__logo_without_outline_fr} position={[0.851, 2.603, 2.981]} rotation={[-0.058, 0.045, -0.048]} scale={1.235} />
+            <mesh geometry={nodes.logo_backup.geometry} material-color={colors["Logo"]} material={materials.pasted__logo_without_outline_fr} position={[0.851, 2.603, 3.081]} rotation={[-0.058, 0.045, -0.048]} scale={1.235} />
             {/*Logo Back*/}
-            <mesh geometry={nodes.polySurface110.geometry} material-color={colors.wristPlate} material={materials.blinn16} />
+            <mesh geometry={nodes.polySurface110.geometry} material-color={colors.wristPlate} position={[0, 0, 0.1]} material={materials.blinn16} />
             {/*Logo Stitches*/}
-            <mesh geometry={nodes.MASH16_ReproMesh.geometry} material-color={colors.Stitches} material={materials.blinn17} />
+            <mesh geometry={nodes.MASH16_ReproMesh.geometry} material-color={colors.Stitches} position={[0, 0, 0.1]} material={materials.blinn17} />
             {/*DK*/}
             <mesh geometry={nodes.pCylinder29.geometry} material-color={"#fefefe"} material={materials.lambert1} />
           </>
@@ -310,12 +322,12 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
         {/*Square Logo*/}
         {base.wrist_logo === "Square Patch" && (
           <>
-            <mesh geometry={nodes.logo_backup1.geometry} material-color={colors["Logo"]} material={materials.pasted__logo_without_outline_fr} position={[0.486, 1.025, -1.894]} rotation={[-0.058, 0.045, -0.048]} scale={0.921} />
-            <mesh geometry={nodes.polySurface111.geometry} material-color={colors["Square Patch"]} material={materials.blinn13} position={[-0.64, -3.843, -16.009]} rotation={[-2.256, 0.252, -0.051]} scale={[3.666, 2.288, 2.055]} />
-            <mesh geometry={nodes.polySurface113.geometry} material-color={colors["Patch Inner Lines"]} material={matOuterLines} position={[-0.64, -3.843, -16.009]} rotation={[-2.256, 0.252, -0.051]} scale={[3.666, 2.288, 2.055]} />
-            <mesh geometry={nodes.polySurface114.geometry} material-color={colors["Patch Inner Lines"]} material={matOuterLines} position={[-0.64, -3.843, -16.009]} rotation={[-2.256, 0.252, -0.051]} scale={[3.666, 2.288, 2.055]} />
-            <mesh geometry={nodes.polySurface112.geometry} material-color={colors["Patch Outer Lines"]} material={matInnerLines} position={[-0.64, -3.843, -16.009]} rotation={[-2.256, 0.252, -0.051]} scale={[3.666, 2.288, 2.055]} />
-            <mesh geometry={nodes.polySurface115.geometry} material-color={colors["Patch Outer Lines"]} material={matInnerLines} position={[-0.64, -3.843, -16.009]} rotation={[-2.256, 0.252, -0.051]} scale={[3.666, 2.288, 2.055]} />
+            <mesh geometry={nodes.logo_backup1.geometry} material-color={colors["Logo"]} material={materials.pasted__logo_without_outline_fr} position={[0.486, 1.025, -1.794]} rotation={[-0.058, 0.045, -0.048]} scale={0.921} />
+            <mesh geometry={nodes.polySurface111.geometry} material-color={colors["Square Patch"]} material={materials.blinn13} position={[-0.64, -3.843, -15.909]} rotation={[-2.256, 0.252, -0.051]} scale={[3.666, 2.288, 2.055]} />
+            <mesh geometry={nodes.polySurface113.geometry} material-color={colors["Patch Inner Lines"]} material={matOuterLines} position={[-0.64, -3.843, -15.909]} rotation={[-2.256, 0.252, -0.051]} scale={[3.666, 2.288, 2.055]} />
+            <mesh geometry={nodes.polySurface114.geometry} material-color={colors["Patch Inner Lines"]} material={matOuterLines} position={[-0.64, -3.843, -15.909]} rotation={[-2.256, 0.252, -0.051]} scale={[3.666, 2.288, 2.055]} />
+            <mesh geometry={nodes.polySurface112.geometry} material-color={colors["Patch Outer Lines"]} material={matInnerLines} position={[-0.64, -3.843, -15.909]} rotation={[-2.256, 0.252, -0.051]} scale={[3.666, 2.288, 2.055]} />
+            <mesh geometry={nodes.polySurface115.geometry} material-color={colors["Patch Outer Lines"]} material={matInnerLines} position={[-0.64, -3.843, -15.909]} rotation={[-2.256, 0.252, -0.051]} scale={[3.666, 2.288, 2.055]} />
           </>
         )}
       </group>
@@ -345,8 +357,11 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
 
       <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
         {/*Palm*/}
-        {textures.palm }
-        <mesh geometry={nodes.polySurface19.geometry} material-color={colors.palm} material={materials.palm} />
+        {textures.palm != null ? (
+          <MeshWithTexture geometry={nodes.polySurface19.geometry} material-color={colors.palm} material={materials.palm_1} texture={textures.palm} tsize={1}/>
+        ):(
+          <mesh geometry={nodes.polySurface19.geometry} material-color={colors.palm} material={materials.palm_1} />
+        )}
         
         {/*Leather1*/}
         {textures.leather1 != null ? (
@@ -362,17 +377,17 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
       </group>
       <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
         {/*Wrist*/}
-        {/* {base.inlay !== null ? (
-            <MeshWithTexture geometry={nodes.polySurface108.geometry} material-color={colors.wrist} material={materials.Wrist} texture={blackmesh} tsize={2}/>
+        {base.inlay !== null ? (
+            <MeshWithTexture geometry={nodes.polySurface9004.geometry} material-color={colors.wrist} material={materials.Wrist} position={[-36.984, -0.046, 0]} texture={blackmesh} tsize={2}/>
         ):(
           <>
           {textures.wrist != null ? (
-            <MeshWithTexture geometry={nodes.polySurface108.geometry} material-color={colors.wrist} material={materials.Wrist} texture={textures.wrist} tsize={1} />
+            <MeshWithTexture geometry={nodes.polySurface9004.geometry} material-color={colors.wrist} material={materials.Wrist} position={[-36.984, -0.046, 0]} texture={textures.wrist} tsize={3} />
           ) : (
-            <mesh geometry={nodes.polySurface108.geometry} material-color={colors.wrist} material={materials.Wrist} />
+            <mesh geometry={nodes.polySurface9004.geometry} material-color={colors.wrist} material={materials.Wrist} position={[-36.984, -0.046, 0]} />
           )}
           </>
-        )} */}
+        )}
         
         {/*leather1*/}
         {base.inlay === null ? (
@@ -474,4 +489,4 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
   )
 }
 
-useGLTF.preload("/wp-content/reactpress/apps/catcherprostar/build/Model/CatcherLatest.glb")
+useGLTF.preload("/wp-content/reactpress/apps/catcherprostar/build/Model/CatcherWristFixed.glb")

@@ -10,12 +10,16 @@ function usePricing(baseConfig, personalizeConfig) {
   
   useEffect(() => {
     const priceAffectingOptions = {
+      logoStyle: baseConfig.wrist_logo,  
       wristGuard: baseConfig["Wrist Guard"],
       thumb: personalizeConfig["Thumb Logo/Graphic"]
     }
 
     let newPrice = 150;
     
+    if(priceAffectingOptions.logoStyle === "Embriodered Flag (+$7)") {
+      newPrice += 7; 
+    }
     if(priceAffectingOptions.wristGuard === "Wrist Guard (+$10)") {
        newPrice += 10; 
     }  
@@ -551,7 +555,6 @@ export default function Main() {
       }));
     }
     if(option === 'wrist_logo' && value === "Circle Patch") {
-      console.log("here")
       setColorSteps(prevSteps => ({
         ...prevSteps,
         wristPlate: true
@@ -575,6 +578,39 @@ export default function Main() {
         "Square Patch": false,
         "Patch Inner Lines": false,
         "Patch Outer Lines": false
+      }));
+    }
+    if(option === 'wrist_logo' && value === "Triangular Patch") {
+      setColorSteps(prevSteps => ({
+        ...prevSteps,
+        "Triangular Patch": true,
+      }));
+    } else if(option === 'wrist_logo' && value !== "Triangular Patch") {
+      setColorSteps(prevSteps => ({
+        ...prevSteps,  
+        "Triangular Patch": false,
+      }));
+    }
+    if(option === 'wrist_logo' && value === "Thick Outline") {
+      setColorSteps(prevSteps => ({
+        ...prevSteps,
+        "Logo Border": true,
+      }));
+    } else if(option === 'wrist_logo' && value !== "Thick Outline") {
+      setColorSteps(prevSteps => ({
+        ...prevSteps,  
+        "Logo Border": false,
+      }));
+    }
+    if(option === 'wrist_logo' && value === 'Embriodered Flag (+$7)') {
+      setBaseSteps(prevSteps => ({
+        ...prevSteps,
+        embroidered_flag: true
+      }));
+    } else if(option === 'wrist_logo' && value !== 'Embriodered Flag (+$7)') {
+      setBaseSteps(prevSteps => ({
+        ...prevSteps,  
+        embroidered_flag: false
       }));
     }
 
@@ -1090,7 +1126,7 @@ export default function Main() {
                           >
                             <img
                               className="me-1"
-                              src={`/wp-content/reactpress/apps/catcherlegend/build/images/mandatory.svg`}
+                              src={`/wp-content/reactpress/apps/catcherminimitt/build/images/mandatory.svg`}
                               alt="Help"
                             />
                             Required
@@ -1187,7 +1223,7 @@ export default function Main() {
                           >
                             <img
                               className="me-1"
-                              src={`/wp-content/reactpress/apps/catcherlegend/build/images/mandatory.svg`}
+                              src={`/wp-content/reactpress/apps/catcherminimitt/build/images/mandatory.svg`}
                               alt="Help"
                             />
                             Required
@@ -1299,7 +1335,7 @@ export default function Main() {
                           >
                             <img
                               className="me-1"
-                              src={`/wp-content/reactpress/apps/catcherlegend/build/images/mandatory.svg`}
+                              src={`/wp-content/reactpress/apps/catcherminimitt/build/images/mandatory.svg`}
                               alt="Help"
                             />
                             Required

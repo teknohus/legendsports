@@ -25,6 +25,7 @@ import snakered from '../assets/textures/snake red/snake skin red.png'
 import snaketan from '../assets/textures/snake tan/snake skin tan.png'
 import snaketeal from '../assets/textures/snake teal/snake skin teal.png'
 import snakewhite from '../assets/textures/snake white/snake skin white.png'
+import newsnakeskin from '../assets/textures/New Snake Skin.png'
 import midnightcityedition from '../assets/textures/Midnight City Edition.png'
 import greengradient from '../assets/textures/Green Gradient.png';
 import shinychameleon from '../assets/textures/Shiny Chameleon.png';
@@ -67,21 +68,21 @@ import logoMexico from '../assets/logo_flag/LogoMexico.png'
 import logoPR from '../assets/logo_flag/LogoPR.png'
 import logoVenezuela from '../assets/logo_flag/LogoVenezuela.jpg'
 import logoNetherland from '../assets/logo_flag/LogoNetherlands.jpg'
-import clover from '../assets/Graphics/clover.png'
-import crown from '../assets/Graphics/Crown.png'
-import baseballbats from '../assets/Graphics/Baseball Bats.png'
-import cross from '../assets/Graphics/cross.png'
 import cross1 from '../assets/Graphics/cross1.png'
-import star_david from '../assets/Graphics/star_david.png'
-import reverse_k from '../assets/Graphics/reverse-k.png'
-import ribbon from '../assets/Graphics/ribbon.png'
-import heart from '../assets/Graphics/heart.png'
-import paw from '../assets/Graphics/paw.png'
-import maple from '../assets/Graphics/maple.png'
-import star from '../assets/Graphics/star.png'
-import light_bolt from '../assets/Graphics/lightning.png'
-import peace from '../assets/Graphics/peace.png'
-import shaka from '../assets/Graphics/shaka.png'
+// import clover from '../assets/Graphics/clover.png'
+// import crown from '../assets/Graphics/Crown.png'
+// import baseballbats from '../assets/Graphics/Baseball Bats.png'
+// import cross from '../assets/Graphics/cross.png'
+// import star_david from '../assets/Graphics/star_david.png'
+// import reverse_k from '../assets/Graphics/reverse-k.png'
+// import ribbon from '../assets/Graphics/ribbon.png'
+// import heart from '../assets/Graphics/heart.png'
+// import paw from '../assets/Graphics/paw.png'
+// import maple from '../assets/Graphics/maple.png'
+// import star from '../assets/Graphics/star.png'
+// import light_bolt from '../assets/Graphics/lightning.png'
+// import peace from '../assets/Graphics/peace.png'
+// import shaka from '../assets/Graphics/shaka.png'
 import cannon from '../assets/Graphics/cannon.png'
 import champion from '../assets/Graphics/champion.png'
 import greenclover from '../assets/Graphics/green_clover.png'
@@ -132,20 +133,20 @@ import puerto_rico_stamp from '../assets/stamp_flag/puerto-rico.png'
 import south_korea_stamp from '../assets/stamp_flag/south-korea.png'
 import texas_stamp from '../assets/stamp_flag/texas.png'
 import venezuela_stamp from '../assets/stamp_flag/venezuela.png'
-import stamp_ball from "../assets/palm_stamp/ball.png"
-import stamp_bolt from "../assets/palm_stamp/bolt.png"
-import stamp_clover from "../assets/palm_stamp/clover.png"
-import stamp_field from "../assets/palm_stamp/field.png"
-import stamp_heart from "../assets/palm_stamp/heart.png"
-import stamp_mapple from "../assets/palm_stamp/maple-leaf.png"
-import stamp_paw from "../assets/palm_stamp/paw.png"
-import stamp_peace from "../assets/palm_stamp/peace.png"
-import stamp_pitcher from "../assets/palm_stamp/pitcher.png"
-import stamp_reverse from "../assets/palm_stamp/reverse-k.png"
-import stamp_shaka from "../assets/palm_stamp/shakka.png"
-import stamp_smile from "../assets/palm_stamp/smile.png"
-import stamp_star from "../assets/palm_stamp/star.png"
-import stamp_target from "../assets/palm_stamp/target.png"
+// import stamp_ball from "../assets/palm_stamp/ball.png"
+// import stamp_bolt from "../assets/palm_stamp/bolt.png"
+// import stamp_clover from "../assets/palm_stamp/clover.png"
+// import stamp_field from "../assets/palm_stamp/field.png"
+// import stamp_heart from "../assets/palm_stamp/heart.png"
+// import stamp_mapple from "../assets/palm_stamp/maple-leaf.png"
+// import stamp_paw from "../assets/palm_stamp/paw.png"
+// import stamp_peace from "../assets/palm_stamp/peace.png"
+// import stamp_pitcher from "../assets/palm_stamp/pitcher.png"
+// import stamp_reverse from "../assets/palm_stamp/reverse-k.png"
+// import stamp_shaka from "../assets/palm_stamp/shakka.png"
+// import stamp_smile from "../assets/palm_stamp/smile.png"
+// import stamp_star from "../assets/palm_stamp/star.png"
+// import stamp_target from "../assets/palm_stamp/target.png"
 import flag_alabama from "../assets/flags/alabama.png"
 import flag_alaska from "../assets/flags/alaska.png"        
 import flag_arizona from "../assets/flags/arizona.png"      
@@ -236,6 +237,17 @@ import Outlinefont from "../assets/fonts/Milestone Outline.otf"
 import Bold from "../assets/fonts/HergonGrotesk-Medium.ttf"
 import legendLogo from "../assets/palm_stamp/legendLogo.png"
 import legendHorse from "../assets/palm_stamp/LegendHorse.png"
+import Clover from "../assets/new_graphics/Clover.png";
+import Diamond from "../assets/new_graphics/Diamond.png";
+import Dollar from "../assets/new_graphics/Dollar.png";
+import Fire from "../assets/new_graphics/Fire.png";
+import Heart from "../assets/new_graphics/Heart.png";
+import HorseShoe from "../assets/new_graphics/Horse Shoe.png";
+import Horse from "../assets/new_graphics/Horse.png";
+import Paw from "../assets/new_graphics/Paw.png";
+import Star from "../assets/new_graphics/Star.png";
+import Target from "../assets/new_graphics/Target.png";
+
 
 export const LegendLogo = legendLogo
 export const LegendHorse = legendHorse
@@ -254,22 +266,35 @@ export const flags = {
   "Netherlands": Netherlands,
 }
 
+// export const thumb_graphics = {
+//   "4 Leaf Clover" : clover,
+//   "Cross" : cross,
+//   "Star of David" : star_david,
+//   "Reverse K" : reverse_k,
+//   "Ribbon" : ribbon,
+//   "Heart" : heart,
+//   "Paw Print" : paw,
+//   "Maple Leaf" : maple,
+//   "Star" : star,
+//   "Lightning Bolt" : light_bolt,
+//   "Peace" : peace,
+//   "Shaka" : shaka,
+//   "Crown" : crown,
+//   "Baseball Bats": baseballbats,
+// }
+
 export const thumb_graphics = {
-  "4 Leaf Clover" : clover,
-  "Cross" : cross,
-  "Star of David" : star_david,
-  "Reverse K" : reverse_k,
-  "Ribbon" : ribbon,
-  "Heart" : heart,
-  "Paw Print" : paw,
-  "Maple Leaf" : maple,
-  "Star" : star,
-  "Lightning Bolt" : light_bolt,
-  "Peace" : peace,
-  "Shaka" : shaka,
-  "Crown" : crown,
-  "Baseball Bats": baseballbats,
-}
+  "Clover": Clover,
+  "Diamond": Diamond,
+  "Dollar": Dollar,
+  "Fire": Fire,
+  "Heart": Heart,
+  "Horse Shoe": HorseShoe,
+  "Horse": Horse,
+  "Paw": Paw,
+  "Star": Star,
+  "Target": Target,
+};
 
 export const thumb_premium_graphics = {
   "Hot Dog" : hotdog,
@@ -329,21 +354,33 @@ export const stamp_flags = {
 }
 
 export const stamp_palm = {
- "Baseball" : stamp_ball, 
- "Lightning Bolt" : stamp_bolt, 
- "Clover" : stamp_clover, 
- "Field" : stamp_field, 
- "Heart" : stamp_heart, 
- "Maple Leaf" : stamp_mapple,
- "Paw" : stamp_paw, 
- "Peace" : stamp_peace, 
- "Pitcher" : stamp_pitcher, 
- "Reverse K" : stamp_reverse, 
- "Shaka" : stamp_shaka, 
- "Smiley Face" : stamp_smile, 
- "Star" : stamp_star, 
- "Target" : stamp_target,
+  "Clover": Clover,
+  "Diamond": Diamond,
+  "Dollar": Dollar,
+  "Fire": Fire,
+  "Heart": Heart,
+  "Horse Shoe": HorseShoe,
+  "Horse": Horse,
+  "Paw": Paw,
+  "Star": Star,
+  "Target": Target,
 }
+// export const stamp_palm = {
+//  "Baseball" : stamp_ball, 
+//  "Lightning Bolt" : stamp_bolt, 
+//  "Clover" : stamp_clover, 
+//  "Field" : stamp_field, 
+//  "Heart" : stamp_heart, 
+//  "Maple Leaf" : stamp_mapple,
+//  "Paw" : stamp_paw, 
+//  "Peace" : stamp_peace, 
+//  "Pitcher" : stamp_pitcher, 
+//  "Reverse K" : stamp_reverse, 
+//  "Shaka" : stamp_shaka, 
+//  "Smiley Face" : stamp_smile, 
+//  "Star" : stamp_star, 
+//  "Target" : stamp_target,
+// }
 
 export const back_flags = {
   "Alabama" : flag_alabama,      
@@ -463,6 +500,7 @@ export const imagePaths = {
 "Red Elephant Skin": redelephantskin ,
 "Rainbow": rainbow,
 "Black Mesh": blackmesh,
+"New Snake Skin": newsnakeskin,
 };
 
 export const colorOptions = {
@@ -491,7 +529,7 @@ export const colorOptions = {
   
   export const allColors = {"Black": "#1a1a1a", "Gray": "#84837E", "White": "#FFFFFF", "Blonde": "#FCD48F", "Yellow": "#EFD115", "Tan": "#E57E00", "Orange": "#FF6D1F", "Orange Tan": "#D3480F", "Oiled Chestnut": "#9B4E2B", "Brown": "#694E3B", "Red": "#D21E1E", "Maroon": "#943535", "Pink": "#F07693", "Purple": "#58357D", "Navy Blue": "#262740", "Royal Blue": "#2143BF", "Sky Blue": "#0BB4C7", "Forest Green": "#334F30", "Mint": "#65DDA3", "Light Gray": "#9D9D99", "Lime Green": "#29E600",}
   export const colorPalette = {"Black": "#1a1a1a", "Gray": "#84837E", "White": "#FFFFFF", "white": "#fefefe", "Blonde": "#FCD48F", "Yellow": "#EFD115", "Tan": "#E57E00", "Orange": "#FF6D1F", "Orange Tan": "#D3480F", "Oiled Chestnut": "#9B4E2B", "Brown": "#694E3B", "Red": "#D21E1E", "Maroon": "#943535", "Pink": "#F07693", "Purple": "#58357D", "Navy Blue": "#262740", "Royal Blue": "#2143BF", "Sky Blue": "#0BB4C7", "Forest Green": "#334F30", "Mint": "#65DDA3", "Light Gray": "#9D9D99", "Lime Green": "#29E600",}
-  export const texturePalette = {"Shiny Silver": silvershiny, "Shiny Gold": goldshiny , "Shiny Red": redshiny , "Shiny Blue": blueshiny, "Royal Blue Metallic": royalbluemetallic,  "Blue Pink Tie": bluepinktie , "Green Camo": greencamo , "Gray Camo": graycamo , "Red Camo": redcamo , "Green Gradient": greengradient, "Shiny Chameleon": shinychameleon, "Reptile Skin": reptileskin , "Aligator Skin": alligatorskin, "Elephant Skin": elephantskin, "Lime Green Paint Spots": limegreenpaintspots, "Teal Art Spots": tealartspots, "Sky Blue Art Spots": skyblueartspots, "Pink Art Spots": pinkartspots, "Black Snake": snakeblack , "Gray Snake": snakegray , "White Snake": snakewhite, "Red Snake": snakered, "Blue Snake": snakelblue , "Blonde Snake": snakeblonde , "Brown Snake": snakebrown , "Pink Snake": snakepink , "Purple Snake": snakepurple , "Tan Snake": snaketan , "Teal Snake": snaketeal , "Pink Snakeskin Art Spots": pinksnakeskinartspots, "Hot Pink Snakeskin Art Spots": hotpinksnakeskinartspots, "Teal Snakeskin Art Spots": tealsnakeskinartspots, "White Vintage": whitevintage, "Black Vintage": blackvintage, "Gray Vintage": grayvintage, "Mint Vintage": mintvintage, "Red Vintage": redvintage, "Cross Pattern": crosspattern , "Stripe Pattern": stripepattern, "Midnight City Edition": midnightcityedition, "Furred Cow Skin": furredskincow, "Inverted Elephant Skin": invertedelephaantskin, "Red Elephant Skin": redelephantskin, "White Ostrich": whiteostrich, }
+  export const texturePalette = {"Shiny Silver": silvershiny, "Shiny Gold": goldshiny , "Shiny Red": redshiny , "Shiny Blue": blueshiny, "Royal Blue Metallic": royalbluemetallic,  "Blue Pink Tie": bluepinktie , "Green Camo": greencamo , "Gray Camo": graycamo , "Red Camo": redcamo , "Green Gradient": greengradient, "Shiny Chameleon": shinychameleon, "Reptile Skin": reptileskin , "Aligator Skin": alligatorskin, "Elephant Skin": elephantskin, "Lime Green Paint Spots": limegreenpaintspots, "Teal Art Spots": tealartspots, "Sky Blue Art Spots": skyblueartspots, "Pink Art Spots": pinkartspots, "Black Snake": snakeblack , "Gray Snake": snakegray , "White Snake": snakewhite, "Red Snake": snakered, "Blue Snake": snakelblue , "Blonde Snake": snakeblonde , "Brown Snake": snakebrown , "Pink Snake": snakepink , "Purple Snake": snakepurple , "Tan Snake": snaketan , "Teal Snake": snaketeal , "Pink Snakeskin Art Spots": pinksnakeskinartspots, "Hot Pink Snakeskin Art Spots": hotpinksnakeskinartspots, "Teal Snakeskin Art Spots": tealsnakeskinartspots, "White Vintage": whitevintage, "Black Vintage": blackvintage, "Gray Vintage": grayvintage, "Mint Vintage": mintvintage, "Red Vintage": redvintage, "Cross Pattern": crosspattern , "Stripe Pattern": stripepattern, "Midnight City Edition": midnightcityedition, "Furred Cow Skin": furredskincow, "Inverted Elephant Skin": invertedelephaantskin, "Red Elephant Skin": redelephantskin, "White Ostrich": whiteostrich, "New Snake Skin": newsnakeskin,}
 
   export const meshOptions = {
   binding: {
@@ -530,6 +568,11 @@ export const colorOptions = {
     exclusive_textures: {"Furred Cow Skin": furredskincow, "Inverted Elephant Skin": invertedelephaantskin, "Red Elephant Skin": redelephantskin, "White Ostrich": whiteostrich, },
   },
   "Logo": {
+    colors: {"Black": "#1a1a1a", "Gray": "#84837E", "White": "#FFFFFF", "Blonde": "#FCD48F", "Yellow": "#EFD115", "Tan": "#E57E00", "Orange": "#FF6D1F", "Brown": "#694E3B", "Red": "#D21E1E", "Maroon": "#943535", "Pink": "#F07693", "Purple": "#58357D", "Navy Blue": "#262740", "Royal Blue": "#2143BF", "Turquoise": "#06C7DE", "Forest Green": "#334F30", "Seatle Green": "#508E88" , "Electric Green": "#96EB6B", "Light Gray": "#9D9D99", "Lime Green": "#29E600",},
+    textures: {},
+    exclusive_textures: null,
+  },
+  "Logo Border": {
     colors: {"Black": "#1a1a1a", "Gray": "#84837E", "White": "#FFFFFF", "Blonde": "#FCD48F", "Yellow": "#EFD115", "Tan": "#E57E00", "Orange": "#FF6D1F", "Brown": "#694E3B", "Red": "#D21E1E", "Maroon": "#943535", "Pink": "#F07693", "Purple": "#58357D", "Navy Blue": "#262740", "Royal Blue": "#2143BF", "Turquoise": "#06C7DE", "Forest Green": "#334F30", "Seatle Green": "#508E88" , "Electric Green": "#96EB6B", "Light Gray": "#9D9D99", "Lime Green": "#29E600",},
     textures: {},
     exclusive_textures: null,
@@ -593,36 +636,44 @@ export const colorOptions = {
     colors: {"Black": "#1a1a1a", "Gray": "#84837E", "White": "#FFFFFF", "Blonde": "#FCD48F", "Yellow": "#EFD115", "Tan": "#E57E00", "Orange": "#FF6D1F", "Brown": "#694E3B", "Red": "#D21E1E", "Maroon": "#943535", "Pink": "#F07693", "Purple": "#58357D", "Navy Blue": "#262740", "Royal Blue": "#2143BF", "Turquoise": "#06C7DE", "Forest Green": "#334F30", "Seatle Green": "#508E88" , "Electric Green": "#96EB6B", "Light Gray": "#9D9D99", "Lime Green": "#29E600",},
     textures: {},
     exclusive_textures: null,
+  },
+  "Triangular Patch": {
+    colors: {"Black": "#1a1a1a", "Gray": "#84837E", "White": "#FFFFFF", "Blonde": "#FCD48F", "Yellow": "#EFD115", "Tan": "#E57E00", "Orange": "#FF6D1F", "Brown": "#694E3B", "Red": "#D21E1E", "Maroon": "#943535", "Pink": "#F07693", "Purple": "#58357D", "Navy Blue": "#262740", "Royal Blue": "#2143BF", "Turquoise": "#06C7DE", "Forest Green": "#334F30", "Seatle Green": "#508E88" , "Electric Green": "#96EB6B", "Light Gray": "#9D9D99", "Lime Green": "#29E600",},
+    textures: {},
+    exclusive_textures: null,
   }
 }
 
 export const colorData = {
-    binding: "#fefefe",
-    "Crown": "#fefefe",
-    "Finger Hood": "#fefefe",
-    "Finger Pad": "#fefefe",
-    inlay: "#fefefe",
-    laces: "#fefefe",
-    leather1: "#fefefe",
-    "Logo": "#fefefe", //Webbing Logo
-    logo_outline_color: "#DCDCDC",
-    palm: "#fefefe",
-    Stitches: "#fefefe",
-    web: "#fefefe",
-    wrist: "#fefefe",
-    wristPlate: "#fefefe",
-    "Wrist Guard": "#fefefe",
-    finger_hood: "#fefefe",
-    finger_pad: "#fefefe",
-    "Square Patch": "#fefefe",
-    "Patch Inner Lines": "#fefefe",
-    "Patch Outer Lines": "#fefefe",
-    // logo4_replace: "#808080", //Palm Logo
-    // slice: "#f8f8f8", //Extension of Palm to Back
-    // blackPiece: "#f0f0f0", //Back Hole Cover
-    // logo_02: "#C0C0C0", //Wrist Logo
-    // logo_03: "#e0e0e0", //Side Logo
-  };
+  binding: "#fefefe",
+  "Crown": "#fefefe",
+  "Finger Hood": "#fefefe",
+  "Finger Pad": "#fefefe",
+  inlay: "#fefefe",
+  laces: "#fefefe",
+  leather1: "#fefefe",
+  "Logo": "#fefefe", //Webbing Logo
+  "Logo Border": "#fefefe",
+  logo_outline_color: "#DCDCDC",
+  palm: "#fefefe",
+  Stitches: "#fefefe",
+  web: "#fefefe",
+  wrist: "#fefefe",
+  wristPlate: "#fefefe",
+  "Wrist Guard": "#fefefe",
+  finger_hood: "#fefefe",
+  finger_pad: "#fefefe",
+  "Square Patch": "#fefefe",
+  "Patch Inner Lines": "#fefefe",
+  "Patch Outer Lines": "#fefefe",
+  "Triangular Patch": "#fefefe",
+  // logo4_replace: "#808080", //Palm Logo
+  // slice: "#f8f8f8", //Extension of Palm to Back
+  // blackPiece: "#f0f0f0", //Back Hole Cover
+  // logo_02: "#C0C0C0", //Wrist Logo
+  // logo_03: "#e0e0e0", //Side Logo
+};
+
 
   export const textureData = {
     binding: null,
@@ -632,7 +683,8 @@ export const colorData = {
     inlay: null,
     laces: null,
     leather1: null,
-    "Logo": null, 
+    "Logo": null,
+    "Logo Border": null, 
     logo_outline_color: null,
     palm: null,
     Stitches: null,
@@ -642,6 +694,7 @@ export const colorData = {
     "Wrist Guard": null,
     finger_hood: null,
     finger_pad: null,
+    "Triangular Patch": null,
   };
 
   export const colorStepsConfig= {
@@ -653,6 +706,7 @@ export const colorData = {
     laces: true,
     leather1: true,
     "Logo": true,
+    "Logo Border": false,
     logo_outline_color: false, 
     palm: true,
     Stitches: true,
@@ -665,6 +719,7 @@ export const colorData = {
     "Square Patch": false,
     "Patch Inner Lines": false,
     "Patch Outer Lines": false,
+    "Triangular Patch": false, 
   }
 
   export const colorReq= {
@@ -676,6 +731,7 @@ export const colorData = {
     laces: true,
     leather1: true,
     "Logo": true, //Webbing Logo
+    "Logo Border": true,
     logo_outline_color: true,
     palm: true,
     Stitches: true,
@@ -688,6 +744,7 @@ export const colorData = {
     "Square Patch": true,
     "Patch Inner Lines": true,
     "Patch Outer Lines": true,
+    "Triangular Patch": true,
   }
 
   export const baseStepsConfig= {
@@ -767,7 +824,7 @@ export const colorData = {
 
   export const personlizationOptions = {
     "Thumb Logo/Graphic" : "None",
-    "Thumb Graphic": "Cross",
+    "Thumb Graphic": "Clover",
     "Premium Graphic": "Hot Dog", 
     "Jumbo Number": "",
     "Jumbo Number Color": "#1a1a1a",
@@ -777,7 +834,7 @@ export const colorData = {
     "Custom Plate Number Color" : "#1a1a1a",
     "Palm Stamp": "None",
     "Palm Custom Number": "",
-    "Palm Graphic" : "Baseball",
+    "Palm Graphic" : "Clover",
     "Thumb Text" : "Thumb Text",
     "Thumb Text Text" : "",
     "Thumb Text Color" : "#1a1a1a",
@@ -801,13 +858,13 @@ export const colorData = {
     },
     "Wrist Guard": {
       textbox: false,
-      options: ["Wrist Guard"],
+      options: ["Wrist Guard (+$10)"],
       icons: null,
       colors: null,
     },
     wrist_logo: {
       textbox: false,
-      options: ["Embroidered", "Circle Patch", "Square Patch"],
+      options: ["Embroidered", "Circle Patch", "Square Patch", "Triangular Patch", "Thick Outline", "Embriodered Flag (+$7)"],
       icons: null,
       colors: null,
     },
@@ -862,7 +919,7 @@ export const colorData = {
     "Thumb Graphic": {
       textbox: false,
       options: null,
-      icons: {"Cross" : cross, "Star of David" : star_david, "Reverse K" : reverse_k, "Ribbon" : ribbon, "Heart" : heart, "Paw Print" : paw, "Maple Leaf" : maple, "Star" : star, "Lightning Bolt" : light_bolt, "Peace" : peace, "Shaka" : shaka, "Crown" : crown, "Baseball Bats": baseballbats,},
+      icons: {"Clover": Clover, "Diamond": Diamond, "Dollar": Dollar, "Fire": Fire, "Heart": Heart, "Horse Shoe": HorseShoe, "Horse": Horse, "Paw": Paw, "Star": Star, "Target": Target,},
       colors: null,
     },
     "Premium Graphic": {
@@ -911,7 +968,7 @@ export const colorData = {
     "Palm Graphic": {
       textbox: false,
       options: null,
-      icons: {"Baseball" : stamp_ball, "Lightning Bolt" : stamp_bolt, "Clover" : stamp_clover, "Field" : stamp_field, "Heart" : stamp_heart, "Maple Leaf" : stamp_mapple, "Paw" : stamp_paw, "Peace" : stamp_peace, "Pitcher" : stamp_pitcher, "Reverse K" : stamp_reverse, "Shaka" : stamp_shaka, "Smiley Face" : stamp_smile, "Star" : stamp_star, "Target" : stamp_target},
+      icons: {"Clover": Clover, "Diamond": Diamond, "Dollar": Dollar, "Fire": Fire, "Heart": Heart, "Horse Shoe": HorseShoe, "Horse": Horse, "Paw": Paw, "Star": Star, "Target": Target,},
       colors: null,
     },
     "Thumb Text" : {

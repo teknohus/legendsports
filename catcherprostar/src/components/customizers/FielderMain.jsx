@@ -10,6 +10,7 @@ function usePricing(baseConfig, personalizeConfig) {
   
   useEffect(() => {
     const priceAffectingOptions = {
+      logoStyle: baseConfig.wrist_logo,  
       wristGuard: baseConfig["Wrist Guard"],
       thumb: personalizeConfig["Thumb Logo/Graphic"],
       flag: personalizeConfig["Flag"]
@@ -17,6 +18,9 @@ function usePricing(baseConfig, personalizeConfig) {
 
     let newPrice = 185;
     
+    if(priceAffectingOptions.logoStyle === "Embriodered Flag (+$7)") {
+      newPrice += 7; 
+    }
     if(priceAffectingOptions.wristGuard === "Wrist Guard (+$10)") {
        newPrice += 10; 
     }  
