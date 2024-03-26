@@ -51,7 +51,7 @@ export default function Controls({ controls }) {
             <input
               value={xRotation}
               onChange={(e) => setXRotation(e.target.value)}
-              step={1 / 32}
+              step={0.001}
               type="number"
             />
           </div>
@@ -60,7 +60,7 @@ export default function Controls({ controls }) {
             <input
               value={yRotation}
               onChange={(e) => setYRotation(e.target.value)}
-              step={1 / 32}
+              step={0.001}
               type="number"
             />
           </div>
@@ -69,7 +69,7 @@ export default function Controls({ controls }) {
             <input
               value={zRotation}
               onChange={(e) => setZRotation(e.target.value)}
-              step={1 / 32}
+              step={0.001}
               type="number"
             />
           </div>

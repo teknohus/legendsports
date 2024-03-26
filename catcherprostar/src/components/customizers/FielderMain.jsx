@@ -581,6 +581,39 @@ export default function Main() {
         "Patch Outer Lines": false
       }));
     }
+    if(option === 'wrist_logo' && value === "Triangular Patch") {
+      setColorSteps(prevSteps => ({
+        ...prevSteps,
+        "Triangular Patch": true,
+      }));
+    } else if(option === 'wrist_logo' && value !== "Triangular Patch") {
+      setColorSteps(prevSteps => ({
+        ...prevSteps,  
+        "Triangular Patch": false,
+      }));
+    }
+    if(option === 'wrist_logo' && value === "Thick Outline") {
+      setColorSteps(prevSteps => ({
+        ...prevSteps,
+        "Logo Border": true,
+      }));
+    } else if(option === 'wrist_logo' && value !== "Thick Outline") {
+      setColorSteps(prevSteps => ({
+        ...prevSteps,  
+        "Logo Border": false,
+      }));
+    }
+    if(option === 'wrist_logo' && value === 'Embriodered Flag (+$7)') {
+      setBaseSteps(prevSteps => ({
+        ...prevSteps,
+        embroidered_flag: true
+      }));
+    } else if(option === 'wrist_logo' && value !== 'Embriodered Flag (+$7)') {
+      setBaseSteps(prevSteps => ({
+        ...prevSteps,  
+        embroidered_flag: false
+      }));
+    }
 
     if(option === 'finger_option' && value !== 'None') {
       setBaseSteps(prevSteps => ({
@@ -1087,17 +1120,19 @@ export default function Main() {
                       <div className="data-card">
                         <div className="data-head d-flex justify-content-between">
                           <h2 className="title">{format_Text(currentBase)}:</h2>
-                          <a
+                          {baseRequired[currentBase] && (
+                          <p
                             href="/"
                             className="product-guid d-flex align-items-center"
                           >
                             <img
                               className="me-1"
-                              src={`/wp-content/reactpress/apps/catcherprostar/build/images/help.svg`}
+                              src={`/wp-content/reactpress/apps/catcherprostar/build/images/mandatory.svg`}
                               alt="Help"
                             />
-                            help
-                          </a>
+                            Required
+                          </p>
+                          )}
                         </div>
                         <div className="options-area ">
                           <form action="#" method="" className="overflow-hidden">
@@ -1182,17 +1217,19 @@ export default function Main() {
                       <div className="data-card">
                         <div className="data-head d-flex justify-content-between">
                           <h2 className="title">{format_Text(currentMesh)}:</h2>
-                          <a
+                          {colorRequired[currentMesh] && (
+                          <p
                             href="/"
                             className="product-guid d-flex align-items-center"
                           >
                             <img
                               className="me-1"
-                              src={`/wp-content/reactpress/apps/catcherprostar/build/images/help.svg`}
+                              src={`/wp-content/reactpress/apps/catcherprostar/build/images/mandatory.svg`}
                               alt="Help"
                             />
-                            help
-                          </a>
+                            Required
+                          </p>
+                          )}
                         </div>
                         <div className="options-area ">
                           <form action="#" method="" className="overflow-hidden">
@@ -1292,17 +1329,19 @@ export default function Main() {
                       <div className="data-card">
                         <div className="data-head d-flex justify-content-between">
                           <h2 className="title">{currentPersonlize}:</h2>
-                          <a
+                          {personalizedRequired[currentPersonlize] && (
+                          <p
                             href="/"
                             className="product-guid d-flex align-items-center"
                           >
                             <img
                               className="me-1"
-                              src={`/wp-content/reactpress/apps/catcherprostar/build/images/help.svg`}
+                              src={`/wp-content/reactpress/apps/catcherprostar/build/images/mandatory.svg`}
                               alt="Help"
                             />
-                            help
-                          </a>
+                            Required
+                          </p>
+                          )}
                         </div>
                         <div className="options-area ">
                           <form action="#" method="" className="overflow-hidden">

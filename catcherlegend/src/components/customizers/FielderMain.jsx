@@ -10,12 +10,16 @@ function usePricing(baseConfig, personalizeConfig) {
   
   useEffect(() => {
     const priceAffectingOptions = {
+      logoStyle: baseConfig.wrist_logo,  
       wristGuard: baseConfig["Wrist Guard"],
       thumb: personalizeConfig["Thumb Logo/Graphic"]
     }
 
     let newPrice = 225;
     
+    if(priceAffectingOptions.logoStyle === "Embriodered Flag (+$7)") {
+      newPrice += 7; 
+    }
     if(priceAffectingOptions.wristGuard === "Wrist Guard (+$10)") {
        newPrice += 10; 
     }  
@@ -88,12 +92,12 @@ export default function Main() {
     );
   }, [personlizeConfig, personilzeSteps]) 
   
-  const [xPosition, setXPosition] = useState(-0.052);
-  const [yPosition, setYPosition] = useState(0.181);
-  const [zPosition, setZPosition] = useState(0.006);
-  const [xRotation, setXRotation] = useState(-1);
-  const [yRotation, setYRotation] = useState(0.09375);
-  const [zRotation, setZRotation] = useState(-0.6625);
+  const [xPosition, setXPosition] = useState(0);
+  const [yPosition, setYPosition] = useState(0);
+  const [zPosition, setZPosition] = useState(0);
+  const [xRotation, setXRotation] = useState(0);
+  const [yRotation, setYRotation] = useState(0);
+  const [zRotation, setZRotation] = useState(0);
 
   const controls = {
     xPosition,
@@ -551,7 +555,6 @@ export default function Main() {
       }));
     }
     if(option === 'wrist_logo' && value === "Circle Patch") {
-      console.log("here")
       setColorSteps(prevSteps => ({
         ...prevSteps,
         wristPlate: true
@@ -575,6 +578,39 @@ export default function Main() {
         "Square Patch": false,
         "Patch Inner Lines": false,
         "Patch Outer Lines": false
+      }));
+    }
+    if(option === 'wrist_logo' && value === "Triangular Patch") {
+      setColorSteps(prevSteps => ({
+        ...prevSteps,
+        "Triangular Patch": true,
+      }));
+    } else if(option === 'wrist_logo' && value !== "Triangular Patch") {
+      setColorSteps(prevSteps => ({
+        ...prevSteps,  
+        "Triangular Patch": false,
+      }));
+    }
+    if(option === 'wrist_logo' && value === "Thick Outline") {
+      setColorSteps(prevSteps => ({
+        ...prevSteps,
+        "Logo Border": true,
+      }));
+    } else if(option === 'wrist_logo' && value !== "Thick Outline") {
+      setColorSteps(prevSteps => ({
+        ...prevSteps,  
+        "Logo Border": false,
+      }));
+    }
+    if(option === 'wrist_logo' && value === 'Embriodered Flag (+$7)') {
+      setBaseSteps(prevSteps => ({
+        ...prevSteps,
+        embroidered_flag: true
+      }));
+    } else if(option === 'wrist_logo' && value !== 'Embriodered Flag (+$7)') {
+      setBaseSteps(prevSteps => ({
+        ...prevSteps,  
+        embroidered_flag: false
       }));
     }
 
@@ -1083,17 +1119,19 @@ export default function Main() {
                       <div className="data-card">
                         <div className="data-head d-flex justify-content-between">
                           <h2 className="title">{format_Text(currentBase)}:</h2>
-                          <a
+                          {baseRequired[currentBase] && (
+                          <p
                             href="/"
                             className="product-guid d-flex align-items-center"
                           >
                             <img
                               className="me-1"
-                              src={`/wp-content/reactpress/apps/catcherlegend/build/images/help.svg`}
+                              src={`/wp-content/reactpress/apps/catcherlegend/build/images/mandatory.svg`}
                               alt="Help"
                             />
-                            help
-                          </a>
+                            Required
+                          </p>
+                          )}
                         </div>
                         <div className="options-area ">
                           <form action="#" method="" className="overflow-hidden">
@@ -1178,17 +1216,19 @@ export default function Main() {
                       <div className="data-card">
                         <div className="data-head d-flex justify-content-between">
                           <h2 className="title">{format_Text(currentMesh)}:</h2>
-                          <a
+                          {colorRequired[currentMesh] && (
+                          <p
                             href="/"
                             className="product-guid d-flex align-items-center"
                           >
                             <img
                               className="me-1"
-                              src={`/wp-content/reactpress/apps/catcherlegend/build/images/help.svg`}
+                              src={`/wp-content/reactpress/apps/catcherlegend/build/images/mandatory.svg`}
                               alt="Help"
                             />
-                            help
-                          </a>
+                            Required
+                          </p>
+                          )}
                         </div>
                         <div className="options-area ">
                           <form action="#" method="" className="overflow-hidden">
@@ -1288,17 +1328,19 @@ export default function Main() {
                       <div className="data-card">
                         <div className="data-head d-flex justify-content-between">
                           <h2 className="title">{currentPersonlize}:</h2>
-                          <a
+                          {personalizedRequired[currentPersonlize] && (
+                          <p
                             href="/"
                             className="product-guid d-flex align-items-center"
                           >
                             <img
                               className="me-1"
-                              src={`/wp-content/reactpress/apps/catcherlegend/build/images/help.svg`}
+                              src={`/wp-content/reactpress/apps/catcherlegend/build/images/mandatory.svg`}
                               alt="Help"
                             />
-                            help
-                          </a>
+                            Required
+                          </p>
+                          )}
                         </div>
                         <div className="options-area ">
                           <form action="#" method="" className="overflow-hidden">
@@ -1423,7 +1465,6 @@ export default function Main() {
                 )}
               </div>
             </div>
-            
             <ProductSlideshow baseConfig={baseConfig} colors={colors} textures={textures} personlizeConfig={personlizeConfig} personlizationConfig={personlizationConfig} xPosition={xPosition} yPosition={yPosition} zPosition={zPosition} xRotation={xRotation} yRotation={yRotation} zRotation={zRotation} />
             {/* <ProductSlideshow baseConfig={baseConfig} colors={colors} textures={textures} personlizeConfig={personlizeConfig} personlizationConfig={personlizationConfig} /> */}
           </div>

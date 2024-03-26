@@ -939,7 +939,7 @@ export default function Main() {
 
     return {
       "Glove Model": "Crown Style Glove",
-      "Glove Sport": "Fielder",
+      "Glove Sport": "Baseball",
       "Glove Type": "Infield",
       "Price": price,
       ...enabledBaseOptions,
@@ -1199,17 +1199,19 @@ export default function Main() {
                       <div className="data-card">
                         <div className="data-head d-flex justify-content-between">
                           <h2 className="title">{format_Text(currentBase)}:</h2>
-                          <a
+                          {baseRequired[currentBase] && (
+                          <p
                             href="/"
                             className="product-guid d-flex align-items-center"
                           >
                             <img
                               className="me-1"
-                              src={`/wp-content/reactpress/apps/infieldcrown/build/images/help.svg`}
+                              src={`/wp-content/reactpress/apps/infieldcrown/build/images/mandatory.svg`}
                               alt="Help"
                             />
-                            help
-                          </a>
+                            Required
+                          </p>
+                          )}
                         </div>
                         <div className="options-area ">
                           <form action="#" method="" className="overflow-hidden">
@@ -1294,17 +1296,19 @@ export default function Main() {
                       <div className="data-card">
                         <div className="data-head d-flex justify-content-between">
                           <h2 className="title">{format_Text(currentMesh)}:</h2>
-                          <a
+                          {colorRequired[currentMesh] && (
+                          <p
                             href="/"
                             className="product-guid d-flex align-items-center"
                           >
                             <img
                               className="me-1"
-                              src={`/wp-content/reactpress/apps/infieldcrown/build/images/help.svg`}
+                              src={`/wp-content/reactpress/apps/infieldcrown/build/images/mandatory.svg`}
                               alt="Help"
                             />
-                            help
-                          </a>
+                            Required
+                          </p>
+                          )}
                         </div>
                         <div className="options-area ">
                           <form action="#" method="" className="overflow-hidden">
@@ -1404,17 +1408,19 @@ export default function Main() {
                       <div className="data-card">
                         <div className="data-head d-flex justify-content-between">
                           <h2 className="title">{currentPersonlize}:</h2>
-                          <a
+                          {personalizedRequired[currentPersonlize] && (
+                          <p
                             href="/"
                             className="product-guid d-flex align-items-center"
                           >
                             <img
                               className="me-1"
-                              src={`/wp-content/reactpress/apps/infieldcrown/build/images/help.svg`}
+                              src={`/wp-content/reactpress/apps/infieldcrown/build/images/mandatory.svg`}
                               alt="Help"
                             />
-                            help
-                          </a>
+                            Required
+                          </p>
+                          )}
                         </div>
                         <div className="options-area ">
                           <form action="#" method="" className="overflow-hidden">

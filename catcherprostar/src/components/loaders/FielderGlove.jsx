@@ -27,18 +27,18 @@ const MeshWithTexture = ({ geometry, material, color, position, rotation, scale,
 const ThumbGraphic = ({ nodes, materials, position, rotation, scale, personalize}) => {
   const graphicTexture = useTexture(thumb_graphics[personalize['Thumb Graphic']]);
   graphicTexture.encoding = THREE.sRGBEncoding;
-  materials.Graphic.map = graphicTexture
+  materials.cross.map = graphicTexture
 
   return (
-    //  <mesh geometry={nodes.cross.geometry} material={materials.Graphic} position={[-0.07, 0.207, 0.022]} rotation={[0.131, -0.422, -1.208]} scale={0.05} />
-     <mesh geometry={nodes.cross.geometry} material={materials.Graphic} material-color={"#D1D3D0"} position={position} rotation={rotation} scale={scale}  />
+    //  <mesh geometry={nodes.cross.geometry} material={materials.cross} position={[-0.07, 0.207, 0.022]} rotation={[0.131, -0.422, -1.208]} scale={0.05} />
+     <mesh geometry={nodes.cross.geometry} material={materials.cross} material-color={"#D1D3D0"} position={position} rotation={rotation} scale={scale}  />
     //  <mesh geometry={nodes.shaka.geometry} material={materials.shaka} material-color={"#D1D3D0"} position={position} rotation={rotation} scale={scale} /> 
   );
 };
 const ThumbPremiumGraphic = ({ nodes, materials, position, rotation, scale, personalize}) => {
   const graphicTexture = useTexture(thumb_premium_graphics[personalize['Premium Graphic']]);
   graphicTexture.encoding = THREE.sRGBEncoding;
-  materials.Graphic.map = graphicTexture
+  materials.cross.map = graphicTexture
 
   if(personalize['Premium Graphic'] === "Banana"){
     scale = [0.0482, 0.025, 0.0482]
@@ -51,8 +51,8 @@ const ThumbPremiumGraphic = ({ nodes, materials, position, rotation, scale, pers
   }
 
   return (
-    //  <mesh geometry={nodes.cross.geometry} material={materials.Graphic} position={[-0.07, 0.207, 0.022]} rotation={[0.131, -0.422, -1.208]} scale={0.05} />
-     <mesh geometry={nodes.cross.geometry} material={materials.Graphic} material-color={"#D1D3D0"} position={position} rotation={rotation} scale={scale}  />
+    //  <mesh geometry={nodes.cross.geometry} material={materials.cross} position={[-0.07, 0.207, 0.022]} rotation={[0.131, -0.422, -1.208]} scale={0.05} />
+     <mesh geometry={nodes.cross.geometry} material={materials.cross} material-color={"#D1D3D0"} position={position} rotation={rotation} scale={scale}  />
     //  <mesh geometry={nodes.shaka.geometry} material={materials.shaka} material-color={"#D1D3D0"} position={position} rotation={rotation} scale={scale} /> 
   );
 };
@@ -60,7 +60,7 @@ const StampedFlag = ({ nodes, materials, position, rotation, scale, personalize 
   
   const graphicTexture = useTexture(stamp_flags[personalize['Stamped Flag']]);
   graphicTexture.encoding = THREE.sRGBEncoding;
-  const Copy =  materials.Graphic.clone();
+  const Copy =  materials.cross.clone();
   Copy.map = graphicTexture
 
   return (
@@ -71,7 +71,7 @@ const StampedFlag = ({ nodes, materials, position, rotation, scale, personalize 
 const PalmGraphic = ({ nodes, materials, position, rotation, scale, personalize }) => {
   const graphicTexture = useTexture(stamp_palm[personalize['Palm Graphic']]);
   graphicTexture.encoding = THREE.sRGBEncoding;
-  const Copy =  materials.Graphic.clone();
+  const Copy =  materials.cross.clone();
   Copy.map = graphicTexture
 
   return (
@@ -82,7 +82,7 @@ const PalmText = ({ nodes, materials, position, rotation, scale, personalize }) 
   // const graphicTexture = useTexture(LegendLogo);
   const graphicTexture = useTexture(LegendHorse);
   graphicTexture.encoding = THREE.sRGBEncoding;
-  const Copy =  materials.Graphic.clone();
+  const Copy =  materials.cross.clone();
   Copy.map = graphicTexture
 
   return (
@@ -94,7 +94,7 @@ const PalmText = ({ nodes, materials, position, rotation, scale, personalize }) 
 const BackFlag = ({ nodes, materials, position, rotation, scale, personalize }) => {
   const graphicTexture = useTexture(back_flags[personalize['Flag']]);
   graphicTexture.encoding = THREE.sRGBEncoding;
-  const Copy =  materials.Graphic.clone();
+  const Copy =  materials.cross.clone();
   Copy.map = graphicTexture
 
   return (
@@ -103,7 +103,7 @@ const BackFlag = ({ nodes, materials, position, rotation, scale, personalize }) 
 };
 
 export function New({rot, base, colors, personalize, personalizeConfig, xPosition, yPosition, zPosition, xRotation, yRotation, zRotation, textures }) {
-  const { nodes, materials } = useGLTF("/wp-content/reactpress/apps/catcherprostar/build/Model/catcher3.glb")
+  const { nodes, materials } = useGLTF("/wp-content/reactpress/apps/catcherprostar/build/Model/CatcherLatest.glb")
 
   const ref = useRef();
   const pos0 = 0;
@@ -113,8 +113,8 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
   useFrame(() => {
     ref.current.rotation.y = rot
     if (rot === pos2){
-      ref.current.rotation.z = pos1
-      ref.current.rotation.x = pos1
+      ref.current.rotation.y = -0.98
+      ref.current.rotation.z = 0.2
     }
     else if(rot === pos1){
       ref.current.rotation.y = pos2
@@ -159,7 +159,7 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
   }, []);
 
   const position2xFactor = useMemo(() => {
-    return (4.8 - 1.4) / (maxWidth - minWidth);
+    return (0.8 - 0.45) / (maxWidth - minWidth);
   }, []);
 
   const scaledScale = useMemo(() => {
@@ -169,20 +169,21 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
 
   const scaledXPosition = useMemo(() => {
     const position0_x = 0.2 + (width - minWidth) * position0xFactor;
-    const position2_x = 1.4 + (width - minWidth) * position2xFactor;
+    const position2_x = 0.45 + (width - minWidth) * position2xFactor;
     return rot === pos0 ? position0_x : rot === pos1 ? -position0_x : position2_x;
   }, [width, rot, position0xFactor, position2xFactor, pos1]);
 
   const scaledYPosition = useMemo(() => {
     const position0_y = 1.6 + (width - minWidth) * position0yFactor;
-    return rot === pos0 || rot === pos1 ? -position0_y : 0;
-  }, [width, rot, position0yFactor, pos1]);
+    return -position0_y;
+  }, [width, position0yFactor]);
+
 
 
   return (
     <group dispose={null} position={[scaledXPosition, scaledYPosition, 0]} scale={scaledScale} ref={ref}>
       {personalize["Thumb Logo/Graphic"] === "Graphic (+$7)" && (
-        <ThumbGraphic nodes={nodes} materials={materials} position={[-0.052, 0.181, 0.006]} rotation={[Math.PI*-1, Math.PI*0.09375, Math.PI*-0.61425]} scale={[0.035, 0.025, 0.021]} personalize={personalize}/>
+        <ThumbGraphic nodes={nodes} materials={materials} position={[-0.052, 0.181, 0.006]} rotation={[Math.PI*-1, Math.PI*0.09375, Math.PI*-0.61425]} scale={[0.0350, 0.025, 0.0350]} personalize={personalize}/>
       )}
       {personalize["Thumb Logo/Graphic"] === "Premium Graphic (+$15)" && (
         <ThumbPremiumGraphic nodes={nodes} materials={materials} position={[-0.052, 0.181, 0.006]} rotation={[Math.PI*-1, Math.PI*0.09375, Math.PI*-0.61425]} scale={[0.0382, 0.025, 0.0342]} personalize={personalize}/>
@@ -191,8 +192,10 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
         <StampedFlag nodes={nodes} materials={materials} position={[-0.052, 0.181, 0.006]} rotation={[Math.PI*-1, Math.PI*0.0625, Math.PI*-0.63125]} scale={[0.0440, 0.025, 0.0204]} personalize={personalize}/>
       )}
       {personalize["Palm Stamp"] === "Graphic" && (
-        // <PalmGraphic nodes={nodes} materials={materials} position={[xPosition, yPosition, zPosition]} rotation={[Math.PI*xRotation, Math.PI*yRotation, Math.PI*zRotation]} scale={[0.0602, 0.025, 0.0447]} personalize={personalize}/>
-        <PalmGraphic nodes={nodes} materials={materials} position={[0.016, 0.236, 0.068]} rotation={[Math.PI*-0.59375, Math.PI*0, Math.PI*-0.0625]} scale={[0.0602, 0.025, 0.0447]} personalize={personalize}/>
+        <>
+          {/* <PalmGraphic nodes={nodes} materials={materials} position={[0.016, 0.236, 0.068]} rotation={[Math.PI*xRotation, Math.PI*yRotation, Math.PI*zRotation]} scale={[0.0602, 0.025, 0.0447]} personalize={personalize}/> */}
+          <PalmGraphic nodes={nodes} materials={materials} position={[0.016, 0.236, 0.068]} rotation={[Math.PI*-0.59375, Math.PI*0.127, Math.PI*-0.0625]} scale={[0.0602, 0.025, 0.0447]} personalize={personalize}/>
+        </>
       )}
       {personalize["Palm Stamp"] === "Legend Logo" && (
         // <PalmText nodes={nodes} materials={materials} position={[xPosition, yPosition, zPosition]} rotation={[Math.PI*xRotation, Math.PI*yRotation, Math.PI*zRotation]} scale={[0.0800, 0.025, 0.0337]} personalize={personalize}/>
@@ -308,11 +311,11 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
         {base.wrist_logo === "Square Patch" && (
           <>
             <mesh geometry={nodes.logo_backup1.geometry} material-color={colors["Logo"]} material={materials.pasted__logo_without_outline_fr} position={[0.486, 1.025, -1.894]} rotation={[-0.058, 0.045, -0.048]} scale={0.921} />
-            <mesh geometry={nodes.polySurface111.geometry} material-color={colors["Square Patch"]} material={materials.blinn13} position={[-0.529, -3.843, -16.009]} rotation={[-2.256, 0.252, -0.051]} scale={[3.666, 2.288, 2.055]} />
-            <mesh geometry={nodes.polySurface113.geometry} material-color={colors["Patch Inner Lines"]} material={matOuterLines} position={[-0.529, -3.843, -16.009]} rotation={[-2.256, 0.252, -0.051]} scale={[3.666, 2.288, 2.055]} />
-            <mesh geometry={nodes.polySurface114.geometry} material-color={colors["Patch Inner Lines"]} material={matOuterLines} position={[-0.529, -3.843, -16.009]} rotation={[-2.256, 0.252, -0.051]} scale={[3.666, 2.288, 2.055]} />
-            <mesh geometry={nodes.polySurface112.geometry} material-color={colors["Patch Outer Lines"]} material={matInnerLines} position={[-0.529, -3.843, -16.009]} rotation={[-2.256, 0.252, -0.051]} scale={[3.666, 2.288, 2.055]} />
-            <mesh geometry={nodes.polySurface115.geometry} material-color={colors["Patch Outer Lines"]} material={matInnerLines} position={[-0.529, -3.843, -16.009]} rotation={[-2.256, 0.252, -0.051]} scale={[3.666, 2.288, 2.055]} />
+            <mesh geometry={nodes.polySurface111.geometry} material-color={colors["Square Patch"]} material={materials.blinn13} position={[-0.64, -3.843, -16.009]} rotation={[-2.256, 0.252, -0.051]} scale={[3.666, 2.288, 2.055]} />
+            <mesh geometry={nodes.polySurface113.geometry} material-color={colors["Patch Inner Lines"]} material={matOuterLines} position={[-0.64, -3.843, -16.009]} rotation={[-2.256, 0.252, -0.051]} scale={[3.666, 2.288, 2.055]} />
+            <mesh geometry={nodes.polySurface114.geometry} material-color={colors["Patch Inner Lines"]} material={matOuterLines} position={[-0.64, -3.843, -16.009]} rotation={[-2.256, 0.252, -0.051]} scale={[3.666, 2.288, 2.055]} />
+            <mesh geometry={nodes.polySurface112.geometry} material-color={colors["Patch Outer Lines"]} material={matInnerLines} position={[-0.64, -3.843, -16.009]} rotation={[-2.256, 0.252, -0.051]} scale={[3.666, 2.288, 2.055]} />
+            <mesh geometry={nodes.polySurface115.geometry} material-color={colors["Patch Outer Lines"]} material={matInnerLines} position={[-0.64, -3.843, -16.009]} rotation={[-2.256, 0.252, -0.051]} scale={[3.666, 2.288, 2.055]} />
           </>
         )}
       </group>
@@ -359,7 +362,7 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
       </group>
       <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
         {/*Wrist*/}
-        {base.inlay !== null ? (
+        {/* {base.inlay !== null ? (
             <MeshWithTexture geometry={nodes.polySurface108.geometry} material-color={colors.wrist} material={materials.Wrist} texture={blackmesh} tsize={2}/>
         ):(
           <>
@@ -369,21 +372,21 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
             <mesh geometry={nodes.polySurface108.geometry} material-color={colors.wrist} material={materials.Wrist} />
           )}
           </>
-        )}
+        )} */}
         
         {/*leather1*/}
         {base.inlay === null ? (
           <>
             {textures.leather1 != null ? (
-              <MeshWithTexture geometry={nodes.polySurface9.geometry} material-color={colors.leather1} material={materials.leather1_2} texture={textures.leather1} tsize={3}/>
+              <MeshWithTexture geometry={nodes.polySurface9.geometry} material-color={colors.leather1} material={materials['leather1_2.001']} texture={textures.leather1} tsize={3}/>
             ): (
               <>
-                <mesh geometry={nodes.polySurface9.geometry} material-color={colors.leather1} material={materials.leather1_2} />
+                <mesh geometry={nodes.polySurface9.geometry} material-color={colors.leather1} material={materials['leather1_2.001']} />
               </>
             )}
           </>
         ) : (
-          <MeshWithTexture geometry={nodes.polySurface9.geometry} material-color={colors.leather1} material={materials.leather1_2} texture={blackmesh} tsize={5}/>
+          <MeshWithTexture geometry={nodes.polySurface9.geometry} material-color={colors.leather1} material={materials['leather1_2.001']} texture={blackmesh} tsize={5}/>
         )}
       </group>
       <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
@@ -421,8 +424,54 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
       ) : (
         <mesh geometry={nodes.polySurface14.geometry} material-color={colors.web} material={materials.web} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
       )}
+      {base.wrist_logo === "Triangular Patch" && (
+        <>
+          <mesh geometry={nodes.logo_patch.geometry} material={materials.d_initialShadingGroup} material-color={colors["Triangular Patch"]} position={[-0.004, 0.153, -0.032]} rotation={[1.604, -0.087, 2.659]} scale={0.414} />
+          <mesh geometry={nodes.logo_stitch.geometry} material={materials['initialShadingGroup.006']} material-color={colors.Stitches} position={[-0.004, 0.155, -0.035]} rotation={[1.604, -0.087, 2.659]} scale={0.414} />
+          <mesh geometry={nodes.logo_text.geometry} material={materials.pasted__logo_without_outline_fr} material-color={colors["Logo"]} position={[-0.003, 0.153, -0.035]} rotation={[1.604, -0.087, 2.659]} scale={0.414} />
+        </>
+      )}
+      {base.wrist_logo === "Thick Outline" && (
+        <>
+          <mesh geometry={nodes.logo_text.geometry} material={materials.pasted__logo_without_outline_fr} material-color={colors["Logo"]} position={[-0.003, 0.153, -0.035]} rotation={[1.604, -0.087, 2.659]} scale={0.414} />
+          <mesh geometry={nodes.logo_fat_border.geometry} material={materials['initialShadingGroup.007']} position={[-0.004, 0.154, -0.035]} material-color={colors["Logo Border"]}  rotation={[1.604, -0.087, 2.659]} scale={0.414} />
+        </>
+      )}
+      {base.wrist_logo === "Embriodered Flag (+$7)" && base.embroidered_flag === "Puerto Rico" && (
+        <mesh geometry={nodes.Logo1.geometry} material={materials.logo1} position={[-0.004, 0.153, -0.034]} rotation={[1.7, -0.105, 2.552]} scale={0.011} />
+      )}
+      {base.wrist_logo === "Embriodered Flag (+$7)" && base.embroidered_flag === "Venezuela" && (
+        <mesh geometry={nodes.Logo2.geometry} material={materials.Logo2} position={[-0.004, 0.153, -0.034]} rotation={[1.7, -0.105, 2.552]} scale={0.011} />
+      )}
+      {base.wrist_logo === "Embriodered Flag (+$7)" && base.embroidered_flag === "Italy" && (
+        <mesh geometry={nodes.Logo3.geometry} material={materials.Logo3} position={[-0.004, 0.153, -0.034]} rotation={[1.7, -0.105, 2.552]} scale={0.011} />
+      )}
+      {base.wrist_logo === "Embriodered Flag (+$7)" && base.embroidered_flag === "Australia" && (
+        <mesh geometry={nodes.Logo4.geometry} material={materials.Logo4} position={[-0.004, 0.153, -0.034]} rotation={[1.7, -0.105, 2.552]} scale={0.011} />
+      )}
+      {base.wrist_logo === "Embriodered Flag (+$7)" && base.embroidered_flag === "Japan" && (
+        <mesh geometry={nodes.Logo5.geometry} material={materials.Logo5} position={[-0.004, 0.153, -0.034]} rotation={[1.7, -0.105, 2.552]} scale={0.011} />
+      )}
+      {base.wrist_logo === "Embriodered Flag (+$7)" && base.embroidered_flag === "Dominican Republic" && (
+        <mesh geometry={nodes.Logo6.geometry} material={materials.Logo6} position={[-0.004, 0.153, -0.034]} rotation={[1.7, -0.105, 2.552]} scale={0.011} />
+      )}
+      {base.wrist_logo === "Embriodered Flag (+$7)" && base.embroidered_flag === "Netherlands" && (
+        <mesh geometry={nodes.Logo7.geometry} material={materials.Logo7} position={[-0.004, 0.153, -0.034]} rotation={[1.7, -0.105, 2.552]} scale={0.011} />
+      )}
+      {base.wrist_logo === "Embriodered Flag (+$7)" && base.embroidered_flag === "Korea" && (
+        <mesh geometry={nodes.Logo8.geometry} material={materials.Logo8} position={[-0.004, 0.153, -0.034]} rotation={[1.7, -0.105, 2.552]} scale={0.011} />
+      )}
+      {base.wrist_logo === "Embriodered Flag (+$7)" && base.embroidered_flag === "Canada" && (
+       <mesh geometry={nodes.Logo9.geometry} material={materials.Logo9} position={[-0.004, 0.153, -0.034]} rotation={[1.7, -0.105, 2.552]} scale={0.011} />
+      )}
+      {base.wrist_logo === "Embriodered Flag (+$7)" && base.embroidered_flag === "USA" && (
+       <mesh geometry={nodes.Logo10.geometry} material={materials.Logo10} position={[-0.004, 0.153, -0.034]} rotation={[1.7, -0.105, 2.552]} scale={0.011} />
+      )}
+      {base.wrist_logo === "Embriodered Flag (+$7)" && base.embroidered_flag === "Mexico" && (
+        <mesh geometry={nodes.Logo11.geometry} material={materials.Logo11} position={[-0.004, 0.153, -0.034]} rotation={[1.7, -0.105, 2.552]} scale={0.011} />
+      )}
     </group>
   )
 }
 
-useGLTF.preload("/wp-content/reactpress/apps/catcherprostar/build/Model/catcher3.glb")
+useGLTF.preload("/wp-content/reactpress/apps/catcherprostar/build/Model/CatcherLatest.glb")
