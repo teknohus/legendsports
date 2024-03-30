@@ -1533,7 +1533,7 @@ export default function Main() {
                   className="tab-content position-relative"
                   id="pills-tabContent"
                 >
-                  <Controls controls={controls} />
+                  {/* <Controls controls={controls} /> */}
 
                 </div>
               </div>
