@@ -647,7 +647,22 @@ export const meshOptions = {
     textures: {},
     exclusive_textures: null,
   },
-  "Square Patch Lines": {
+  "Patch Inner Lines": {
+    colors: {"Black": "#1a1a1a", "Gray": "#84837E", "White": "#FFFFFF", "Blonde": "#FCD48F", "Yellow": "#EFD115", "Tan": "#E57E00", "Orange": "#FF6D1F", "Brown": "#694E3B", "Red": "#D21E1E", "Maroon": "#943535", "Pink": "#F07693", "Purple": "#58357D", "Navy Blue": "#262740", "Royal Blue": "#2143BF", "Turquoise": "#06C7DE", "Forest Green": "#334F30", "Seatle Green": "#508E88" , "Electric Green": "#96EB6B", "Light Gray": "#9D9D99", "Lime Green": "#29E600",},
+    textures: {},
+    exclusive_textures: null,
+  },
+  "Patch Outer Lines": {
+    colors: {"Black": "#1a1a1a", "Gray": "#84837E", "White": "#FFFFFF", "Blonde": "#FCD48F", "Yellow": "#EFD115", "Tan": "#E57E00", "Orange": "#FF6D1F", "Brown": "#694E3B", "Red": "#D21E1E", "Maroon": "#943535", "Pink": "#F07693", "Purple": "#58357D", "Navy Blue": "#262740", "Royal Blue": "#2143BF", "Turquoise": "#06C7DE", "Forest Green": "#334F30", "Seatle Green": "#508E88" , "Electric Green": "#96EB6B", "Light Gray": "#9D9D99", "Lime Green": "#29E600",},
+    textures: {},
+    exclusive_textures: null,
+  },
+  "Logo Border": {
+    colors: {"Black": "#1a1a1a", "Gray": "#84837E", "White": "#FFFFFF", "Blonde": "#FCD48F", "Yellow": "#EFD115", "Tan": "#E57E00", "Orange": "#FF6D1F", "Brown": "#694E3B", "Red": "#D21E1E", "Maroon": "#943535", "Pink": "#F07693", "Purple": "#58357D", "Navy Blue": "#262740", "Royal Blue": "#2143BF", "Turquoise": "#06C7DE", "Forest Green": "#334F30", "Seatle Green": "#508E88" , "Electric Green": "#96EB6B", "Light Gray": "#9D9D99", "Lime Green": "#29E600",},
+    textures: {},
+    exclusive_textures: null,
+  },
+  "Triangular Patch": {
     colors: {"Black": "#1a1a1a", "Gray": "#84837E", "White": "#FFFFFF", "Blonde": "#FCD48F", "Yellow": "#EFD115", "Tan": "#E57E00", "Orange": "#FF6D1F", "Brown": "#694E3B", "Red": "#D21E1E", "Maroon": "#943535", "Pink": "#F07693", "Purple": "#58357D", "Navy Blue": "#262740", "Royal Blue": "#2143BF", "Turquoise": "#06C7DE", "Forest Green": "#334F30", "Seatle Green": "#508E88" , "Electric Green": "#96EB6B", "Light Gray": "#9D9D99", "Lime Green": "#29E600",},
     textures: {},
     exclusive_textures: null,
@@ -683,8 +698,11 @@ export const meshOptions = {
     wingtipPinky: "#fefefe",
     wristPlate: "#fefefe",
     "Square Patch": "#fefefe",
-    "Square Patch Lines": "#fefefe",
+    "Patch Inner Lines": "#fefefe",
+    "Patch Outer Lines": "#fefefe",
     wrist: "#fefefe",
+    "Triangular Patch": "#fefefe",
+    "Logo Border": "#fefefe",
     // logo4_replace: "#808080", //Palm Logo
     // slice: "#f8f8f8", //Extension of Palm to Back
     // blackPiece: "#f0f0f0", //Back Hole Cover
@@ -725,6 +743,8 @@ export const meshOptions = {
     logo_02: null, 
     wrist: null,
     wristPlate: null,
+    "Triangular Patch": null,
+    "Logo Border": null,
   };
 
   export const colorStepsConfig= {
@@ -761,7 +781,10 @@ export const meshOptions = {
     wrist: true,
     wristPlate: false,
     "Square Patch": false,
-    "Square Patch Lines": false,
+    "Patch Inner Lines": false,
+    "Patch Outer Lines": false,
+    "Triangular Patch": false,
+    "Logo Border": false,
   }
 
   export const colorReq= {
@@ -792,8 +815,11 @@ export const meshOptions = {
     wingtipPinky: true,
     wristPlate: true,
     "Square Patch": true,
-    "Square Patch Lines": true,
+    "Patch Inner Lines": true,
+    "Patch Outer Lines": true,
     wrist: true,
+    "Triangular Patch": true,
+    "Logo Border": true,
   }
 
   export const baseStepsConfig= {
@@ -918,7 +944,7 @@ export const meshOptions = {
     },
     logo_style: {
       textbox: false,
-      options: ["Embroidered", "Circle Patch", "Embroidered Flag (+$7)", "Square Patch"],
+      options: ["Embroidered", "Circle Patch", "Embroidered Flag (+$7)", "Square Patch", "Triangular Patch", "Thick Outline",],
       icons: null,
       colors: null,
     },
@@ -978,7 +1004,7 @@ export const meshOptions = {
     },
     web_style: {
       textbox: false,
-      options: ["I-Web", "I-Web (No Logo)",  "I-Web (Spiral Lace)", "Y-Web", "E-Web", "H-Web", "Laced H-Web", "T-Web", "Basket Web", "Cross Web", "Net Style Web" ,"1 Piece Web", "2 Piece Web"],
+      options: ["I-Web", "I-Web (No Logo)",  "I-Web (Spiral Lace)", "Y-Web", "E-Web", "H-Web", "V-Web", "Laced Cross Web", "Laced H-Web", "T-Web", "Basket Web", "Cross Web", "Net Style Web" ,"1 Piece Web", "2 Piece Web"],
       icons: null,
       colors: null,
     },

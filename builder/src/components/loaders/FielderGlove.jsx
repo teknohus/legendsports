@@ -1051,16 +1051,16 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
           <mesh geometry={nodes.web6_laces.geometry} material-color={colors.laces} material={materials.Web_Laces_3} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
           <mesh geometry={nodes.web6_stitches.geometry} material-color={colors.Stiches} material={materials.Web_Stitches_7} rotation={[Math.PI / 2, 0, 0]} scale={0.01} /> */}
           {textures.webStyle ? (
-            <MeshWithTexture geometry={nodes.web6001.geometry} material-color={colors.webStyle} material={materials['Knots.002']} rotation={[Math.PI / 2, 0, 0]} scale={0.01} texture={textures.webStyle} tsize={8}/>
+            <MeshWithTexture geometry={nodes.web_H_new.geometry} material-color={colors.webStyle} material={materials['initialShadingGroup.002']} rotation={[Math.PI / 2, 0, 0]} texture={textures.webStyle} tsize={8}/>
           ) : (
-            <mesh geometry={nodes.web6001.geometry} material-color={colors.webStyle} material={materials['Knots.002']} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
+            <mesh geometry={nodes.web_H_new.geometry} material-color={colors.webStyle} material={materials['initialShadingGroup.002']} rotation={[Math.PI / 2, 0, 0]} />
           )}
           {textures.Stiches ? (
-            <MeshWithTexture geometry={nodes.web6_stitches001.geometry} material-color={colors.Stiches} material={materials['Web_Stitches_7.001']} rotation={[Math.PI / 2, 0, 0]} texture={textures.Stiches} />
+            <MeshWithTexture geometry={nodes.web_H_new_stitches.geometry} material-color={colors.Stitches} material={materials['s:web6stitches']} rotation={[Math.PI / 2, 0, 0]} texture={textures.Stiches} />
           ) : (
-            <mesh geometry={nodes.web6_stitches001.geometry} material-color={colors.Stiches} material={materials['Web_Stitches_7.001']} rotation={[Math.PI / 2, 0, 0]} />
+            <mesh geometry={nodes.web_H_new_stitches.geometry} material-color={colors.Stitches} material={materials['s:web6stitches']} rotation={[Math.PI / 2, 0, 0]} />
           )} 
-          <mesh geometry={nodes.web6_laces001.geometry} material-color={colors.laces} material={materials['Web_Laces_3.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
+          <mesh geometry={nodes.web4_laces_fr001.geometry} material-color={colors.laces} material={materials.web4_laces} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
         </>
       )}
       
@@ -1080,7 +1080,7 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
           ) : (
             <mesh geometry={nodes.web7_stitches001.geometry} material-color={colors.Stiches} material={materials['Web_Stitches_7.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
           )} 
-          <mesh geometry={nodes.web7_laces001.geometry} material-color={colors.laces} material={materials['Knots.004']} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
+          <mesh geometry={nodes.T_web_laces.geometry} material-color={colors.laces} material={materials.blinn1SG} position={[-0.005, 0.007, 0.001]} rotation={[Math.PI / 2, 0, 0]} />
         </>
       )}
 
@@ -1202,7 +1202,36 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
           ) : (
             <mesh geometry={nodes.web12_stitches.geometry} material-color={colors.Stiches} material={materials.Web_Stitches_10} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
           )}
-          <mesh geometry={nodes.web12_laces.geometry} material-color={colors.laces} material={materials.Web_Laces_10} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
+          <mesh geometry={nodes.Y_web_laces.geometry} material-color={colors.laces} material={materials['blinn1SG.001']} position={[0.042, 0.115, 0.034]} rotation={[1.635, -0.03, 0.03]} />
+        </>
+      )}
+      {base.web_style === 'V-Web' && (
+        <>
+          {textures.webStyle ? (
+            <MeshWithTexture geometry={nodes.web_2.geometry} material-color={colors.webStyle} material={materials['initialShadingGroup.013']} rotation={[Math.PI / 2, 0, 0]} texture={textures.webStyle} tsize={3.25}/>
+          ) : (
+            <mesh geometry={nodes.web_2.geometry} material-color={colors.webStyle} material={materials['initialShadingGroup.013']} rotation={[Math.PI / 2, 0, 0]} />
+          )}
+          {textures.Stiches ? (
+            <MeshWithTexture geometry={nodes.web_2_stitches.geometry} material-color={colors.Stiches} material={materials['initialShadingGroup.014']} rotation={[Math.PI / 2, 0, 0]} scale={0.01} texture={textures.Stiches} />
+          ) : (
+            <mesh geometry={nodes.web_2_stitches.geometry} material-color={colors.Stiches} material={materials['initialShadingGroup.014']} rotation={[Math.PI / 2, 0, 0]} />
+          )}
+          <mesh geometry={nodes.web_2_laces.geometry} material-color={colors.laces} material={materials['initialShadingGroup.015']} rotation={[Math.PI / 2, 0, 0]} />        </>
+      )}
+      {base.web_style === 'Laced Cross Web' && (
+        <>
+          {textures.webStyle ? (
+            <MeshWithTexture geometry={nodes.body.geometry} material={materials['initialShadingGroup.010']} rotation={[Math.PI / 2, 0, 0]} material-color={colors.webStyle} texture={textures.webStyle} tsize={3.25}/>
+            ) : (
+            <mesh geometry={nodes.body.geometry} material={materials['initialShadingGroup.010']} rotation={[Math.PI / 2, 0, 0]} material-color={colors.webStyle}/>
+          )}
+          {textures.Stiches ? (
+            <MeshWithTexture geometry={nodes.stitches.geometry} material-color={colors.Stiches} material={materials['initialShadingGroup.012']} rotation={[Math.PI / 2, 0, 0]} texture={textures.Stiches}/>
+          ) : (
+            <mesh geometry={nodes.stitches.geometry} material-color={colors.Stiches} material={materials['initialShadingGroup.012']} rotation={[Math.PI / 2, 0, 0]} />
+          )}
+          <mesh geometry={nodes.laces.geometry} material-color={colors.laces} material={materials['initialShadingGroup.011']} rotation={[Math.PI / 2, 0, 0]} />
         </>
       )}
       
@@ -1251,24 +1280,12 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
         </>
       )}
 
-      {base.logo_style === "Embroidered Flag (+$7)" && (
-        <>
-          <mesh geometry={nodes.circle_logo001.geometry} material-color={colors.wristPlate} material={materials.Circle_Logo} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
-          <mesh geometry={nodes.logo_stitch_round.geometry} material-color={colors.Stiches} material={materials['Logo Stitches']} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
-          <EmbroideredLogo geometry={nodes.flag_logo.geometry} material={materials.logo_with_outline1} rotation={[Math.PI / 2, 0, 0]} scale={0.01} texture={base.embroidered_flag} tsize={2}/>
-          {/* <mesh geometry={nodes.flag_logo.geometry} material={materials.logo_with_outline1} rotation={[Math.PI / 2, 0, 0]} scale={0.01} >
-             <meshBasicMaterial map={textureMap} />
-          </mesh> */}
-        </>
-      )}
-
-
       {/*Square Logo*/}
       {base.logo_style === "Square Patch" && (
         <>
           <mesh geometry={nodes.square_logo_patch.geometry} material-color={colors["Square Patch"]} material={materials['Square Logo Patch']} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
-          <mesh geometry={nodes.outside_line_square_logo.geometry} material-color={colors["Square Patch Lines"]} material={materials['Logo Outside Line']} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
-          <mesh geometry={nodes.inside_line_square_logo.geometry} material-color={colors["Square Patch Lines"]} material={materials['Logo Inner Line']} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
+          <mesh geometry={nodes.outside_line_square_logo.geometry} material-color={colors["Patch Outer Lines"]} material={materials['Logo Outside Line']} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
+          <mesh geometry={nodes.inside_line_square_logo.geometry} material-color={colors["Patch Inner Lines"]} material={materials['Logo Inner Line']} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
           <mesh geometry={nodes.square_logo_3.geometry} material-color={colors.logo} material={materials.Square_Logo_Letters} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
           {/* {base.logo_outline && (
             <>
@@ -1277,6 +1294,68 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
           )} */}
         </>
       )}
+      {base.logo_style === "Triangular Patch" && (
+        <>
+          <mesh geometry={nodes.logo_patch.geometry} material={materials.d_initialShadingGroup} material-color={colors["Triangular Patch"]} position={[-0.025, 0, 0.03]} rotation={[Math.PI / 2, 0, 0]} scale={0.414} />
+          <mesh geometry={nodes.logo_stitch.geometry} material={materials['initialShadingGroup.006']} material-color={colors.Stitches} position={[-0.025, 0, 0.03]} rotation={[Math.PI / 2, 0, 0]} scale={0.414} />
+          <mesh geometry={nodes.logo_text.geometry} material={materials['initialShadingGroup.005']} material-color={colors.logo} position={[-0.025, 0, 0.4]} rotation={[Math.PI / 2, 0, 0]} scale={0.414} />
+        </>
+      )}
+      {base.logo_style === "Thick Outline" && (
+         <>
+          <mesh geometry={nodes.logo_text.geometry} material={materials['initialShadingGroup.005']} material-color={colors.logo} position={[-0.025, 0, 0.03]} rotation={[Math.PI / 2, 0, 0]} scale={0.414} />
+          <mesh geometry={nodes.logo_fat_border.geometry} material={materials['initialShadingGroup.007']} material-color={colors["Logo Border"]} position={[-0.025, 0, 0.03]} rotation={[Math.PI / 2, 0, 0]} scale={0.414} />
+        </>
+      )}
+
+      {base.logo_style === "Embroidered Flag (+$7)" && base.embroidered_flag === "Puerto Rico" && (
+        <mesh geometry={nodes.Logo1.geometry} material={materials.logo1} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
+      )}
+      {base.logo_style === "Embroidered Flag (+$7)" && base.embroidered_flag === "Venezuela" && (
+        <mesh geometry={nodes.Logo2.geometry} material={materials.Logo2} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
+      )}
+      {base.logo_style === "Embroidered Flag (+$7)" && base.embroidered_flag === "Italy" && (
+        <mesh geometry={nodes.Logo3.geometry} material={materials.Logo3} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
+      )}
+      {base.logo_style === "Embroidered Flag (+$7)" && base.embroidered_flag === "Australia" && (
+        <mesh geometry={nodes.Logo4.geometry} material={materials.Logo4} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
+      )}
+      {base.logo_style === "Embroidered Flag (+$7)" && base.embroidered_flag === "Japan" && (
+        <mesh geometry={nodes.Logo5.geometry} material={materials.Logo5} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
+      )}
+      {base.logo_style === "Embroidered Flag (+$7)" && base.embroidered_flag === "Dominican Republic" && (
+        <mesh geometry={nodes.Logo6.geometry} material={materials.Logo6} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
+      )}
+      {base.logo_style === "Embroidered Flag (+$7)" && base.embroidered_flag === "Netherlands" && (
+        <mesh geometry={nodes.Logo7.geometry} material={materials.Logo7} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
+      )}
+      {base.logo_style === "Embroidered Flag (+$7)" && base.embroidered_flag === "Korea" && (
+        <mesh geometry={nodes.Logo8.geometry} material={materials.Logo8} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
+      )}
+      {base.logo_style === "Embroidered Flag (+$7)" && base.embroidered_flag === "Canada" && (
+       <mesh geometry={nodes.Logo9.geometry} material={materials.Logo9} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
+      )}
+      {base.logo_style === "Embroidered Flag (+$7)" && base.embroidered_flag === "USA" && (
+       <mesh geometry={nodes.Logo10.geometry} material={materials.Logo10} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
+      )}
+      {base.logo_style === "Embroidered Flag (+$7)" && base.embroidered_flag === "Mexico" && (
+        <mesh geometry={nodes.Logo11.geometry} material={materials.Logo11} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
+      )}
+      
+      {/*Finger Stitch*/}
+      {/* <group position={[-0.061, 0.085, -0.011]} rotation={[1.204, -0.015, 0.413]} scale={0.027}>
+        <mesh geometry={nodes['1_stitch_1'].geometry} material={materials['blinn3SG.001']} />
+        <mesh geometry={nodes['1_stitch_2'].geometry} material={materials.blinn3SG} />
+      </group> */}
+
+      {/*Finger Hood/Pad Stitch*/}
+      {/* <mesh geometry={nodes.newTest.geometry} material={materials.initialShadingGroup} rotation={[Math.PI / 2, 0, 0]} /> */}
+
+      <group position={[-0.022, -0.002, 0.0345]} rotation={[Math.PI / 2, 0, 0]} scale={0.394}>
+        <mesh geometry={nodes['2'].geometry} material={materials['blinn1SG.002']} />
+        <mesh geometry={nodes['2_1'].geometry} material={materials['huerta_initialShadingGroup_003.001']} />
+        <mesh geometry={nodes['2_2'].geometry} material={materials['blinn2SG.001']} />
+      </group>
   
     </group>
   )

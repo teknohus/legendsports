@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import ProductSlideshow from "./FielderSlider";
 import { meshOptions, baseReq, colorReq, personlizationReq, colorData, colorPalette, allColors, texturePalette, tabs, textureData, colorStepsConfig, baseOptions, personlizationOptions, personlizationConfig, Options, baseStepsConfig } from "../constants";
-// import Controls from "../controls"
+import Controls from "../controls"
 
 function usePricing(baseConfig, personalizeConfig) {
 
@@ -96,27 +96,27 @@ export default function Main() {
     );
   }, [personlizeConfig, personilzeSteps]) 
   
-  // const [xPosition, setXPosition] = useState(9.25);
-  // const [yPosition, setYPosition] = useState(0.039);
-  // const [zPosition, setZPosition] = useState(0.023);
-  // const [xRotation, setXRotation] = useState(2.915);
-  // const [yRotation, setYRotation] = useState(1.132);
-  // const [zRotation, setZRotation] = useState(-0.6625);
+  const [xPosition, setXPosition] = useState(9.25);
+  const [yPosition, setYPosition] = useState(0.039);
+  const [zPosition, setZPosition] = useState(0.023);
+  const [xRotation, setXRotation] = useState(2.915);
+  const [yRotation, setYRotation] = useState(1.132);
+  const [zRotation, setZRotation] = useState(-0.6625);
 
-  // const controls = {
-  //   xPosition,
-  //   yPosition,
-  //   zPosition,
-  //   xRotation,
-  //   yRotation,
-  //   zRotation,
-  //   setXPosition,
-  //   setYPosition,
-  //   setZPosition,
-  //   setXRotation,
-  //   setYRotation,
-  //   setZRotation,
-  // };
+  const controls = {
+    xPosition,
+    yPosition,
+    zPosition,
+    xRotation,
+    yRotation,
+    zRotation,
+    setXPosition,
+    setYPosition,
+    setZPosition,
+    setXRotation,
+    setYRotation,
+    setZRotation,
+  };
 
   
   useEffect(() =>{
@@ -577,13 +577,37 @@ export default function Main() {
       setColorSteps(prevSteps => ({
         ...prevSteps,
         "Square Patch": true,
-        "Square Patch Lines": true
+        "Patch Inner Lines": true,
+        "Patch Outer Lines": true,
       }));
     } else if(option === 'logo_style' && value !== "Square Patch") {
       setColorSteps(prevSteps => ({
         ...prevSteps,  
         "Square Patch": false,
-        "Square Patch LInes": false
+        "Patch Inner Lines": true,
+        "Patch Outer Lines": true,
+      }));
+    }
+    if(option === 'logo_style' && value === "Triangular Patch") {
+      setColorSteps(prevSteps => ({
+        ...prevSteps,
+        "Triangular Patch": true,
+      }));
+    } else if(option === 'logo_style' && value !== "Triangular Patch") {
+      setColorSteps(prevSteps => ({
+        ...prevSteps,  
+        "Triangular Patch": false,
+      }));
+    }
+    if(option === 'logo_style' && value === "Thick Outline") {
+      setColorSteps(prevSteps => ({
+        ...prevSteps,
+        "Logo Border": true,
+      }));
+    } else if(option === 'logo_style' && value !== "Thick Outline") {
+      setColorSteps(prevSteps => ({
+        ...prevSteps,  
+        "Logo Border": false,
       }));
     }
 
@@ -1509,7 +1533,7 @@ export default function Main() {
                   className="tab-content position-relative"
                   id="pills-tabContent"
                 >
-                  {/* <Controls controls={controls} /> */}
+                  <Controls controls={controls} />
 
                 </div>
               </div>
@@ -1527,8 +1551,8 @@ export default function Main() {
               </div>
             </div>
             
-            {/* <ProductSlideshow baseConfig={baseConfig} colors={colors} textures={textures} personlizeConfig={personlizeConfig} personlizationConfig={personlizationConfig} xPosition={xPosition} yPosition={yPosition} zPosition={zPosition} xRotation={xRotation} yRotation={yRotation} zRotation={zRotation} /> */}
-            <ProductSlideshow baseConfig={baseConfig} colors={colors} textures={textures} personlizeConfig={personlizeConfig} personlizationConfig={personlizationConfig} />
+            <ProductSlideshow baseConfig={baseConfig} colors={colors} textures={textures} personlizeConfig={personlizeConfig} personlizationConfig={personlizationConfig} xPosition={xPosition} yPosition={yPosition} zPosition={zPosition} xRotation={xRotation} yRotation={yRotation} zRotation={zRotation} />
+            {/* <ProductSlideshow baseConfig={baseConfig} colors={colors} textures={textures} personlizeConfig={personlizeConfig} personlizationConfig={personlizationConfig} /> */}
           </div>
           {/* <button onClick={captureScreenshot}>Capture Screenshot</button> */}
         </div>
