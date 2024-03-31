@@ -1351,11 +1351,11 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
       {/*Finger Hood/Pad Stitch*/}
       {/* <mesh geometry={nodes.newTest.geometry} material={materials.initialShadingGroup} rotation={[Math.PI / 2, 0, 0]} /> */}
 
-      <group position={[-0.022, -0.002, 0.0345]} rotation={[Math.PI / 2, 0, 0]} scale={0.394}>
+      {/* <group position={[-0.022, -0.002, 0.0345]} rotation={[Math.PI / 2, 0, 0]} scale={0.394}>
         <mesh geometry={nodes['2'].geometry} material={materials['blinn1SG.002']} />
         <mesh geometry={nodes['2_1'].geometry} material={materials['huerta_initialShadingGroup_003.001']} />
         <mesh geometry={nodes['2_2'].geometry} material={materials['blinn2SG.001']} />
-      </group>
+      </group> */}
   
     </group>
   )
