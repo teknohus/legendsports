@@ -39,6 +39,45 @@
       ]
   },
   {
+    "name": "T5 Players Choice",
+    "image": "/wp-content/reactpress/apps/fielderoutfield/build/images/fielder.png",
+    "price": "$185",
+    "redirect-url": "https://legendsportspro.com/outfield-t5/",
+    "highlights": [
+      "US Steerhide",
+      "Available in Single or Dual Welting",
+      "Inlay Options Available",
+      "Select special colors/prints available",
+      "Available in sizes: 11.25, 11.5, 11.75, 12, 12.25"
+    ]
+  },
+  {
+    "name": "EX-10",
+    "image": "/wp-content/reactpress/apps/fielderoutfield/build/images/fielder.png",
+    "price": "$185",
+    "redirect-url": "https://legendsportspro.com/outfield-ex10/",
+    "highlights": [
+      "US Steerhide",
+      "Available in Single or Dual Welting",
+      "Inlay Options Available",
+      "Select special colors/prints available",
+      "Available in sizes: 11.25, 11.5, 11.75, 12, 12.25"
+    ]
+  },
+  {
+    "name": "CB44",
+    "image": "/wp-content/reactpress/apps/fielderoutfield/build/images/fielder.png",
+    "price": "$185",
+    "redirect-url": "https://legendsportspro.com/outfield-cb44/",
+    "highlights": [
+      "US Steerhide",
+      "Available in Single or Dual Welting",
+      "Inlay Options Available",
+      "Select special colors/prints available",
+      "Available in sizes: 11.25, 11.5, 11.75, 12, 12.25"
+    ]
+  },
+  {
       "name": "F-5 Fast Custom",
       "image": "/wp-content/reactpress/apps/fielderoutfield/build/images/fielder.png",
       "price": "$160",
