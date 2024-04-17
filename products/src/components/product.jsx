@@ -2,14 +2,14 @@ import React from "react";
 
 export default function Product() {
 
-  const handleCatcher = () => {
-    window.location.href = 'https://legendsportspro.com/catcher/';
+  const handleBaseball = () => {
+    window.location.href = 'https://legendsportspro.com/baseball/';
   }
-  const handleFielder = () => {
-    window.location.href = 'https://legendsportspro.com/fielder/';
+  const handleSoftball = () => {
+    window.location.href = 'https://legendsportspro.com/softball/';
   }
-  const handleFB = () => {
-     window.location.href = 'https://legendsportspro.com/firstbase/';
+  const handleElbowGuard = () => {
+     window.location.href = 'https://legendsportspro.com/elbowguard/';
   }
 
    return(
@@ -27,16 +27,16 @@ export default function Product() {
                 <div className="d-flex justify-content-center">
                   <div className="col-heading-content">
                     <div className="upper-heading-content">
-                      <h3>Catcher</h3>
+                      <h3>Baseball</h3>
                     </div>
                   </div>
                 </div>
               </div>
               <div className="image-box my-3">
-              <img src={`/wp-content/reactpress/apps/products/build/images/catcher.png`} className="mx-auto" alt="layer-45" />
+              <img src={`/wp-content/reactpress/apps/products/build/images/fielder.png`} className="mx-auto" alt="layer-45" />
               </div>
               <div className="btn-box text-center">
-                <button onClick={handleCatcher} className="btn" >Select</button>
+                <button onClick={handleBaseball} className="btn" >Select</button>
               </div>
             </div>
           </div>
@@ -46,7 +46,7 @@ export default function Product() {
                 <div className="d-flex justify-content-center">
                   <div className="col-heading-content black">
                     <div className="upper-heading-content black">
-                      <h3>Fielder</h3>
+                      <h3>Softball</h3>
                     </div>
                   </div>
                 </div>
@@ -55,7 +55,7 @@ export default function Product() {
               <img src={`/wp-content/reactpress/apps/products/build/images/fielder.png`} className="mx-auto" alt="layer-45" />
               </div>
               <div className="btn-box text-center">
-                <button onClick={handleFielder} className="btn">Select</button>
+                <button onClick={handleSoftball} className="btn">Select</button>
               </div>
             </div>
           </div>
@@ -65,16 +65,16 @@ export default function Product() {
                 <div className="d-flex justify-content-center">
                   <div className="col-heading-content">
                     <div className="upper-heading-content">
-                      <h3>First Base</h3>
+                      <h3>Elbow Guard</h3>
                     </div>
                   </div>
                 </div>
               </div>
               <div className="image-box my-3">
-              <img src={`/wp-content/reactpress/apps/products/build/images/firstbase.png`} className="mx-auto" alt="layer-45" />
+              <img src={`/wp-content/reactpress/apps/products/build/images/fielder.png`} className="mx-auto" alt="layer-45" />
               </div>
               <div className="btn-box text-center">
-                <button onClick={handleFB} className="btn">Select</button>
+                <button onClick={handleElbowGuard} className="btn">Select</button>
               </div>
             </div>
           </div>

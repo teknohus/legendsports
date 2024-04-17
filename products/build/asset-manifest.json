@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/wp-content/reactpress/apps/products/build/static/css/main.b3cea566.css",
-    "main.js": "/wp-content/reactpress/apps/products/build/static/js/main.8b55d363.js",
+    "main.css": "/wp-content/reactpress/apps/products/build/static/css/main.98757a08.css",
+    "main.js": "/wp-content/reactpress/apps/products/build/static/js/main.9e04e046.js",
     "static/media/bg-layer.jpg": "/wp-content/reactpress/apps/products/build/static/media/bg-layer.2d1dd15bf34b188410ea.jpg",
     "index.html": "/wp-content/reactpress/apps/products/build/index.html",
     "static/media/left.svg": "/wp-content/reactpress/apps/products/build/static/media/left.1cea82937e55ba1e2fc0.svg",
     "static/media/right.svg": "/wp-content/reactpress/apps/products/build/static/media/right.58128f2b0162a21c36e9.svg",
     "static/media/right-arrow.svg": "/wp-content/reactpress/apps/products/build/static/media/right-arrow.2c34fafc5c6c64f43cb8.svg",
     "static/media/left-arrow.svg": "/wp-content/reactpress/apps/products/build/static/media/left-arrow.d833be4a83b41ea0bc4a.svg",
-    "main.b3cea566.css.map": "/wp-content/reactpress/apps/products/build/static/css/main.b3cea566.css.map",
-    "main.8b55d363.js.map": "/wp-content/reactpress/apps/products/build/static/js/main.8b55d363.js.map"
+    "main.98757a08.css.map": "/wp-content/reactpress/apps/products/build/static/css/main.98757a08.css.map",
+    "main.9e04e046.js.map": "/wp-content/reactpress/apps/products/build/static/js/main.9e04e046.js.map"
   },
   "entrypoints": [
-    "static/css/main.b3cea566.css",
-    "static/js/main.8b55d363.js"
+    "static/css/main.98757a08.css",
+    "static/js/main.9e04e046.js"
   ]
 }

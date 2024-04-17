@@ -43,7 +43,7 @@ h1 {font: 400 32px/40px 'Circular Std Book';margin: 0 0 50px;color: #000850;text
   h1 {font-size: 60px;line-height: 70px;}
 }
 h2 {font: 400 32px/40px 'Poppins', sans-serif;margin: 0 0 20px;color: #000;text-transform: uppercase;}
-h3 {font: 400 28px/36px 'Poppins', sans-serif;margin: 0 0 20px;color: #000;text-transform: uppercase;}
+h3 {font: 400 24px/30px 'Poppins', sans-serif;margin: 0 0 20px;color: #000;text-transform: uppercase;}
 h4 {font: 400 24px/30px 'Poppins', sans-serif;margin: 0 0 20px;color: #000;text-transform: uppercase;}
 h5 {font: 400 100%/100% 'Poppins', sans-serif;margin: 0 0 20px;color: #000;text-transform: capitalize;}
 h6 {font: 400 100%/100% 'Poppins', sans-serif;margin: 0 0 20px;color: #000;text-transform: capitalize;}
@@ -334,7 +334,7 @@ body.nav-open {overflow: hidden;}
   .hb-fielders-glove h2{font-size: 45px; line-height: 55px; margin-bottom: 69px; }  
 .hb-fielders-glove h2{color: #454444; margin: 0; text-transform: capitalize; font-weight: 900; text-align: center; margin-bottom: 20px; font-size: 30px; line-height: 36px;}
 .hb-fielders-glove .hb-content{overflow: hidden; padding: 0 15px 30px; margin-bottom: 25px;}
-.hb-fielders-glove h3{font-size: 25px; line-height: 30px; margin-bottom: 25px; color: #fff; font-weight: 400; text-transform: capitalize;}
+.hb-fielders-glove h3{font-size: 22px; line-height: 30px; margin-bottom: 25px; color: #fff; font-weight: 400; text-transform: capitalize;}
 .hb-fielders-glove .col-heading-content{ width: 250px; height: 125px; clip-path: ellipse(50% 100% at 50% 0%); background-color: #dadada; margin-top: -40px;}
 .hb-fielders-glove .col-heading-content .upper-heading-content{width: 215px; margin: auto; height: 110px; display: flex; justify-content: center; align-items: flex-end; clip-path: ellipse(50% 100% at 50% 0%); background-color: #000;}
 .hb-fielders-glove .col-heading-content.black{background-color: #dadada;}
@@ -903,7 +903,7 @@ border: 2px solid #333;
   .hb-fielders-glove h2{font-size: 45px; line-height: 55px; margin-bottom: 69px; }  
 .hb-fielders-glove h2{color: #454444; margin: 0; text-transform: capitalize; font-weight: 900; text-align: center; margin-bottom: 20px; font-size: 30px; line-height: 36px;}
 .hb-fielders-glove .hb-content{overflow: hidden; padding: 0 15px 30px; margin-bottom: 25px;}
-.hb-fielders-glove h3{font-size: 25px; line-height: 30px; margin-bottom: 25px; color: #fff; font-weight: 400; text-transform: capitalize;}
+.hb-fielders-glove h3{font-size: 22px; line-height: 30px; margin-bottom: 25px; color: #fff; font-weight: 400; text-transform: capitalize;}
 .hb-fielders-glove .col-heading-content{ width: 250px; height: 125px; clip-path: ellipse(50% 100% at 50% 0%); background-color: #dadada; margin-top: -40px;}
 .hb-fielders-glove .col-heading-content .upper-heading-content{width: 215px; margin: auto; height: 110px; display: flex; justify-content: center; align-items: flex-end; clip-path: ellipse(50% 100% at 50% 0%); background-color: #000;}
 .hb-fielders-glove .col-heading-content.black{background-color: #dadada;}
