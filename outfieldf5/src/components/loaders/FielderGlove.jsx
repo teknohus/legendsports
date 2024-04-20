@@ -1010,20 +1010,20 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
         </>
       )}
 
-      {/*LaceH*/}
-      {base.web_style === 'Laced H-Web' && (
+       {/*LaceH*/}
+       {base.web_style === 'Laced H-Web' && (
         <>
           {textures.webStyle ? (
-            <MeshWithTexture geometry={nodes.web4.geometry} material-color={colors["Base Colors"]} material={materials.Web_Body_2} rotation={[Math.PI / 2, 0, 0]} scale={0.01} texture={textures.webStyle} tsize={5.5}/>
+            <MeshWithTexture geometry={nodes.web4.geometry} material-color={colors.webStyle} material={materials.Web_Body_2} rotation={[Math.PI / 2, 0, 0]} scale={0.01} texture={textures.webStyle} tsize={5.5}/>
           ) : (
-            <mesh geometry={nodes.web4.geometry} material-color={colors["Base Colors"]} material={materials.Web_Body_2} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
+            <mesh geometry={nodes.web4.geometry} material-color={colors.webStyle} material={materials.Web_Body_2} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
           )}
           {textures.Stiches ? (
-            <MeshWithTexture geometry={nodes.web4_stitches.geometry} material-color={colors["Base Colors"]} material={materials['Web_Stitches 2']} rotation={[Math.PI / 2, 0, 0]} scale={0.01} texture={textures.Stiches} />
+            <MeshWithTexture geometry={nodes.web4_stitches.geometry} material-color={colors.Stiches} material={materials['Web_Stitches 2']} rotation={[Math.PI / 2, 0, 0]} scale={0.01} texture={textures.Stiches} />
           ) : (
-            <mesh geometry={nodes.web4_stitches.geometry} material-color={colors["Base Colors"]} material={materials['Web_Stitches 2']} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
+            <mesh geometry={nodes.web4_stitches.geometry} material-color={colors.Stiches} material={materials['Web_Stitches 2']} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
           )}  
-          <mesh geometry={nodes.web4_laces_fr.geometry} material-color={colors["Laces"]} material={materials.Web_Laces_4} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
+          <mesh geometry={nodes.web4_laces_fr.geometry} material-color={colors.laces} material={materials.Web_Laces_4} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
         </>
       )}
 
@@ -1046,41 +1046,38 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
 
       {/*WebH*/}
       {base.web_style === 'H-Web' && (
-        <> 
-          {/* <mesh geometry={nodes.web6.geometry} material-color={colors["Base Colors"]} material={materials.Knots} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
-          <mesh geometry={nodes.web6_laces.geometry} material-color={colors["Laces"]} material={materials.Web_Laces_3} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
-          <mesh geometry={nodes.web6_stitches.geometry} material-color={colors["Base Colors"]} material={materials.Web_Stitches_7} rotation={[Math.PI / 2, 0, 0]} scale={0.01} /> */}
+        <>
           {textures.webStyle ? (
-            <MeshWithTexture geometry={nodes.web6001.geometry} material-color={colors["Base Colors"]} material={materials['Knots.002']} rotation={[Math.PI / 2, 0, 0]} scale={0.01} texture={textures.webStyle} tsize={8}/>
+            <MeshWithTexture geometry={nodes.web4.geometry} material-color={colors.webStyle} material={materials.Web_Body_2} rotation={[Math.PI / 2, 0, 0]} scale={0.01} texture={textures.webStyle} tsize={5.5}/>
           ) : (
-            <mesh geometry={nodes.web6001.geometry} material-color={colors["Base Colors"]} material={materials['Knots.002']} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
+            <mesh geometry={nodes.web4.geometry} material-color={colors.webStyle} material={materials.Web_Body_2} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
           )}
           {textures.Stiches ? (
-            <MeshWithTexture geometry={nodes.web6_stitches001.geometry} material-color={colors["Base Colors"]} material={materials['Web_Stitches_7.001']} rotation={[Math.PI / 2, 0, 0]} texture={textures.Stiches} />
+            <MeshWithTexture geometry={nodes.web4_stitches.geometry} material-color={colors.Stiches} material={materials['Web_Stitches 2']} rotation={[Math.PI / 2, 0, 0]} scale={0.01} texture={textures.Stiches} />
           ) : (
-            <mesh geometry={nodes.web6_stitches001.geometry} material-color={colors["Base Colors"]} material={materials['Web_Stitches_7.001']} rotation={[Math.PI / 2, 0, 0]} />
-          )} 
-          <mesh geometry={nodes.web6_laces001.geometry} material-color={colors["Laces"]} material={materials['Web_Laces_3.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
+            <mesh geometry={nodes.web4_stitches.geometry} material-color={colors.Stiches} material={materials['Web_Stitches 2']} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
+          )}  
+          {/* <mesh geometry={nodes.web4_laces_fr.geometry} material-color={colors.laces} material={materials.Web_Laces_4} rotation={[Math.PI / 2, 0, 0]} scale={0.01} /> */}
         </>
       )}
       
       {/*WebT*/}
       {base.web_style === 'T-Web' && (
         <> 
-          {/* <mesh geometry={nodes.web7.geometry} material-color={colors["Base Colors"]} material={materials['Web 2']} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
-          <mesh geometry={nodes.web7_laces.geometry} material-color={colors["Laces"]} material={materials.Knots} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
-          <mesh geometry={nodes.web7_stitches.geometry} material-color={colors["Base Colors"]} material={materials.Knots} rotation={[Math.PI / 2, 0, 0]} scale={0.01} /> */}
+          {/* <mesh geometry={nodes.web7.geometry} material-color={colors.webStyle} material={materials['Web 2']} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
+          <mesh geometry={nodes.web7_laces.geometry} material-color={colors.laces} material={materials.Knots} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
+          <mesh geometry={nodes.web7_stitches.geometry} material-color={colors.Stiches} material={materials.Knots} rotation={[Math.PI / 2, 0, 0]} scale={0.01} /> */}
           {textures.webStyle ? (
-            <MeshWithTexture geometry={nodes.web7001.geometry} material-color={colors["Base Colors"]} material={materials['Web 2.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.01} texture={textures.webStyle} tsize={3.5}/>
+            <MeshWithTexture geometry={nodes.web7001.geometry} material-color={colors.webStyle} material={materials['Web 2.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.01} texture={textures.webStyle} tsize={3.5}/>
           ) : (
-            <mesh geometry={nodes.web7001.geometry} material-color={colors["Base Colors"]} material={materials['Web 2.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
+            <mesh geometry={nodes.web7001.geometry} material-color={colors.webStyle} material={materials['Web 2.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
           )}
           {textures.Stiches ? (
-            <MeshWithTexture geometry={nodes.web7_stitches001.geometry} material-color={colors["Base Colors"]} material={materials['Web_Stitches_7.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.01} texture={textures.Stiches} />
+            <MeshWithTexture geometry={nodes.web7_stitches001.geometry} material-color={colors.Stiches} material={materials['Web_Stitches_7.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.01} texture={textures.Stiches} />
           ) : (
-            <mesh geometry={nodes.web7_stitches001.geometry} material-color={colors["Base Colors"]} material={materials['Web_Stitches_7.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
+            <mesh geometry={nodes.web7_stitches001.geometry} material-color={colors.Stiches} material={materials['Web_Stitches_7.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
           )} 
-          <mesh geometry={nodes.web7_laces001.geometry} material-color={colors["Laces"]} material={materials['Knots.004']} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
+          <mesh geometry={nodes.T_web_laces.geometry} material-color={colors.laces} material={materials.blinn1SG} position={[-0.005, 0.007, 0.001]} rotation={[Math.PI / 2, 0, 0]} />
         </>
       )}
 
@@ -1193,16 +1190,45 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
       {base.web_style === 'Y-Web' && (
         <>
           {textures.webStyle ? (
-            <MeshWithTexture geometry={nodes.web12.geometry} material-color={colors["Base Colors"]} material={materials.Web_Body_Y} rotation={[Math.PI / 2, 0, 0]} scale={0.01} texture={textures.webStyle} tsize={3.25} />
+            <MeshWithTexture geometry={nodes.web12.geometry} material-color={colors.webStyle} material={materials.Web_Body_Y} rotation={[Math.PI / 2, 0, 0]} scale={0.01} texture={textures.webStyle} tsize={3.25} />
           ) : (
-            <mesh geometry={nodes.web12.geometry} material-color={colors["Base Colors"]} material={materials.Web_Body_Y} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
+            <mesh geometry={nodes.web12.geometry} material-color={colors.webStyle} material={materials.Web_Body_Y} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
           )}
           {textures.Stiches ? (
-            <MeshWithTexture geometry={nodes.web12_stitches.geometry} material-color={colors["Base Colors"]} material={materials.Web_Stitches_10} rotation={[Math.PI / 2, 0, 0]} scale={0.01} texture={textures.Stiches} />
+            <MeshWithTexture geometry={nodes.web12_stitches.geometry} material-color={colors.Stiches} material={materials.Web_Stitches_10} rotation={[Math.PI / 2, 0, 0]} scale={0.01} texture={textures.Stiches} />
           ) : (
-            <mesh geometry={nodes.web12_stitches.geometry} material-color={colors["Base Colors"]} material={materials.Web_Stitches_10} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
+            <mesh geometry={nodes.web12_stitches.geometry} material-color={colors.Stiches} material={materials.Web_Stitches_10} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
           )}
-          <mesh geometry={nodes.web12_laces.geometry} material-color={colors["Laces"]} material={materials.Web_Laces_10} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
+          <mesh geometry={nodes.Y_web_laces.geometry} material-color={colors.laces} material={materials['blinn1SG.001']} position={[0.042, 0.115, 0.034]} rotation={[1.635, -0.03, 0.03]} />
+        </>
+      )}
+      {base.web_style === 'V-Web' && (
+        <>
+          {textures.webStyle ? (
+            <MeshWithTexture geometry={nodes.web_2.geometry} material-color={colors.webStyle} material={materials['initialShadingGroup.013']} rotation={[Math.PI / 2, 0, 0]} texture={textures.webStyle} tsize={3.25}/>
+          ) : (
+            <mesh geometry={nodes.web_2.geometry} material-color={colors.webStyle} material={materials['initialShadingGroup.013']} rotation={[Math.PI / 2, 0, 0]} />
+          )}
+          {textures.Stiches ? (
+            <MeshWithTexture geometry={nodes.web_2_stitches.geometry} material-color={colors.Stiches} material={materials['initialShadingGroup.014']} rotation={[Math.PI / 2, 0, 0]} scale={0.01} texture={textures.Stiches} />
+          ) : (
+            <mesh geometry={nodes.web_2_stitches.geometry} material-color={colors.Stiches} material={materials['initialShadingGroup.014']} rotation={[Math.PI / 2, 0, 0]} />
+          )}
+          <mesh geometry={nodes.web_2_laces.geometry} material-color={colors.laces} material={materials['initialShadingGroup.015']} rotation={[Math.PI / 2, 0, 0]} />        </>
+      )}
+      {base.web_style === 'Laced Cross Web' && (
+        <>
+          {textures.webStyle ? (
+            <MeshWithTexture geometry={nodes.body.geometry} material={materials['initialShadingGroup.010']} rotation={[Math.PI / 2, 0, 0]} material-color={colors.webStyle} texture={textures.webStyle} tsize={3.25}/>
+            ) : (
+            <mesh geometry={nodes.body.geometry} material={materials['initialShadingGroup.010']} rotation={[Math.PI / 2, 0, 0]} material-color={colors.webStyle}/>
+          )}
+          {textures.Stiches ? (
+            <MeshWithTexture geometry={nodes.stitches.geometry} material-color={colors.Stiches} material={materials['initialShadingGroup.012']} rotation={[Math.PI / 2, 0, 0]} texture={textures.Stiches}/>
+          ) : (
+            <mesh geometry={nodes.stitches.geometry} material-color={colors.Stiches} material={materials['initialShadingGroup.012']} rotation={[Math.PI / 2, 0, 0]} />
+          )}
+          <mesh geometry={nodes.laces.geometry} material-color={colors.laces} material={materials['initialShadingGroup.011']} rotation={[Math.PI / 2, 0, 0]} />
         </>
       )}
       

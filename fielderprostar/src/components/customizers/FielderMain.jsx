@@ -661,32 +661,27 @@ export default function Main() {
       }));
       setColorSteps(prevSteps => ({
         ...prevSteps,
-        leather2: false
+        leather2: false,
+        leather3: false,
+        leather4: false,
+        leather5: false,
+        leather6: false,
+        leather7: false,
+        leather8: false,
       }));
-      setColorSteps(prevSteps => ({
-        ...prevSteps,
-        leather3: false
-      }));
-      setColorSteps(prevSteps => ({
-        ...prevSteps,
-        leather4: false
-      }));
-      setColorSteps(prevSteps => ({
-        ...prevSteps,
-        leather5: false
-      }));
-      setColorSteps(prevSteps => ({
-        ...prevSteps,
-        leather6: false
-      }));
-      setColorSteps(prevSteps => ({
-        ...prevSteps,
-        leather7: false
-      }));
-      setColorSteps(prevSteps => ({
-        ...prevSteps,
-        leather8: false
-      }));
+
+      setData((prevData) => {
+        const updatedData = { ...prevData };
+        updatedData["Thumb Logo/Graphic"].options = updatedData["Thumb Logo/Graphic"].options.filter(
+          (option) => option !== "Circle Logo"  && option !== "Custom Plate Number (+$7)"
+        );
+        return updatedData;
+      });
+      setPersonlizeConfig((prevOption) => ({
+        ...prevOption,
+        "Thumb Logo/Graphic": prevOption["Thumb Logo/Graphic"] === "Circle Logo" ? "Logo" : prevOption["Thumb Logo/Graphic"]
+      }));      
+
     } else if(option === "dual_welting" && value !== "Dual Welting") {
       setColorSteps(prevSteps => ({
         ...prevSteps,
@@ -694,33 +689,29 @@ export default function Main() {
       }));
       setColorSteps(prevSteps => ({
         ...prevSteps,
-        leather2: true
+        leather2: true,
+        leather3: true,
+        leather4: true,
+        leather5: true,
+        leather6: true,
+        leather7: true,
+        leather8: true,
       }));
-      setColorSteps(prevSteps => ({
-        ...prevSteps,
-        leather3: true
-      }));
-      setColorSteps(prevSteps => ({
-        ...prevSteps,
-        leather4: true
-      }));
-      setColorSteps(prevSteps => ({
-        ...prevSteps,
-        leather5: true
-      }));
-      setColorSteps(prevSteps => ({
-        ...prevSteps,
-        leather6: true
-      }));
-      setColorSteps(prevSteps => ({
-        ...prevSteps,
-        leather7: true
-      }));
-      setColorSteps(prevSteps => ({
-        ...prevSteps,
-        leather8: true
+      
+      setData((prevData) => {
+        const updatedData = { ...prevData };
+        updatedData["Thumb Logo/Graphic"].options = [
+          "Logo", "Circle Logo", "Graphic (+$7)", "Premium Graphic (+$15)", "Jumbo Number (+$7)", "Stamped Flag (+$7)", "Thumb Flag (+$7)", "Custom Plate Number (+$7)"
+        ];
+        return updatedData;
+      });
+
+      setPersonlizeConfig((prevOption) => ({
+        ...prevOption,
+        "Thumb Logo/Graphic": prevOption["Thumb Logo/Graphic"],
       }));
     }
+
 
     if(option === 'web_style' && value === 'I-Web') {
       setColorSteps(prevSteps => ({

@@ -155,7 +155,7 @@ const EmbroideredLogo = ({ geometry, material, color, position, rotation, scale,
 export function New({rot, base, colors, personalize, personalizeConfig, xPosition, yPosition, zPosition, xRotation, yRotation, zRotation, textures }) {
   const ref = useRef();
 
-  const { nodes, materials } = useGLTF("/wp-content/reactpress/apps/outfieldprostar/build/Model/Fielder.glb")
+  const { nodes, materials } = useGLTF("/wp-content/reactpress/apps/outfieldprostar/build/Model/untitled.glb")
   
   // const myFont = new FontLoader().parse(fontArrayBuffer);
 
@@ -438,8 +438,8 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
               ) : (
                 <mesh geometry={nodes.polySurface332.geometry} material-color={colors.leather1} material={materials.Thumb_Outer} position={[-0.007, 0.013, 0.009]} rotation={[1.617, -0.085, -2.45]} scale={0.008} />
               )}
-              <mesh geometry={nodes.polySurface333.geometry} material-color={colors.logo} material={materials.Side_Logo} position={[-0.035, 0.003, 0.005]} rotation={[1.659, -0.185, -2.459]} scale={0.012} />
-              <mesh geometry={nodes.polySurface334.geometry} material-color={colors.logo} material={materials.Side_Logo} position={[-0.035, 0.003, 0.005]} rotation={[1.659, -0.185, -2.459]} scale={0.012} />  
+              <mesh geometry={nodes.polySurface333.geometry} material-color={colors.logo} material={materials.Side_Logo} position={[base.dual_welting === null ? -0.035 : -0.0335, 0.003, 0.005]} rotation={[1.659, -0.185, -2.459]} scale={0.012} />
+              <mesh geometry={nodes.polySurface334.geometry} material-color={colors.logo} material={materials.Side_Logo} position={[base.dual_welting === null ? -0.035 : -0.0335, 0.003, 0.005]} rotation={[1.659, -0.185, -2.459]} scale={0.012} />  
             </>
           )}
           {personalize["Thumb Logo/Graphic"] === "Graphic (+$7)" && (
@@ -449,7 +449,7 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
               ) : (
                 <mesh geometry={nodes.polySurface332.geometry} material-color={colors.leather1} material={materials.Thumb_Outer} position={[-0.007, 0.013, 0.009]} rotation={[1.617, -0.085, -2.45]} scale={0.008} />
               )}
-              <ThumbGraphic nodes={nodes} materials={materials} position={[0.043, 0.048, 0.016]} rotation={[Math.PI*2.915, Math.PI*1.10075, Math.PI*-0.6625]} scale={[0.014, 0.016, 0.017]} personalize={personalize}/>
+              <ThumbGraphic nodes={nodes} materials={materials} position={[0.0445, 0.048, 0.016]} rotation={[Math.PI*2.915, Math.PI*1.10075, Math.PI*-0.6625]} scale={[0.014, 0.016, 0.017]} personalize={personalize}/>
               {/* <mesh geometry={nodes.shaka.geometry} material={materials.shaka} position={[0.036, 0.039, 0.023]} rotation={[2.744, 0.257, -1.083]} scale={0.012} /> */}
             </>
           )}
@@ -460,7 +460,7 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
               ) : (
                 <mesh geometry={nodes.polySurface332.geometry} material-color={colors.leather1} material={materials.Thumb_Outer} position={[-0.007, 0.013, 0.009]} rotation={[1.617, -0.085, -2.45]} scale={0.008} />
               )}
-                <ThumbPremiumGraphic nodes={nodes} materials={materials} position={[0.043, 0.048, 0.016]} rotation={[Math.PI*2.915, Math.PI*1.10075, Math.PI*-0.6625]} scale={0.018} personalize={personalize} />
+                <ThumbPremiumGraphic nodes={nodes} materials={materials} position={[0.0445, 0.048, 0.016]} rotation={[Math.PI*2.915, Math.PI*1.10075, Math.PI*-0.6625]} scale={0.018} personalize={personalize} />
             </>
           )}
           {personalize["Thumb Logo/Graphic"] === "Stamped Flag (+$7)" && (
@@ -470,7 +470,7 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
               ) : (
                 <mesh geometry={nodes.polySurface332.geometry} material-color={colors.leather1} material={materials.Thumb_Outer} position={[-0.007, 0.013, 0.009]} rotation={[1.617, -0.085, -2.45]} scale={0.008} />
               )}
-                <StampedFlag nodes={nodes} materials={materials} position={[0.043, 0.048, 0.016]} rotation={[Math.PI*2.8525, Math.PI*1.0695, Math.PI*-0.6625]} scale={[0.025, 0.02, 0.02]} personalize={personalize} />
+                <StampedFlag nodes={nodes} materials={materials} position={[0.045, 0.048, 0.016]} rotation={[Math.PI*2.8525, Math.PI*1.0695, Math.PI*-0.6625]} scale={[0.025, 0.02, 0.02]} personalize={personalize} />
               {/* <mesh geometry={nodes.shaka.geometry} material={materials.shaka} position={[0.036, 0.039, 0.023]} rotation={[2.744, 0.257, -1.083]} scale={0.012} /> */}
             </>
           )}
@@ -481,7 +481,7 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
               ) : (
                 <mesh geometry={nodes.polySurface332.geometry} material-color={colors.leather1} material={materials.Thumb_Outer} position={[-0.007, 0.013, 0.009]} rotation={[1.617, -0.085, -2.45]} scale={0.008} />
               )}
-                <ThumbFlag nodes={nodes} materials={materials} position={[0.043, 0.048, 0.016]} rotation={[Math.PI*2.8525, Math.PI*1.0695, Math.PI*-0.6625]} scale={[0.03, 0.015, 0.02]} personalize={personalize} />
+                <ThumbFlag nodes={nodes} materials={materials} position={[0.045, 0.048, 0.016]} rotation={[Math.PI*2.8525, Math.PI*1.0695, Math.PI*-0.6625]} scale={[0.03, 0.015, 0.02]} personalize={personalize} />
               {/* <mesh geometry={nodes.shaka.geometry} material={materials.shaka} position={[0.036, 0.039, 0.023]} rotation={[2.744, 0.257, -1.083]} scale={0.012} /> */}
             </>
           )}
@@ -494,7 +494,7 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
               )}
               <Text
                 font={fonts[personalize["Text Font"]]}
-                position={[0.040, 0.044, 0.017]}
+                position={[base.dual_welting === null ? 0.40 : 0.0425, 0.044, 0.017]}
                 rotation={[0.21875*Math.PI, 0.3125*Math.PI, 0.1875*Math.PI]}
                 color={personalize["Jumbo Number Color"]}
                 scale={0.02}
@@ -608,54 +608,77 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
                 </>
               )}
               {personalize["Thumb Logo/Graphic"] === "Logo" && (
-                <>
-                  <MeshWithTexture geometry={nodes.polySurface332.geometry} material-color={colors.inlay} material={materials.Thumb_Outer} position={[-0.007, 0.013, 0.009]} rotation={[1.617, -0.085, -2.45]} scale={0.008} texture={textures.inlay} />
-                  <mesh geometry={nodes.polySurface333.geometry} material-color={colors.logo} material={materials.Side_Logo} position={[-0.035, 0.003, 0.005]} rotation={[1.659, -0.185, -2.459]} scale={0.012} />
-                  <mesh geometry={nodes.polySurface334.geometry} material-color={colors.logo} material={materials.Side_Logo} position={[-0.035, 0.003, 0.005]} rotation={[1.659, -0.185, -2.459]} scale={0.012} />  
-                </>
+            <>
+              {textures.leather1 ? (
+                <MeshWithTexture geometry={nodes.polySurface332.geometry} material-color={colors.leather1} material={materials.Thumb_Outer} position={[-0.007, 0.013, 0.009]} rotation={[1.617, -0.085, -2.45]} scale={0.008} texture={textures.leather1} />
+              ) : (
+                <mesh geometry={nodes.polySurface332.geometry} material-color={colors.leather1} material={materials.Thumb_Outer} position={[-0.007, 0.013, 0.009]} rotation={[1.617, -0.085, -2.45]} scale={0.008} />
               )}
-              {personalize["Thumb Logo/Graphic"] === "Graphic (+$7)" && (
-                <>
-                  <MeshWithTexture geometry={nodes.polySurface332.geometry} material-color={colors.inlay} material={materials.Thumb_Outer} position={[-0.007, 0.013, 0.009]} rotation={[1.617, -0.085, -2.45]} scale={0.008} texture={textures.inlay} />
-                  <ThumbGraphic nodes={nodes} materials={materials} position={[0.043, 0.048, 0.016]} rotation={[Math.PI*2.915, Math.PI*1.10075, Math.PI*-0.6625]} scale={[0.014, 0.016, 0.017]} personalize={personalize}/>
-                  {/* <mesh geometry={nodes.shaka.geometry} material={materials.shaka} position={[0.036, 0.039, 0.023]} rotation={[2.744, 0.257, -1.083]} scale={0.012} /> */}
-                </>
+              <mesh geometry={nodes.polySurface333.geometry} material-color={colors.logo} material={materials.Side_Logo} position={[base.dual_welting === null ? -0.035 : -0.0335, 0.003, 0.005]} rotation={[1.659, -0.185, -2.459]} scale={0.012} />
+              <mesh geometry={nodes.polySurface334.geometry} material-color={colors.logo} material={materials.Side_Logo} position={[base.dual_welting === null ? -0.035 : -0.0335, 0.003, 0.005]} rotation={[1.659, -0.185, -2.459]} scale={0.012} />  
+            </>
+          )}
+          {personalize["Thumb Logo/Graphic"] === "Graphic (+$7)" && (
+            <>
+              {textures.leather1 ? (
+                <MeshWithTexture geometry={nodes.polySurface332.geometry} material-color={colors.leather1} material={materials.Thumb_Outer} position={[-0.007, 0.013, 0.009]} rotation={[1.617, -0.085, -2.45]} scale={0.008} texture={textures.leather1} />
+              ) : (
+                <mesh geometry={nodes.polySurface332.geometry} material-color={colors.leather1} material={materials.Thumb_Outer} position={[-0.007, 0.013, 0.009]} rotation={[1.617, -0.085, -2.45]} scale={0.008} />
               )}
-              {personalize["Thumb Logo/Graphic"] === "Premium Graphic (+$15)" && (
-                <>
-                  <MeshWithTexture geometry={nodes.polySurface332.geometry} material-color={colors.inlay} material={materials.Thumb_Outer} position={[-0.007, 0.013, 0.009]} rotation={[1.617, -0.085, -2.45]} scale={0.008} texture={textures.inlay} />
-                  <ThumbPremiumGraphic nodes={nodes} materials={materials} position={[0.043, 0.048, 0.016]} rotation={[Math.PI*2.915, Math.PI*1.10075, Math.PI*-0.6625]} scale={0.018} personalize={personalize} />
-                  {/* <mesh geometry={nodes.shaka.geometry} material={materials.shaka} position={[0.036, 0.039, 0.023]} rotation={[2.744, 0.257, -1.083]} scale={0.012} /> */}
-                </>
+              <ThumbGraphic nodes={nodes} materials={materials} position={[0.0445, 0.048, 0.016]} rotation={[Math.PI*2.915, Math.PI*1.10075, Math.PI*-0.6625]} scale={[0.014, 0.016, 0.017]} personalize={personalize}/>
+              {/* <mesh geometry={nodes.shaka.geometry} material={materials.shaka} position={[0.036, 0.039, 0.023]} rotation={[2.744, 0.257, -1.083]} scale={0.012} /> */}
+            </>
+          )}
+          {personalize["Thumb Logo/Graphic"] === "Premium Graphic (+$15)" && (
+            <>
+              {textures.leather1 ? (
+                <MeshWithTexture geometry={nodes.polySurface332.geometry} material-color={colors.leather1} material={materials.Thumb_Outer} position={[-0.007, 0.013, 0.009]} rotation={[1.617, -0.085, -2.45]} scale={0.008} texture={textures.leather1} />
+              ) : (
+                <mesh geometry={nodes.polySurface332.geometry} material-color={colors.leather1} material={materials.Thumb_Outer} position={[-0.007, 0.013, 0.009]} rotation={[1.617, -0.085, -2.45]} scale={0.008} />
               )}
-              {personalize["Thumb Logo/Graphic"] === "Stamped Flag (+$7)" && (
-                <>
-                  <MeshWithTexture geometry={nodes.polySurface332.geometry} material-color={colors.inlay} material={materials.Thumb_Outer} position={[-0.007, 0.013, 0.009]} rotation={[1.617, -0.085, -2.45]} scale={0.008} texture={textures.inlay} />
-                  <StampedFlag nodes={nodes} materials={materials} position={[0.043, 0.048, 0.016]} rotation={[Math.PI*2.8525, Math.PI*1.0695, Math.PI*-0.6625]} scale={[0.025, 0.02, 0.02]} personalize={personalize} />
-                  {/* <mesh geometry={nodes.shaka.geometry} material={materials.shaka} position={[0.036, 0.039, 0.023]} rotation={[2.744, 0.257, -1.083]} scale={0.012} /> */}
-                </>
+                <ThumbPremiumGraphic nodes={nodes} materials={materials} position={[0.0445, 0.048, 0.016]} rotation={[Math.PI*2.915, Math.PI*1.10075, Math.PI*-0.6625]} scale={0.018} personalize={personalize} />
+            </>
+          )}
+          {personalize["Thumb Logo/Graphic"] === "Stamped Flag (+$7)" && (
+            <>
+              {textures.leather1 ? (
+                <MeshWithTexture geometry={nodes.polySurface332.geometry} material-color={colors.leather1} material={materials.Thumb_Outer} position={[-0.007, 0.013, 0.009]} rotation={[1.617, -0.085, -2.45]} scale={0.008} texture={textures.leather1} />
+              ) : (
+                <mesh geometry={nodes.polySurface332.geometry} material-color={colors.leather1} material={materials.Thumb_Outer} position={[-0.007, 0.013, 0.009]} rotation={[1.617, -0.085, -2.45]} scale={0.008} />
               )}
-              {personalize["Thumb Logo/Graphic"] === "Thumb Flag (+$7)" && (
-                <>
-                  <MeshWithTexture geometry={nodes.polySurface332.geometry} material-color={colors.inlay} material={materials.Thumb_Outer} position={[-0.007, 0.013, 0.009]} rotation={[1.617, -0.085, -2.45]} scale={0.008} texture={textures.inlay} />
-                  <ThumbFlag nodes={nodes} materials={materials} position={[0.043, 0.048, 0.016]} rotation={[Math.PI*2.8525, Math.PI*1.0695, Math.PI*-0.6625]} scale={[0.03, 0.015, 0.02]} personalize={personalize} />
-                  {/* <mesh geometry={nodes.shaka.geometry} material={materials.shaka} position={[0.036, 0.039, 0.023]} rotation={[2.744, 0.257, -1.083]} scale={0.012} /> */}
-                </>
+                <StampedFlag nodes={nodes} materials={materials} position={[0.045, 0.048, 0.016]} rotation={[Math.PI*2.8525, Math.PI*1.0695, Math.PI*-0.6625]} scale={[0.025, 0.02, 0.02]} personalize={personalize} />
+              {/* <mesh geometry={nodes.shaka.geometry} material={materials.shaka} position={[0.036, 0.039, 0.023]} rotation={[2.744, 0.257, -1.083]} scale={0.012} /> */}
+            </>
+          )}
+          {personalize["Thumb Logo/Graphic"] === "Thumb Flag (+$7)" && (
+            <>
+              {textures.leather1 ? (
+                <MeshWithTexture geometry={nodes.polySurface332.geometry} material-color={colors.leather1} material={materials.Thumb_Outer} position={[-0.007, 0.013, 0.009]} rotation={[1.617, -0.085, -2.45]} scale={0.008} texture={textures.leather1} />
+              ) : (
+                <mesh geometry={nodes.polySurface332.geometry} material-color={colors.leather1} material={materials.Thumb_Outer} position={[-0.007, 0.013, 0.009]} rotation={[1.617, -0.085, -2.45]} scale={0.008} />
               )}
-              {personalize["Thumb Logo/Graphic"] === "Jumbo Number (+$7)" && (
-                <>
-                  <MeshWithTexture geometry={nodes.polySurface332.geometry} material-color={colors.inlay} material={materials.Thumb_Outer} position={[-0.007, 0.013, 0.009]} rotation={[1.617, -0.085, -2.45]} scale={0.008} texture={textures.inlay} />
-                  <Text
-                    font={fonts[personalize["Text Font"]]}
-                    position={[0.040, 0.044, 0.017]}
-                    rotation={[0.21875*Math.PI, 0.3125*Math.PI, 0.1875*Math.PI]}
-                    color={personalize["Jumbo Number Color"]}
-                    scale={0.02}
-                  >
-                    {personalize["Jumbo Number"]}
-                  </Text>
-                </>
+                <ThumbFlag nodes={nodes} materials={materials} position={[0.045, 0.048, 0.016]} rotation={[Math.PI*2.8525, Math.PI*1.0695, Math.PI*-0.6625]} scale={[0.03, 0.015, 0.02]} personalize={personalize} />
+              {/* <mesh geometry={nodes.shaka.geometry} material={materials.shaka} position={[0.036, 0.039, 0.023]} rotation={[2.744, 0.257, -1.083]} scale={0.012} /> */}
+            </>
+          )}
+          {personalize["Thumb Logo/Graphic"] === "Jumbo Number (+$7)" && (
+            <>
+              {textures.leather1 ? (
+                <MeshWithTexture geometry={nodes.polySurface332.geometry} material-color={colors.leather1} material={materials.Thumb_Outer} position={[-0.007, 0.013, 0.009]} rotation={[1.617, -0.085, -2.45]} scale={0.008} texture={textures.leather1} />
+              ) : (
+                <mesh geometry={nodes.polySurface332.geometry} material-color={colors.leather1} material={materials.Thumb_Outer} position={[-0.007, 0.013, 0.009]} rotation={[1.617, -0.085, -2.45]} scale={0.008} />
               )}
+              <Text
+                font={fonts[personalize["Text Font"]]}
+                position={[base.dual_welting === null ? 0.40 : 0.0425, 0.044, 0.017]}
+                rotation={[0.21875*Math.PI, 0.3125*Math.PI, 0.1875*Math.PI]}
+                color={personalize["Jumbo Number Color"]}
+                scale={0.02}
+              >
+                {personalize["Jumbo Number"]}
+              </Text>
+            </>
+          )}
               {personalize["Thumb Logo/Graphic"] === "Custom Plate Number (+$7)" && (
                 <>
                   <MeshWithTexture geometry={nodes.thuimb.geometry} material-color={colors.inlay} material={materials.Thumb_Outer} position={[-0.007, 0.013, 0.009]} rotation={[1.617, -0.085, -2.45]} scale={0.008} texture={textures.inlay} />
@@ -700,54 +723,77 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
                 </>
               )}
               {personalize["Thumb Logo/Graphic"] === "Logo" && (
-                <>
-                  <mesh geometry={nodes.polySurface332.geometry} material-color={colors.inlay} material={materials.Thumb_Outer} position={[-0.007, 0.013, 0.009]} rotation={[1.617, -0.085, -2.45]} scale={0.008} />
-                  <mesh geometry={nodes.polySurface333.geometry} material-color={colors.logo} material={materials.Side_Logo} position={[-0.035, 0.003, 0.005]} rotation={[1.659, -0.185, -2.459]} scale={0.012} />
-                  <mesh geometry={nodes.polySurface334.geometry} material-color={colors.logo} material={materials.Side_Logo} position={[-0.035, 0.003, 0.005]} rotation={[1.659, -0.185, -2.459]} scale={0.012} />  
-                </>   
+            <>
+              {textures.leather1 ? (
+                <MeshWithTexture geometry={nodes.polySurface332.geometry} material-color={colors.leather1} material={materials.Thumb_Outer} position={[-0.007, 0.013, 0.009]} rotation={[1.617, -0.085, -2.45]} scale={0.008} texture={textures.leather1} />
+              ) : (
+                <mesh geometry={nodes.polySurface332.geometry} material-color={colors.leather1} material={materials.Thumb_Outer} position={[-0.007, 0.013, 0.009]} rotation={[1.617, -0.085, -2.45]} scale={0.008} />
               )}
-              {personalize["Thumb Logo/Graphic"] === "Graphic (+$7)" && (
-                <>
-                  <mesh geometry={nodes.polySurface332.geometry} material-color={colors.inlay} material={materials.Thumb_Outer} position={[-0.007, 0.013, 0.009]} rotation={[1.617, -0.085, -2.45]} scale={0.008} />
-                  <ThumbGraphic nodes={nodes} materials={materials} position={[0.043, 0.048, 0.016]} rotation={[Math.PI*2.915, Math.PI*1.10075, Math.PI*-0.6625]} scale={[0.014, 0.016, 0.017]} personalize={personalize}/>
-                  {/* <mesh geometry={nodes.shaka.geometry} material={materials.shaka} position={[0.036, 0.039, 0.023]} rotation={[2.744, 0.257, -1.083]} scale={0.012} /> */}
-                </>
+              <mesh geometry={nodes.polySurface333.geometry} material-color={colors.logo} material={materials.Side_Logo} position={[base.dual_welting === null ? -0.035 : -0.0335, 0.003, 0.005]} rotation={[1.659, -0.185, -2.459]} scale={0.012} />
+              <mesh geometry={nodes.polySurface334.geometry} material-color={colors.logo} material={materials.Side_Logo} position={[base.dual_welting === null ? -0.035 : -0.0335, 0.003, 0.005]} rotation={[1.659, -0.185, -2.459]} scale={0.012} />  
+            </>
+          )}
+          {personalize["Thumb Logo/Graphic"] === "Graphic (+$7)" && (
+            <>
+              {textures.leather1 ? (
+                <MeshWithTexture geometry={nodes.polySurface332.geometry} material-color={colors.leather1} material={materials.Thumb_Outer} position={[-0.007, 0.013, 0.009]} rotation={[1.617, -0.085, -2.45]} scale={0.008} texture={textures.leather1} />
+              ) : (
+                <mesh geometry={nodes.polySurface332.geometry} material-color={colors.leather1} material={materials.Thumb_Outer} position={[-0.007, 0.013, 0.009]} rotation={[1.617, -0.085, -2.45]} scale={0.008} />
               )}
-              {personalize["Thumb Logo/Graphic"] === "Premium Graphic (+$15)" && (
-                <>
-                  <mesh geometry={nodes.polySurface332.geometry} material-color={colors.inlay} material={materials.Thumb_Outer} position={[-0.007, 0.013, 0.009]} rotation={[1.617, -0.085, -2.45]} scale={0.008} />
-                  <ThumbPremiumGraphic nodes={nodes} materials={materials} position={[0.043, 0.048, 0.016]} rotation={[Math.PI*2.915, Math.PI*1.10075, Math.PI*-0.6625]} scale={0.018} personalize={personalize} />
-                  {/* <mesh geometry={nodes.shaka.geometry} material={materials.shaka} position={[0.036, 0.039, 0.023]} rotation={[2.744, 0.257, -1.083]} scale={0.012} /> */}
-                </>
+              <ThumbGraphic nodes={nodes} materials={materials} position={[0.0445, 0.048, 0.016]} rotation={[Math.PI*2.915, Math.PI*1.10075, Math.PI*-0.6625]} scale={[0.014, 0.016, 0.017]} personalize={personalize}/>
+              {/* <mesh geometry={nodes.shaka.geometry} material={materials.shaka} position={[0.036, 0.039, 0.023]} rotation={[2.744, 0.257, -1.083]} scale={0.012} /> */}
+            </>
+          )}
+          {personalize["Thumb Logo/Graphic"] === "Premium Graphic (+$15)" && (
+            <>
+              {textures.leather1 ? (
+                <MeshWithTexture geometry={nodes.polySurface332.geometry} material-color={colors.leather1} material={materials.Thumb_Outer} position={[-0.007, 0.013, 0.009]} rotation={[1.617, -0.085, -2.45]} scale={0.008} texture={textures.leather1} />
+              ) : (
+                <mesh geometry={nodes.polySurface332.geometry} material-color={colors.leather1} material={materials.Thumb_Outer} position={[-0.007, 0.013, 0.009]} rotation={[1.617, -0.085, -2.45]} scale={0.008} />
               )}
-              {personalize["Thumb Logo/Graphic"] === "Stamped Flag (+$7)" && (
-                <>
-                  <mesh geometry={nodes.polySurface332.geometry} material-color={colors.inlay} material={materials.Thumb_Outer} position={[-0.007, 0.013, 0.009]} rotation={[1.617, -0.085, -2.45]} scale={0.008} />
-                  <StampedFlag nodes={nodes} materials={materials} position={[0.043, 0.048, 0.016]} rotation={[Math.PI*2.8525, Math.PI*1.0695, Math.PI*-0.6625]} scale={[0.025, 0.02, 0.02]} personalize={personalize} />
-                  {/* <mesh geometry={nodes.shaka.geometry} material={materials.shaka} position={[0.036, 0.039, 0.023]} rotation={[2.744, 0.257, -1.083]} scale={0.012} /> */}
-                </>
+                <ThumbPremiumGraphic nodes={nodes} materials={materials} position={[0.0445, 0.048, 0.016]} rotation={[Math.PI*2.915, Math.PI*1.10075, Math.PI*-0.6625]} scale={0.018} personalize={personalize} />
+            </>
+          )}
+          {personalize["Thumb Logo/Graphic"] === "Stamped Flag (+$7)" && (
+            <>
+              {textures.leather1 ? (
+                <MeshWithTexture geometry={nodes.polySurface332.geometry} material-color={colors.leather1} material={materials.Thumb_Outer} position={[-0.007, 0.013, 0.009]} rotation={[1.617, -0.085, -2.45]} scale={0.008} texture={textures.leather1} />
+              ) : (
+                <mesh geometry={nodes.polySurface332.geometry} material-color={colors.leather1} material={materials.Thumb_Outer} position={[-0.007, 0.013, 0.009]} rotation={[1.617, -0.085, -2.45]} scale={0.008} />
               )}
-              {personalize["Thumb Logo/Graphic"] === "Thumb Flag (+$7)" && (
-                <>
-                  <mesh geometry={nodes.polySurface332.geometry} material-color={colors.inlay} material={materials.Thumb_Outer} position={[-0.007, 0.013, 0.009]} rotation={[1.617, -0.085, -2.45]} scale={0.008} />
-                  <ThumbFlag nodes={nodes} materials={materials} position={[0.043, 0.048, 0.016]} rotation={[Math.PI*2.8525, Math.PI*1.0695, Math.PI*-0.6625]} scale={[0.03, 0.015, 0.02]} personalize={personalize} />
-                  {/* <mesh geometry={nodes.shaka.geometry} material={materials.shaka} position={[0.036, 0.039, 0.023]} rotation={[2.744, 0.257, -1.083]} scale={0.012} /> */}
-                </>
+                <StampedFlag nodes={nodes} materials={materials} position={[0.045, 0.048, 0.016]} rotation={[Math.PI*2.8525, Math.PI*1.0695, Math.PI*-0.6625]} scale={[0.025, 0.02, 0.02]} personalize={personalize} />
+              {/* <mesh geometry={nodes.shaka.geometry} material={materials.shaka} position={[0.036, 0.039, 0.023]} rotation={[2.744, 0.257, -1.083]} scale={0.012} /> */}
+            </>
+          )}
+          {personalize["Thumb Logo/Graphic"] === "Thumb Flag (+$7)" && (
+            <>
+              {textures.leather1 ? (
+                <MeshWithTexture geometry={nodes.polySurface332.geometry} material-color={colors.leather1} material={materials.Thumb_Outer} position={[-0.007, 0.013, 0.009]} rotation={[1.617, -0.085, -2.45]} scale={0.008} texture={textures.leather1} />
+              ) : (
+                <mesh geometry={nodes.polySurface332.geometry} material-color={colors.leather1} material={materials.Thumb_Outer} position={[-0.007, 0.013, 0.009]} rotation={[1.617, -0.085, -2.45]} scale={0.008} />
               )}
-              {personalize["Thumb Logo/Graphic"] === "Jumbo Number (+$7)" && (
-                <>
-                  <mesh geometry={nodes.polySurface332.geometry} material-color={colors.inlay} material={materials.Thumb_Outer} position={[-0.007, 0.013, 0.009]} rotation={[1.617, -0.085, -2.45]} scale={0.008} />
-                  <Text
-                    font={fonts[personalize["Text Font"]]}
-                    position={[0.040, 0.044, 0.017]}
-                    rotation={[0.21875*Math.PI, 0.3125*Math.PI, 0.1875*Math.PI]}
-                    color={personalize["Jumbo Number Color"]}
-                    scale={0.02}
-                  >
-                    {personalize["Jumbo Number"]}
-                  </Text>
-                </>
+                <ThumbFlag nodes={nodes} materials={materials} position={[0.045, 0.048, 0.016]} rotation={[Math.PI*2.8525, Math.PI*1.0695, Math.PI*-0.6625]} scale={[0.03, 0.015, 0.02]} personalize={personalize} />
+              {/* <mesh geometry={nodes.shaka.geometry} material={materials.shaka} position={[0.036, 0.039, 0.023]} rotation={[2.744, 0.257, -1.083]} scale={0.012} /> */}
+            </>
+          )}
+          {personalize["Thumb Logo/Graphic"] === "Jumbo Number (+$7)" && (
+            <>
+              {textures.leather1 ? (
+                <MeshWithTexture geometry={nodes.polySurface332.geometry} material-color={colors.leather1} material={materials.Thumb_Outer} position={[-0.007, 0.013, 0.009]} rotation={[1.617, -0.085, -2.45]} scale={0.008} texture={textures.leather1} />
+              ) : (
+                <mesh geometry={nodes.polySurface332.geometry} material-color={colors.leather1} material={materials.Thumb_Outer} position={[-0.007, 0.013, 0.009]} rotation={[1.617, -0.085, -2.45]} scale={0.008} />
               )}
+              <Text
+                font={fonts[personalize["Text Font"]]}
+                position={[base.dual_welting === null ? 0.40 : 0.0425, 0.044, 0.017]}
+                rotation={[0.21875*Math.PI, 0.3125*Math.PI, 0.1875*Math.PI]}
+                color={personalize["Jumbo Number Color"]}
+                scale={0.02}
+              >
+                {personalize["Jumbo Number"]}
+              </Text>
+            </>
+          )}
               {personalize["Thumb Logo/Graphic"] === "Custom Plate Number (+$7)" && (
                 <>
                   <mesh geometry={nodes.thuimb.geometry} material-color={colors.inlay} material={materials.Thumb_Outer} position={[-0.007, 0.013, 0.009]} rotation={[1.617, -0.085, -2.45]} scale={0.008}  />
@@ -826,6 +872,7 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
       {/*Welt*/}
       {base.dual_welting ? (
         <>
+          <mesh geometry={nodes.dual_welting_thumb_part.geometry} material-color={colors.leather1} material={materials.newthumb} position={[-0.021, 0.002, 0.029]} rotation={[Math.PI / 2, 0, 0]} scale={0.387} />
           <mesh geometry={nodes.polySurface297001.geometry} material-color={colors.welt} material={weltMaterial} position={[-0.007, 0.013, 0.009]} rotation={[1.617, -0.085, -2.45]} scale={0.008} /> */}
           <mesh geometry={nodes.polySurface301.geometry} material-color={colors.welt} material={weltMaterial} position={[-0.007, 0.013, 0.009]} rotation={[1.617, -0.085, -2.45]} scale={0.008} />
           <mesh geometry={nodes.polySurface319.geometry} material-color={colors.welt} material={weltMaterial} position={[-0.007, 0.013, 0.009]} rotation={[1.617, -0.085, -2.45]} scale={0.008} />
@@ -1046,21 +1093,18 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
 
       {/*WebH*/}
       {base.web_style === 'H-Web' && (
-        <> 
-          {/* <mesh geometry={nodes.web6.geometry} material-color={colors.webStyle} material={materials.Knots} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
-          <mesh geometry={nodes.web6_laces.geometry} material-color={colors.laces} material={materials.Web_Laces_3} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
-          <mesh geometry={nodes.web6_stitches.geometry} material-color={colors.Stiches} material={materials.Web_Stitches_7} rotation={[Math.PI / 2, 0, 0]} scale={0.01} /> */}
+        <>
           {textures.webStyle ? (
-            <MeshWithTexture geometry={nodes.web6001.geometry} material-color={colors.webStyle} material={materials['Knots.002']} rotation={[Math.PI / 2, 0, 0]} scale={0.01} texture={textures.webStyle} tsize={8}/>
+            <MeshWithTexture geometry={nodes.web4.geometry} material-color={colors.webStyle} material={materials.Web_Body_2} rotation={[Math.PI / 2, 0, 0]} scale={0.01} texture={textures.webStyle} tsize={5.5}/>
           ) : (
-            <mesh geometry={nodes.web6001.geometry} material-color={colors.webStyle} material={materials['Knots.002']} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
+            <mesh geometry={nodes.web4.geometry} material-color={colors.webStyle} material={materials.Web_Body_2} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
           )}
           {textures.Stiches ? (
-            <MeshWithTexture geometry={nodes.web6_stitches001.geometry} material-color={colors.Stiches} material={materials['Web_Stitches_7.001']} rotation={[Math.PI / 2, 0, 0]} texture={textures.Stiches} />
+            <MeshWithTexture geometry={nodes.web4_stitches.geometry} material-color={colors.Stiches} material={materials['Web_Stitches 2']} rotation={[Math.PI / 2, 0, 0]} scale={0.01} texture={textures.Stiches} />
           ) : (
-            <mesh geometry={nodes.web6_stitches001.geometry} material-color={colors.Stiches} material={materials['Web_Stitches_7.001']} rotation={[Math.PI / 2, 0, 0]} />
-          )} 
-          <mesh geometry={nodes.web6_laces001.geometry} material-color={colors.laces} material={materials['Web_Laces_3.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
+            <mesh geometry={nodes.web4_stitches.geometry} material-color={colors.Stiches} material={materials['Web_Stitches 2']} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
+          )}  
+          {/* <mesh geometry={nodes.web4_laces_fr.geometry} material-color={colors.laces} material={materials.Web_Laces_4} rotation={[Math.PI / 2, 0, 0]} scale={0.01} /> */}
         </>
       )}
       
@@ -1080,7 +1124,7 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
           ) : (
             <mesh geometry={nodes.web7_stitches001.geometry} material-color={colors.Stiches} material={materials['Web_Stitches_7.001']} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
           )} 
-          <mesh geometry={nodes.web7_laces001.geometry} material-color={colors.laces} material={materials['Knots.004']} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
+          <mesh geometry={nodes.T_web_laces.geometry} material-color={colors.laces} material={materials.blinn1SG} position={[-0.005, 0.007, 0.001]} rotation={[Math.PI / 2, 0, 0]} />
         </>
       )}
 
@@ -1202,7 +1246,36 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
           ) : (
             <mesh geometry={nodes.web12_stitches.geometry} material-color={colors.Stiches} material={materials.Web_Stitches_10} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
           )}
-          <mesh geometry={nodes.web12_laces.geometry} material-color={colors.laces} material={materials.Web_Laces_10} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
+          <mesh geometry={nodes.Y_web_laces.geometry} material-color={colors.laces} material={materials['blinn1SG.001']} position={[0.042, 0.115, 0.034]} rotation={[1.635, -0.03, 0.03]} />
+        </>
+      )}
+      {base.web_style === 'V-Web' && (
+        <>
+          {textures.webStyle ? (
+            <MeshWithTexture geometry={nodes.web_2.geometry} material-color={colors.webStyle} material={materials['initialShadingGroup.013']} rotation={[Math.PI / 2, 0, 0]} texture={textures.webStyle} tsize={3.25}/>
+          ) : (
+            <mesh geometry={nodes.web_2.geometry} material-color={colors.webStyle} material={materials['initialShadingGroup.013']} rotation={[Math.PI / 2, 0, 0]} />
+          )}
+          {textures.Stiches ? (
+            <MeshWithTexture geometry={nodes.web_2_stitches.geometry} material-color={colors.Stiches} material={materials['initialShadingGroup.014']} rotation={[Math.PI / 2, 0, 0]} scale={0.01} texture={textures.Stiches} />
+          ) : (
+            <mesh geometry={nodes.web_2_stitches.geometry} material-color={colors.Stiches} material={materials['initialShadingGroup.014']} rotation={[Math.PI / 2, 0, 0]} />
+          )}
+          <mesh geometry={nodes.web_2_laces.geometry} material-color={colors.laces} material={materials['initialShadingGroup.015']} rotation={[Math.PI / 2, 0, 0]} />        </>
+      )}
+      {base.web_style === 'Laced Cross Web' && (
+        <>
+          {textures.webStyle ? (
+            <MeshWithTexture geometry={nodes.body.geometry} material={materials['initialShadingGroup.010']} rotation={[Math.PI / 2, 0, 0]} material-color={colors.webStyle} texture={textures.webStyle} tsize={3.25}/>
+            ) : (
+            <mesh geometry={nodes.body.geometry} material={materials['initialShadingGroup.010']} rotation={[Math.PI / 2, 0, 0]} material-color={colors.webStyle}/>
+          )}
+          {textures.Stiches ? (
+            <MeshWithTexture geometry={nodes.stitches.geometry} material-color={colors.Stiches} material={materials['initialShadingGroup.012']} rotation={[Math.PI / 2, 0, 0]} texture={textures.Stiches}/>
+          ) : (
+            <mesh geometry={nodes.stitches.geometry} material-color={colors.Stiches} material={materials['initialShadingGroup.012']} rotation={[Math.PI / 2, 0, 0]} />
+          )}
+          <mesh geometry={nodes.laces.geometry} material-color={colors.laces} material={materials['initialShadingGroup.011']} rotation={[Math.PI / 2, 0, 0]} />
         </>
       )}
       
@@ -1251,15 +1324,38 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
         </>
       )}
 
-      {base.logo_style === "Embroidered Flag (+$7)" && (
-        <>
-          <mesh geometry={nodes.circle_logo001.geometry} material-color={colors.wristPlate} material={materials.Circle_Logo} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
-          <mesh geometry={nodes.logo_stitch_round.geometry} material-color={colors.Stiches} material={materials['Logo Stitches']} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
-          <EmbroideredLogo geometry={nodes.flag_logo.geometry} material={materials.logo_with_outline1} rotation={[Math.PI / 2, 0, 0]} scale={0.01} texture={base.embroidered_flag} tsize={2}/>
-          {/* <mesh geometry={nodes.flag_logo.geometry} material={materials.logo_with_outline1} rotation={[Math.PI / 2, 0, 0]} scale={0.01} >
-             <meshBasicMaterial map={textureMap} />
-          </mesh> */}
-        </>
+{base.logo_style === "Embroidered Flag (+$7)" && base.embroidered_flag === "Puerto Rico" && (
+        <mesh geometry={nodes.Logo1.geometry} material={materials.logo1} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
+      )}
+      {base.logo_style === "Embroidered Flag (+$7)" && base.embroidered_flag === "Venezuela" && (
+        <mesh geometry={nodes.Logo2.geometry} material={materials.Logo2} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
+      )}
+      {base.logo_style === "Embroidered Flag (+$7)" && base.embroidered_flag === "Italy" && (
+        <mesh geometry={nodes.Logo3.geometry} material={materials.Logo3} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
+      )}
+      {base.logo_style === "Embroidered Flag (+$7)" && base.embroidered_flag === "Australia" && (
+        <mesh geometry={nodes.Logo4.geometry} material={materials.Logo4} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
+      )}
+      {base.logo_style === "Embroidered Flag (+$7)" && base.embroidered_flag === "Japan" && (
+        <mesh geometry={nodes.Logo5.geometry} material={materials.Logo5} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
+      )}
+      {base.logo_style === "Embroidered Flag (+$7)" && base.embroidered_flag === "Dominican Republic" && (
+        <mesh geometry={nodes.Logo6.geometry} material={materials.Logo6} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
+      )}
+      {base.logo_style === "Embroidered Flag (+$7)" && base.embroidered_flag === "Netherlands" && (
+        <mesh geometry={nodes.Logo7.geometry} material={materials.Logo7} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
+      )}
+      {base.logo_style === "Embroidered Flag (+$7)" && base.embroidered_flag === "Korea" && (
+        <mesh geometry={nodes.Logo8.geometry} material={materials.Logo8} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
+      )}
+      {base.logo_style === "Embroidered Flag (+$7)" && base.embroidered_flag === "Canada" && (
+       <mesh geometry={nodes.Logo9.geometry} material={materials.Logo9} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
+      )}
+      {base.logo_style === "Embroidered Flag (+$7)" && base.embroidered_flag === "USA" && (
+       <mesh geometry={nodes.Logo10.geometry} material={materials.Logo10} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
+      )}
+      {base.logo_style === "Embroidered Flag (+$7)" && base.embroidered_flag === "Mexico" && (
+        <mesh geometry={nodes.Logo11.geometry} material={materials.Logo11} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
       )}
 
 
@@ -1282,4 +1378,4 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
   )
 }
 
-useGLTF.preload("/wp-content/reactpress/apps/outfieldprostar/build/Model/Fielder.glb")
+useGLTF.preload("/wp-content/reactpress/apps/outfieldprostar/build/Model/untitled.glb")

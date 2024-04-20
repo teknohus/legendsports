@@ -66,21 +66,21 @@ import logoMexico from '../assets/logo_flag/LogoMexico.png'
 import logoPR from '../assets/logo_flag/LogoPR.png'
 import logoVenezuela from '../assets/logo_flag/LogoVenezuela.jpg'
 import logoNetherland from '../assets/logo_flag/LogoNetherlands.jpg'
-import clover from '../assets/Graphics/clover.png'
-import crown from '../assets/Graphics/Crown.png'
-import baseballbats from '../assets/Graphics/Baseball Bats.png'
-import cross from '../assets/Graphics/cross.png'
 import cross1 from '../assets/Graphics/cross1.png'
-import star_david from '../assets/Graphics/star_david.png'
-import reverse_k from '../assets/Graphics/reverse-k.png'
-import ribbon from '../assets/Graphics/ribbon.png'
-import heart from '../assets/Graphics/heart.png'
-import paw from '../assets/Graphics/paw.png'
-import maple from '../assets/Graphics/maple.png'
-import star from '../assets/Graphics/star.png'
-import light_bolt from '../assets/Graphics/lightning.png'
-import peace from '../assets/Graphics/peace.png'
-import shaka from '../assets/Graphics/shaka.png'
+// import clover from '../assets/Graphics/clover.png'
+// import crown from '../assets/Graphics/Crown.png'
+// import baseballbats from '../assets/Graphics/Baseball Bats.png'
+// import cross from '../assets/Graphics/cross.png'
+// import star_david from '../assets/Graphics/star_david.png'
+// import reverse_k from '../assets/Graphics/reverse-k.png'
+// import ribbon from '../assets/Graphics/ribbon.png'
+// import heart from '../assets/Graphics/heart.png'
+// import paw from '../assets/Graphics/paw.png'
+// import maple from '../assets/Graphics/maple.png'
+// import star from '../assets/Graphics/star.png'
+// import light_bolt from '../assets/Graphics/lightning.png'
+// import peace from '../assets/Graphics/peace.png'
+// import shaka from '../assets/Graphics/shaka.png'
 import cannon from '../assets/Graphics/cannon.png'
 import champion from '../assets/Graphics/champion.png'
 import greenclover from '../assets/Graphics/green_clover.png'
@@ -235,6 +235,16 @@ import Outlinefont from "../assets/fonts/Milestone Outline.otf"
 import Bold from "../assets/fonts/HergonGrotesk-Medium.ttf"
 import legendLogo from "../assets/palm_stamp/legendLogo.png"
 import legendHorse from "../assets/palm_stamp/LegendHorse.png"
+import Clover from "../assets/new_graphics/Clover.png";
+import Diamond from "../assets/new_graphics/Diamond.png";
+import Dollar from "../assets/new_graphics/Dollar.png";
+import Fire from "../assets/new_graphics/Fire.png";
+import Heart from "../assets/new_graphics/Heart.png";
+import HorseShoe from "../assets/new_graphics/Horse Shoe.png";
+import Horse from "../assets/new_graphics/Horse.png";
+import Paw from "../assets/new_graphics/Paw.png";
+import Star from "../assets/new_graphics/Star.png";
+import Target from "../assets/new_graphics/Target.png";
 
 export const LegendLogo = legendLogo
 export const LegendHorse = legendHorse
@@ -254,21 +264,17 @@ export const flags = {
 }
 
 export const thumb_graphics = {
-  "4 Leaf Clover" : clover,
-  "Cross" : cross,
-  "Star of David" : star_david,
-  "Reverse K" : reverse_k,
-  "Ribbon" : ribbon,
-  "Heart" : heart,
-  "Paw Print" : paw,
-  "Maple Leaf" : maple,
-  "Star" : star,
-  "Lightning Bolt" : light_bolt,
-  "Peace" : peace,
-  "Shaka" : shaka,
-  "Crown" : crown,
-  "Baseball Bats": baseballbats,
-}
+  "Clover": Clover,
+  "Diamond": Diamond,
+  "Dollar": Dollar,
+  "Fire": Fire,
+  "Heart": Heart,
+  "Horse Shoe": HorseShoe,
+  "Horse": Horse,
+  "Paw": Paw,
+  "Star": Star,
+  "Target": Target,
+};
 
 export const thumb_premium_graphics = {
   "Hot Dog" : hotdog,
@@ -887,7 +893,7 @@ export const meshOptions = {
 
   export const personlizationOptions = {
     "Thumb Logo/Graphic" : "Circle Logo",
-    "Thumb Graphic": "Cross",
+    "Thumb Graphic": "Clover",
     "Premium Graphic": "Hot Dog", 
     "Jumbo Number": "",
     "Jumbo Number Color": "#1a1a1a",
@@ -981,7 +987,7 @@ export const meshOptions = {
     },
     web_style: {
       textbox: false,
-      options: ["I-Web", "I-Web (No Logo)",  "I-Web (Spiral Lace)", "Y-Web", "E-Web", "H-Web", "Laced H-Web", "T-Web", "Basket Web", "Cross Web", "Net Style Web" ,"1 Piece Web", "2 Piece Web"],
+      options: ["I-Web", "I-Web (No Logo)",  "I-Web (Spiral Lace)", "Y-Web", "E-Web", "H-Web", "V-Web", "Laced Cross Web", "Laced H-Web", "T-Web", "Basket Web", "Cross Web", "Net Style Web" ,"1 Piece Web", "2 Piece Web"],
       icons: null,
       colors: null,
     },
@@ -1006,7 +1012,7 @@ export const meshOptions = {
     "Thumb Graphic": {
       textbox: false,
       options: null,
-      icons: {"Cross" : cross, "Star of David" : star_david, "Reverse K" : reverse_k, "Ribbon" : ribbon, "Heart" : heart, "Paw Print" : paw, "Maple Leaf" : maple, "Star" : star, "Lightning Bolt" : light_bolt, "Peace" : peace, "Shaka" : shaka, "Crown" : crown, "Baseball Bats": baseballbats,},
+      icons: {"Clover": Clover, "Diamond": Diamond, "Dollar": Dollar, "Fire": Fire, "Heart": Heart, "Horse Shoe": HorseShoe, "Horse": Horse, "Paw": Paw, "Star": Star, "Target": Target,},
       colors: null,
     },
     "Premium Graphic": {

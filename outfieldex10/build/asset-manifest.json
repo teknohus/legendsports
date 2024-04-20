@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/wp-content/reactpress/apps/outfieldex10/build/static/css/main.a7c91330.css",
-    "main.js": "/wp-content/reactpress/apps/outfieldex10/build/static/js/main.14eb3c85.js",
+    "main.js": "/wp-content/reactpress/apps/outfieldex10/build/static/js/main.0224118f.js",
     "static/media/Hot Pink Snakeskin Art Spots.png": "/wp-content/reactpress/apps/outfieldex10/build/static/media/Hot Pink Snakeskin Art Spots.5d024125c1f223c7321f.png",
     "static/media/Pink Snakeskin Art Spots.png": "/wp-content/reactpress/apps/outfieldex10/build/static/media/Pink Snakeskin Art Spots.729afb2b28386d110305.png",
     "static/media/Teal Snakeskin Art Spots.png": "/wp-content/reactpress/apps/outfieldex10/build/static/media/Teal Snakeskin Art Spots.027269bef9d21274a9d2.png",
@@ -133,10 +133,10 @@
     "static/media/slick.woff": "/wp-content/reactpress/apps/outfieldex10/build/static/media/slick.295183786cd8a1389865.woff",
     "static/media/check-list-icon.svg": "/wp-content/reactpress/apps/outfieldex10/build/static/media/check-list-icon.de00f8427d14a7d63cef.svg",
     "main.a7c91330.css.map": "/wp-content/reactpress/apps/outfieldex10/build/static/css/main.a7c91330.css.map",
-    "main.14eb3c85.js.map": "/wp-content/reactpress/apps/outfieldex10/build/static/js/main.14eb3c85.js.map"
+    "main.0224118f.js.map": "/wp-content/reactpress/apps/outfieldex10/build/static/js/main.0224118f.js.map"
   },
   "entrypoints": [
     "static/css/main.a7c91330.css",
-    "static/js/main.14eb3c85.js"
+    "static/js/main.0224118f.js"
   ]
 }
