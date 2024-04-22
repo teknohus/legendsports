@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/wp-content/reactpress/apps/softball/build/static/css/main.1d067dc2.css",
-    "main.js": "/wp-content/reactpress/apps/softball/build/static/js/main.6602437d.js",
+    "main.js": "/wp-content/reactpress/apps/softball/build/static/js/main.bffdd353.js",
     "static/media/bg-layer.jpg": "/wp-content/reactpress/apps/softball/build/static/media/bg-layer.2d1dd15bf34b188410ea.jpg",
     "index.html": "/wp-content/reactpress/apps/softball/build/index.html",
     "static/media/left.svg": "/wp-content/reactpress/apps/softball/build/static/media/left.1cea82937e55ba1e2fc0.svg",
@@ -10,10 +10,10 @@
     "static/media/left-arrow.svg": "/wp-content/reactpress/apps/softball/build/static/media/left-arrow.d833be4a83b41ea0bc4a.svg",
     "static/media/check-list-icon.svg": "/wp-content/reactpress/apps/softball/build/static/media/check-list-icon.6845dc6fcf127640e50d.svg",
     "main.1d067dc2.css.map": "/wp-content/reactpress/apps/softball/build/static/css/main.1d067dc2.css.map",
-    "main.6602437d.js.map": "/wp-content/reactpress/apps/softball/build/static/js/main.6602437d.js.map"
+    "main.bffdd353.js.map": "/wp-content/reactpress/apps/softball/build/static/js/main.bffdd353.js.map"
   },
   "entrypoints": [
     "static/css/main.1d067dc2.css",
-    "static/js/main.6602437d.js"
+    "static/js/main.bffdd353.js"
   ]
 }

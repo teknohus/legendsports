@@ -68,6 +68,25 @@ export default function Fielder() {
               </div>
             </div>
           </div>
+          <div className="col-lg-4 col-md-4 col-sm-6">
+            <div className="hb-content bg-white ">
+              <div className="hb-content-header">
+                <div className="d-flex justify-content-center">
+                  <div className="col-heading-content">
+                    <div className="upper-heading-content">
+                      <h3>Catcher</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="image-box my-3">
+                <img src={`/wp-content/reactpress/apps/baseball/build/images/outfield.png`} className="mx-auto" alt="layer-45" />
+              </div>
+              <div className="btn-box text-center">
+                <button className="btn" onClick={()=>{window.location.href = 'https://legendsportspro.com/softball-catcher/'}}>Select</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
