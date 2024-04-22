@@ -61,7 +61,7 @@ export default function Fielder() {
                 </div>
               </div>
               <div className="image-box my-3">
-                <img src={`/wp-content/reactpress/apps/baseball/build/images/outfield.png`} className="mx-auto" alt="layer-45" />
+                <img src={`/wp-content/reactpress/apps/baseball/build/images/Fb.png`} className="mx-auto" alt="layer-45" />
               </div>
               <div className="btn-box text-center">
                 <button className="btn" onClick={()=>{window.location.href = 'https://legendsportspro.com/firstbase/'}}>Select</button>
@@ -80,7 +80,7 @@ export default function Fielder() {
                 </div>
               </div>
               <div className="image-box my-3">
-                <img src={`/wp-content/reactpress/apps/baseball/build/images/outfield.png`} className="mx-auto" alt="layer-45" />
+                <img src={`/wp-content/reactpress/apps/baseball/build/images/Catcheri.png`} className="mx-auto" alt="layer-45" />
               </div>
               <div className="btn-box text-center">
                 <button className="btn" onClick={()=>{window.location.href = 'https://legendsportspro.com/catcher/'}}>Select</button>
