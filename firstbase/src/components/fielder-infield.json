@@ -1,0 +1,52 @@
+[
+    {
+      "name": "Legend Edition",
+      "image": "/wp-content/reactpress/apps/firstbase/build/images/firstbase.png",
+      "price": "$225",
+      "redirect-url": "https://legendsportspro.com/firstbase-legend/",
+      "highlights": [
+        "The Signature Special Edition 'Legend Series'",
+        "Most Customizable Model",
+        "Exclusive leather colors/prints",
+        "Available in Sizes: 12.5, 12.75, 13",
+        "Best available option"
+      ]
+    },
+    {
+      "name": "Pro Star Edition",
+      "image": "/wp-content/reactpress/apps/firstbase/build/images/firstbase.png",
+      "price": "$185",
+      "redirect-url": "https://legendsportspro.com/firstbase-prostar/",
+      "highlights": [
+        "US Steerhide",
+        "Pro Grade" ,
+        "Inlay Options Available",
+        "Select special colors/prints available",
+        "Available in sizes: 12.5, 12.75, 13, 13.5"
+      ]
+    },
+    {
+      "name": "LG1",
+      "image": "/wp-content/reactpress/apps/firstbase/build/images/firstbase.png",
+      "price": "$199",
+      "redirect-url": "https://legendsportspro.com/firstbase-lg1/",
+      "highlights": [
+        "Unique Signature Design",
+        "Select special colors/prints available",
+        "Available in sizes: 12.5, 12.75, 13"
+      ]
+    },
+    {
+      "name": "Mini Trainers Mitt",
+      "image": "/wp-content/reactpress/apps/firstbase/build/images/firstbase.png",
+      "price": "$170",
+      "redirect-url": "https://legendsportspro.com/firstbase-minimitt/",
+      "highlights": [
+          "Prepare For Greatness",
+          "Hone your skills at your postion with this mini trainers mitt",
+          "Customization Options Available",
+          "Available in size: 11"
+      ]
+    }
+]
+  
