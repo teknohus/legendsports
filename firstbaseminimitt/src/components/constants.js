@@ -752,9 +752,9 @@ export const colorData = {
     // inlay: true,
     lace_length: true,
     wrist_linning: true,
-    "Web Style": true,
+    "Web Style": false,
     throwing_hand: true,
-    "Glove Stiffness": true,
+    "Glove Stiffness": false,
   }
 
   export const baseReq = {
@@ -856,7 +856,7 @@ export const colorData = {
   export const Options = {
     size: {
       textbox: false,
-      options: ["12.5", "12.75", "13", "13.25", "13.75", "14"],
+      options: ["11"],
       icons: null,
       colors: null,
     },
