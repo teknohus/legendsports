@@ -332,7 +332,7 @@ export default function Main() {
           textbox: value === "Index Text",
           colors: value === "Index Text" ? allColors : null
         } 
-      }))  
+      }))
     }
     if (option === 'Pinky Text'){
       const pinkyText = data["Pinky Text"];
@@ -370,6 +370,17 @@ export default function Main() {
       [option]: value,
     }));
 
+    if(option === 'Index Text' && value === 'Index Text') {
+      setPersonalizeSteps(prevSteps => ({
+        ...prevSteps,
+        "Flag": false
+      }));  
+    } else if(option === 'Index Text' && value !== 'Index Text') {
+      setPersonalizeSteps(prevSteps => ({
+        ...prevSteps,
+        "Flag": true
+      }));  
+    }
     if(option === 'Thumb Logo/Graphic' && value === 'Circle Logo') {
       setColorSteps(prevSteps => ({
         ...prevSteps,
@@ -724,15 +735,15 @@ export default function Main() {
     }
 
 
-    if(option === 'glove_stiffness' && value !== null) {
+    if(option === 'Glove Stiffness' && value !== null) {
       setBaseRequired(prevSteps => ({
         ...prevSteps,
-        "glove_stiffness": false
+        "Glove Stiffness": false
       }));
-    } else if(option === 'glove_stiffness' && value === null) {
+    } else if(option === 'Glove Stiffness' && value === null) {
       setBaseRequired(prevSteps => ({
         ...prevSteps,
-        "glove_stiffness": true
+        "Glove Stiffness": true
       }));
     }
     if(option === 'throwing_hand' && value !== null) {
@@ -882,7 +893,7 @@ export default function Main() {
             const colorName = Object.entries(colorPalette).find(([name, code]) => code === colorCode)?.[0]
             return [
               [key, personlizeConfig[`${key} Text`] || "None"],
-              [`${key} Color`, colorName || "Default Black"]
+              [`${key} Color`, key==="Palm Text" ? colorName || "Default White" : colorName || "Default Black"]
             ];
           } else {
             return [[key, value === null ? "No" : value]];
@@ -895,7 +906,7 @@ export default function Main() {
     return {
       "Glove Model": "Legend Edition",
       "Glove Sport": "Baseball",
-      "Glove Type": "Catcher",
+      "Glove Type": "First Baseman",
       "Price": price,
       ...enabledBaseOptions,
       ...enabledColorOptions,
@@ -1483,7 +1494,7 @@ export default function Main() {
                   className="tab-content position-relative"
                   id="pills-tabContent"
                 >
-                  <Controls controls={controls} />
+                  {/* <Controls controls={controls} /> */}
 
                 </div>
               </div>

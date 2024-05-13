@@ -2,8 +2,7 @@ import React, { useRef, useMemo } from 'react'
 import { useGLTF,  useTexture, Text } from '@react-three/drei'
 import { useFrame, useThree } from '@react-three/fiber';
 import * as THREE from 'three';
-import blackmesh from '../../assets/textures/black.jpg'
-import { thumb_graphics, thumb_premium_graphics, stamp_flags, LegendLogo, stamp_palm, fonts, back_flags, LegendHorse } from "../constants"
+import { thumb_graphics, thumb_premium_graphics, stamp_flags, stamp_palm, fonts, back_flags, LegendHorse } from "../constants"
 import Outlinefont from "../../assets/fonts/Milestone Outline.otf"
 
 const MeshWithTexture = ({ geometry, material, color, position, rotation, scale, texture, tsize=9.25 }) => {
@@ -85,17 +84,6 @@ const PalmStamp = ({ nodes, materials, position, rotation, scale, personalize })
     <mesh geometry={nodes.cross.geometry} material={Copy} position={position} rotation={rotation} scale={scale} />
   );
 };
-const PalmText = ({ nodes, materials, position, rotation, scale, personalize }) => {
-  // const graphicTexture = useTexture(LegendLogo);
-  const graphicTexture = useTexture(LegendHorse);
-  graphicTexture.encoding = THREE.sRGBEncoding;
-  const Copy =  materials.cross.clone();
-  Copy.map = graphicTexture
-
-  return (
-    <mesh geometry={nodes.cross.geometry} material={Copy} position={position} rotation={rotation} scale={scale} />
-  );
-};
 
 
 const BackFlag = ({ nodes, materials, position, rotation, scale, personalize }) => {
@@ -110,9 +98,8 @@ const BackFlag = ({ nodes, materials, position, rotation, scale, personalize }) 
 };
 
 export function New({rot, base, colors, personalize, personalizeConfig, xPosition, yPosition, zPosition, xRotation, yRotation, zRotation, textures }) {
-  const { nodes, materials } = useGLTF("/wp-content/reactpress/apps/firstbaselegend/build/Model/untitled1-v2.glb")
+  const { nodes, materials } = useGLTF("/wp-content/reactpress/apps/firstbaselegend/build/Model/untitled3-v2.glb")
 
-  const matPad = materials.lambert1.clone();
   const matStitches = materials.lambert1.clone();
   const matLogo = materials.Default_Material.clone();
   const matLogoOutline = materials.Default_Material.clone();
@@ -177,8 +164,8 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
       {personalize["Thumb Logo/Graphic"] === "Jumbo Number (+$7)" && (
         <Text
           font={fonts[personalize["Text Font"]]}
-          position={[0.0643, 0.13, 0.039]}
-          rotation={[Math.PI*0.064, Math.PI*-0.5, Math.PI*0.5]}
+          position={[0.084, 0.13, 0.039]}
+          rotation={[Math.PI*-0.451, Math.PI*-0.615, Math.PI*-0.094]}
           color={personalize["Jumbo Number Color"]}
           scale={0.03}
         >
@@ -192,8 +179,8 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
           <mesh geometry={nodes.polySurface4479.geometry} material={materials['web2:Logo_circle1']} />
           <Text
             font={fonts[personalize["Text Font"]]}
-            position={[0.0643, 0.123, 0.043]}
-            rotation={[Math.PI*0.064, Math.PI*-0.5, Math.PI*0.5]}
+            position={[0.084, 0.1275, 0.039]}
+            rotation={[Math.PI*-0.451, Math.PI*-0.615, Math.PI*-0.094]}
             color={personalize["Custom Plate Number Color"]}
             scale={0.024}
           >
@@ -260,10 +247,10 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
     {rot !== pos1 && personalize["Index Text"] && (
       <Text
         font={fonts[personalize["Text Font"]]}
-        position={[xPosition, yPosition, zPosition]}
-        rotation={[Math.PI*xRotation, Math.PI*yRotation, Math.PI*zRotation]}
-        // position={[0.0643, 0.123, 0.043]}
-        // rotation={[Math.PI*0.064, Math.PI*-0.5, Math.PI*0.5]}
+        // position={[xPosition, yPosition, zPosition]}
+        // rotation={[Math.PI*xRotation, Math.PI*yRotation, Math.PI*zRotation]}
+        position={[0.1003, 0.209, -0.022]}
+        rotation={[Math.PI*0, Math.PI*1, Math.PI*0.5]}
         color={personalize["Index Text Color"]}
         scale={ personalize["Text Font"] === "Script" ?
           personalize["Index Text Text"]?.length > 12  
@@ -279,6 +266,40 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
       </Text>
     )}
 
+      <mesh position={[0.127, 0.15, 0.006]} rotation={[0.014*Math.PI, 0*Math.PI, 0*Math.PI]} scale={0.008}>
+      {/* <mesh position={[xPosition, yPosition, zPosition]} rotation={[xRotation*Math.PI, yRotation*Math.PI, zRotation*Math.PI]} scale={0.008}> */}
+        <planeGeometry args={[9.4, 4.4]} />
+        <meshBasicMaterial color={"#000000"} side={THREE.DoubleSide} />
+      </mesh>
+
+      {rot !== pos1 && personalize["Palm Text"] && (
+      <Text
+        font={fonts[personalize["Text Font"]]}
+        // position={[xPosition, yPosition, zPosition]}
+        // rotation={[Math.PI*xRotation, Math.PI*yRotation, Math.PI*zRotation]}
+        position={[0.121, 0.15, 0.001]} 
+        rotation={[0.014*Math.PI, 1*Math.PI, 0*Math.PI]}
+        color={personalize["Palm Text Color"]}
+        scale={ personalize["Text Font"] === "Script" ?
+          personalize["Palm Text Text"]?.length > 10  
+            ? 0.0110 - 0.000860 * (personalize["Palm Text Text"]?.length - 10)  
+            : 0.0110
+          :
+          personalize["Palm Text Text"]?.length > 10  
+          ? 0.0110 - 0.000860 * (personalize["Palm Text Text"]?.length - 10)  
+          : 0.0110 
+        }
+      >
+        {personalize["Palm Text Text"]}
+      </Text>
+    )}
+
+      {personalize["Index Text"] !== "Index Text" && rot !== pos1 && (personalize["Flag"] !== null && personalize["Flag"] !== "Other" && personalize["Flag"] !== "None") && (
+        <>
+          <BackFlag nodes={nodes} materials={materials} position={[0.1063, 0.234, -0.02]} rotation={[Math.PI*-0.366, Math.PI*-0.5, Math.PI*0]} scale={[0.09, 0.015, 0.03]} personalize={personalize} />
+          {/* <BackFlag nodes={nodes} materials={materials} position={[xPosition, yPosition, zPosition]} rotation={[Math.PI*xRotation, Math.PI*yRotation, Math.PI*zRotation]} scale={[0.09, 0.015, 0.03]} personalize={personalize} /> */}
+        </>
+      )}
       
       <group rotation={[Math.PI / 2, 0, 0]} scale={0.01} >
         {/* <group position={[0.724, 0.889, -0.273]} rotation={[-0.005, 0.037, -0.076]} scale={0.949}>
@@ -305,7 +326,11 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
         {/*Circle Patch*/}
         {base.wrist_logo === "Circle Patch" && (
           <>
-            <mesh geometry={nodes.MASH4_ReproMesh.geometry} material-color={colors.Stitches} material={materials.lambert1} rotation={[-Math.PI / 2, 0, 0]} scale={100} />
+            {textures.Stitches ? (
+              <MeshWithTexture geometry={nodes.MASH4_ReproMesh.geometry} material-color={colors.Stitches} material={materials.lambert1} rotation={[-Math.PI / 2, 0, 0]} scale={100} texture={textures.Stitches} tsize={6} />
+            ) : (
+              <mesh geometry={nodes.MASH4_ReproMesh.geometry} material-color={colors.Stitches} material={materials.lambert1} rotation={[-Math.PI / 2, 0, 0]} scale={100} />
+            )}
             <mesh geometry={nodes.pDisc1.geometry} material-color={colors.wristPlate} material={matCirclePlate} rotation={[-Math.PI / 2, 0, 0]} scale={100} />
             <mesh geometry={nodes.wrist_logo002.geometry} material-color={colors["Logo"]} material={matLogo} rotation={[-Math.PI / 2, 0, 0]} scale={100} />
           </>
@@ -324,16 +349,37 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
       <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
         {base["Web Style"] === "2-Piece Web" && (
           <group position={[0.309, 0.241, -0.947]} scale={0.959}>
-            <mesh geometry={nodes.body.geometry} material-color={colors.web} material={materials['we1:web1']} />
+            {textures.web ? (
+              <>
+                <MeshWithTexture geometry={nodes.body.geometry} material-color={colors.web} material={materials['we1:web1']} texture={textures.web} tsize={2.5} />
+                <MeshWithTexture geometry={nodes.Mesh042_1.geometry} material-color={colors.web} material={materials['we1:web1']} texture={textures.web} tsize={2.5} />
+              </>
+            ) : (
+              <>
+                <mesh geometry={nodes.body.geometry} material-color={colors.web} material={materials['we1:web1']} />
+                <mesh geometry={nodes.Mesh042_1.geometry} material-color={colors.web} material={materials['we1:web1']} />
+              </>
+            ) }
             <mesh geometry={nodes.laces001.geometry} material-color={colors.laces} material={materials.Default_Material} />
-            <mesh geometry={nodes.Mesh042.geometry} material-color={colors.Stitches} material={materials['we1:stiches1']} />
-            <mesh geometry={nodes.Mesh042_1.geometry} material-color={colors.web} material={materials['we1:web1']} />
+            {textures.Stitches ? (
+              <MeshWithTexture geometry={nodes.Mesh042.geometry} material-color={colors.Stitches} material={materials['we1:stiches1']} texture={textures.Stitches} tsize={6} />
+            ) : (
+              <mesh geometry={nodes.Mesh042.geometry} material-color={colors.Stitches} material={materials['we1:stiches1']} />
+            )}
           </group>
         )}
         {base["Web Style"] === "H Web" && (
           <>
-            <mesh geometry={nodes.polySurface11.geometry} material-color={colors.web} material={materials['web2:web1']} />
-            <mesh geometry={nodes.stitches001.geometry} material-color={colors.Stitches} material={materials['web2:stiches1']} />
+            {textures.web ? (
+              <MeshWithTexture geometry={nodes.polySurface11.geometry} material-color={colors.web} material={materials['web2:web1']} texture={textures.web} tsize={3}/>
+            ) : (
+              <mesh geometry={nodes.polySurface11.geometry} material-color={colors.web} material={materials['web2:web1']} />
+            )}
+            {textures.Stitches ? (
+              <MeshWithTexture geometry={nodes.stitches001.geometry} material-color={colors.Stitches} material={materials['web2:stiches1']} texture={textures.Stitches} tsize={6} />
+            ) : (
+              <mesh geometry={nodes.stitches001.geometry} material-color={colors.Stitches} material={materials['web2:stiches1']} />
+            )}
             <mesh geometry={nodes.Mesh038.geometry} material-color={colors.laces} material={materials.Default_Material} />
             <mesh geometry={nodes.Mesh038_1.geometry} material-color={colors.laces} material={materials['web2:laces1']} />
           </>
@@ -341,9 +387,22 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
         {base["Web Style"] === "Post Web" && (
           <>
             <mesh geometry={nodes.laces002.geometry} material-color={colors.laces} material={materials['untitled:laces_002']} />
-            <mesh geometry={nodes.stitches003.geometry} material-color={colors.Stitches} material={materials['untitled:stiches_002']} />
-            <mesh geometry={nodes.Mesh045.geometry} material-color={colors.web} material={materials['untitled:web_002']} />
-            <mesh geometry={nodes.Mesh045_1.geometry} material-color={colors.Stitches} material={materials['untitled:stiches_002']} />
+            {textures.Stitches ? (
+              <>
+                <MeshWithTexture geometry={nodes.stitches003.geometry} material-color={colors.Stitches} material={materials['untitled:stiches_002']} texture={textures.Stitches} tsize={4}/>
+                <MeshWithTexture geometry={nodes.Mesh045_1.geometry} material-color={colors.Stitches} material={materials['untitled:stiches_002']} texture={textures.Stitches} tsize={4}/>
+              </>
+            ) : (
+              <>
+                <mesh geometry={nodes.stitches003.geometry} material-color={colors.Stitches} material={materials['untitled:stiches_002']} />
+                <mesh geometry={nodes.Mesh045_1.geometry} material-color={colors.Stitches} material={materials['untitled:stiches_002']} />
+              </>
+            )}
+            {textures.web ? (
+              <MeshWithTexture geometry={nodes.Mesh045.geometry} material-color={colors.web} material={materials['untitled:web_002']} texture={textures.web} tsize={3}/>
+            ) : (
+              <mesh geometry={nodes.Mesh045.geometry} material-color={colors.web} material={materials['untitled:web_002']} />
+            )}
           </>
         )}
       </group>
@@ -362,8 +421,16 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
 
       {base.finger_pad === "Pad" && (
         <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
-          <mesh geometry={nodes.MASH2_ReproMesh.geometry} material-color={colors.Stitches} material={matStitches} />
-          <mesh geometry={nodes.polySurface12579.geometry} material-color={colors["Finger Pad"]} material={matPad} />
+          {textures.Stitches ? (
+            <MeshWithTexture geometry={nodes.MASH2_ReproMesh.geometry} material-color={colors.Stitches} material={matStitches} texture={textures.Stitches} tsize={6}/>
+          ) : (
+            <mesh geometry={nodes.MASH2_ReproMesh.geometry} material-color={colors.Stitches} material={matStitches} />
+          ) }
+          {textures["Finger Pad"] ? (
+            <MeshWithTexture geometry={nodes.polySurface12579.geometry} material-color={colors["Finger Pad"]} material={materials['lambert1.003']} texture={textures["Finger Pad"]} tsize={0.5}/>
+          ) : (
+           <mesh geometry={nodes.polySurface12579.geometry} material-color={colors["Finger Pad"]} material={materials['lambert1.003']} />
+          )}
         </group>
       )}
       
@@ -372,21 +439,53 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
         <mesh geometry={nodes.polySurface12582.geometry} material={materials.lambert1} />
       </group> */}
 
-      <mesh geometry={nodes.back.geometry} material-color={colors.leather1} material={materials['web2:leather2']} />
-      <mesh geometry={nodes.bindings.geometry} material-color={colors.binding} material={materials['web2:binding1']} />
+      {textures.leather1 ? (
+        <MeshWithTexture geometry={nodes.back.geometry} material-color={colors.leather1} material={materials['web2:leather2.001']} texture={textures.leather1} tsize={6.5} />
+      ):(
+        <mesh geometry={nodes.back.geometry} material-color={colors.leather1} material={materials['web2:leather2.001']} />
+      )}
+
+      {textures.binding ? (
+        <MeshWithTexture geometry={nodes.bindings.geometry} material-color={colors.binding} material={materials['web2:binding1']} texture={textures.binding} tsize={1}/>
+      ):(
+        <mesh geometry={nodes.bindings.geometry} material-color={colors.binding} material={materials['web2:binding1']} />
+      )}
 
       <mesh geometry={nodes.hole_cover.geometry} material={materials['web2:leather2']} />
       <mesh geometry={nodes.inlay.geometry} material-color={colors["Web Crown"]} material={materials['web2:WebCrown1']} />
       
-      <mesh geometry={nodes.wrist.geometry} material-color={colors.wrist} material={materials['web2:wrist1']} />
+      {textures.wrist ? (
+        <MeshWithTexture geometry={nodes.wrist.geometry} material-color={colors.wrist} material={materials['web2:wrist1']} texture={textures.wrist} tsize={1.25} />
+      ) : (
+        <mesh geometry={nodes.wrist.geometry} material-color={colors.wrist} material={materials['web2:wrist1']} />
+      ) }
 
-      <mesh geometry={nodes.Mesh017.geometry} material-color={colors.palm} material={matPalm} />
-      <mesh geometry={nodes.Mesh017_1.geometry} material-color={colors.palm} material={matPalm2} />
+      {textures.palm ? (
+        <>
+          <MeshWithTexture geometry={nodes.Mesh017.geometry} material-color={colors.palm} material={materials['web2:stiches1']} texture={textures.palm} tsize={4}/>
+          <MeshWithTexture geometry={nodes.Mesh017_1.geometry} material-color={colors.palm} material={materials['web2:web1']} texture={textures.palm} tsize={4}/>
+        </>
+      ):(
+        <>
+        <mesh geometry={nodes.Mesh017.geometry} material-color={colors.palm} material={matPalm} />
+        <mesh geometry={nodes.Mesh017_1.geometry} material-color={colors.palm} material={matPalm2} />
+        </>
+      )}
       
       <mesh geometry={nodes.Mesh002.geometry} material-color={colors.laces} material={materials['web2:laces1']} />
       <mesh geometry={nodes.Mesh002_1.geometry} material-color={colors.laces} material={materials.Default_Material} />
-      <mesh geometry={nodes.Mesh007.geometry} material-color={colors.Stitches} material={materials['web2:stiches1']} />
-      <mesh geometry={nodes.Mesh007_1.geometry} material-color={colors.Stitches} material={materials['web2:web1']} />
+
+      {textures.Stitches ? (
+        <>
+          <MeshWithTexture geometry={nodes.Mesh007.geometry} material-color={colors.Stitches} material={materials['web2:stiches1']} texture={textures.Stitches} tsize={6} />
+          <MeshWithTexture geometry={nodes.Mesh007_1.geometry} material-color={colors.Stitches} material={materials['web2:web1']} texture={textures.Stitches} tsize={6} />
+        </>
+      ) : (
+        <>
+          <mesh geometry={nodes.Mesh007.geometry} material-color={colors.Stitches} material={materials['web2:stiches1']} />
+          <mesh geometry={nodes.Mesh007_1.geometry} material-color={colors.Stitches} material={materials['web2:web1']} />
+        </>
+      )}
 
       {base.wrist_logo === "Embriodered Flag (+$7)" && base.embroidered_flag === "Puerto Rico" && (
         <mesh geometry={nodes.Logo1.geometry} material={materials.logo1} position={[0.11, 0.112, -0.01]} rotation={[1.857, -0.219, 2.422]} scale={0.011} />
@@ -426,4 +525,4 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
   )
 }
 
-useGLTF.preload("/wp-content/reactpress/apps/firstbaselegend/build/Model/untitled1-v2.glb")
+useGLTF.preload("/wp-content/reactpress/apps/firstbaselegend/build/Model/untitled3-v2.glb")

@@ -816,7 +816,7 @@ export const colorData = {
     "Palm Custom Number": false,
     "Palm Graphic" : false,
     "Thumb Text" : true,
-    "Index Text" : true,
+    "Index Text" : false,
     "Palm Text" : false,
     "Text Font" : false,
     "Flag" : false,
@@ -847,9 +847,9 @@ export const colorData = {
     "Pinky Text Color" : "#1a1a1a",
     "Palm Text" : null,
     "Palm Text Text" : "",
-    "Palm Text Color" : "#1a1a1a",
+    "Palm Text Color" : "#FFFFFF",
     "Text Font" : "Script",
-    "Flag" : null,
+    "Flag" : "None",
     "Special Instruction" : null,
   }
 
@@ -1023,7 +1023,7 @@ export const colorData = {
     },
     "Flag" : {
       textbox: false,
-      options: ["None", "Other", "Alabama", "Alaska", "Arizona", "Arkansas", "Australia", "Bahamas", "Barbados", "Belgium", "California", "Canada", "China", "Colorado", "Connecticut", "Cuba", "Curacao", "Delaware", "Denmark", "Dominican Republic", "Florida", "France", "Georgia", "Germany", "Ghana", "Greece", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Ireland", "Israel", "Italy", "Japan", "Kansas", "Kentucky", "Lebanon", "Louisiana", "Maine", "Maryland", "Massachusetts", "Mexico", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Netherlands", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Panama", "Pennsylvania", "Philippines", "Puerto Rico", "Rhode Island", "Russia", "Singapore", "South Africa", "South Carolina", "South Dakota", "South Korea", "Spain", "Sweden", "Switzerland", "Taiwan", "Tennessee", "Texas", "United Kingdom", "Usa", "Utah", "Venezuela", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming" ],
+      options: ["None", "Alabama", "Alaska", "Arizona", "Arkansas", "Australia", "Bahamas", "Barbados", "Belgium", "California", "Canada", "China", "Colorado", "Connecticut", "Cuba", "Curacao", "Delaware", "Denmark", "Dominican Republic", "Florida", "France", "Georgia", "Germany", "Ghana", "Greece", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Ireland", "Israel", "Italy", "Japan", "Kansas", "Kentucky", "Lebanon", "Louisiana", "Maine", "Maryland", "Massachusetts", "Mexico", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Netherlands", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Panama", "Pennsylvania", "Philippines", "Puerto Rico", "Rhode Island", "Russia", "Singapore", "South Africa", "South Carolina", "South Dakota", "South Korea", "Spain", "Sweden", "Switzerland", "Taiwan", "Tennessee", "Texas", "United Kingdom", "Usa", "Utah", "Venezuela", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming" ],
       icons: null,
       colors: null,
     },
