@@ -440,9 +440,15 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
       </group> */}
 
       {textures.leather1 ? (
-        <MeshWithTexture geometry={nodes.back.geometry} material-color={colors.leather1} material={materials['web2:leather2.001']} texture={textures.leather1} tsize={6.5} />
+        <>
+          <MeshWithTexture geometry={nodes.back.geometry} material-color={colors.leather1} material={materials['web2:leather2.001']} texture={textures.leather1} tsize={6.5} />
+          <MeshWithTexture geometry={nodes.hole_cover.geometry} material-color={colors.leather1} material={materials['web2:leather2']} texture={textures.leather1} tsize={1}/>
+        </>
       ):(
-        <mesh geometry={nodes.back.geometry} material-color={colors.leather1} material={materials['web2:leather2.001']} />
+        <>
+          <mesh geometry={nodes.back.geometry} material-color={colors.leather1} material={materials['web2:leather2.001']} />
+          <mesh geometry={nodes.hole_cover.geometry} material-color={colors.leather1} material={materials['web2:leather2']} />
+        </>
       )}
 
       {textures.binding ? (
@@ -451,7 +457,7 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
         <mesh geometry={nodes.bindings.geometry} material-color={colors.binding} material={materials['web2:binding1']} />
       )}
 
-      <mesh geometry={nodes.hole_cover.geometry} material={materials['web2:leather2']} />
+      {/* <mesh geometry={nodes.hole_cover.geometry} material={materials['web2:leather2']} /> */}
       <mesh geometry={nodes.inlay.geometry} material-color={colors["Web Crown"]} material={materials['web2:WebCrown1']} />
       
       {textures.wrist ? (
