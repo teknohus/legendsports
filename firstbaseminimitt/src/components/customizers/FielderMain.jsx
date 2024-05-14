@@ -5,7 +5,7 @@ import Controls from "../controls"
 
 function usePricing(baseConfig, personalizeConfig) {
 
-  const [price, setPrice] = useState(225);
+  const [price, setPrice] = useState(170);
 
   
   useEffect(() => {
@@ -15,7 +15,7 @@ function usePricing(baseConfig, personalizeConfig) {
       thumb: personalizeConfig["Thumb Logo/Graphic"]
     }
 
-    let newPrice = 225;
+    let newPrice = 170;
     
     if(priceAffectingOptions.logoStyle === "Embriodered Flag (+$7)") {
       newPrice += 7; 
