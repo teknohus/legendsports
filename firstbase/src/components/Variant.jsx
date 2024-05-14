@@ -7,7 +7,7 @@ export default function Variant() {
       <div className="hb-fielders-glove">
         <div className="container">
           <div className="heading">
-            <h2>Fielder - Infield</h2>
+            <h2>FirstBase</h2>
           </div>
           <div className="row justify-content-center text-center hb-gap">
             {glovesData.map((glove, index) => (
