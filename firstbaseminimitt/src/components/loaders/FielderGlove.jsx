@@ -98,9 +98,12 @@ const BackFlag = ({ nodes, materials, position, rotation, scale, personalize }) 
 };
 
 export function New({rot, base, colors, personalize, personalizeConfig, xPosition, yPosition, zPosition, xRotation, yRotation, zRotation, textures }) {
-  const { nodes, materials } = useGLTF("/wp-content/reactpress/apps/firstbaseminimitt/build/Model/untitled3-v2.glb")
+  const { nodes, materials } = useGLTF("/wp-content/reactpress/apps/firstbaseminimitt/build/Model/untitled-v1.glb")
 
   const matStitches = materials.lambert1.clone();
+  const matLeather2 = materials.lambert1.clone();
+  const matLeather3 = materials.lambert1.clone();
+  const matLeather4 = materials.lambert1.clone();
   const matLogo = materials.Default_Material.clone();
   const matLogoOutline = materials.Default_Material.clone();
   const matCirclePlate = materials.lambert1.clone();
@@ -406,18 +409,6 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
           </>
         )}
       </group>
-      {/* <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
-        <mesh geometry={nodes.MASH1_ReproMesh.geometry} material={materials.lambert1} />
-        <mesh geometry={nodes.polySurface12580.geometry} material={materials.lambert1} />
-      </group> */}
-      
-      {/* <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
-        <mesh geometry={nodes.mesh_palm.geometry} material={materials.lambert1} />
-        <mesh geometry={nodes.polySurface12590.geometry} material={materials.lambert1} />
-        <mesh geometry={nodes.polySurface12591.geometry} material={materials.lambert1} />
-        <mesh geometry={nodes.polySurface12593.geometry} material={materials.lambert1} />
-        <mesh geometry={nodes.polySurface12595.geometry} material={materials.lambert1} />
-      </group> */}
 
       {base.finger_pad === "Pad" && (
         <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
@@ -433,16 +424,70 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
           )}
         </group>
       )}
-      
-      {/* <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
-        <mesh geometry={nodes.MASH3_ReproMesh.geometry} material={materials.lambert1} />
-        <mesh geometry={nodes.polySurface12582.geometry} material={materials.lambert1} />
-      </group> */}
 
       {textures.leather1 ? (
-        <MeshWithTexture geometry={nodes.back.geometry} material-color={colors.leather1} material={materials['web2:leather2.001']} texture={textures.leather1} tsize={6.5} />
+        <>
+          <MeshWithTexture geometry={nodes.back.geometry} material-color={colors.leather1} material={materials['web2:leather2.001']} texture={textures.leather1} tsize={6.5} />
+          <MeshWithTexture geometry={nodes.hole_cover.geometry} material-color={colors.leather1} material={materials['web2:leather2']} texture={textures.leather1} tsize={1}/>
+        </>
       ):(
-        <mesh geometry={nodes.back.geometry} material-color={colors.leather1} material={materials['web2:leather2.001']} />
+        <>
+          <mesh geometry={nodes.back.geometry} material-color={colors.leather1} material={materials['web2:leather2.001']} />
+          <mesh geometry={nodes.hole_cover.geometry} material-color={colors.leather1} material={materials['web2:leather2']} />
+        </>
+      )}
+
+      {/*Leather 2*/}
+      {textures.leather2 ? (
+        <>
+          <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
+            <MeshWithTexture geometry={nodes.polySurface12591.geometry} material-color={colors.leather2} material={materials['lambert1.004']} texture={textures.leather2} tsize={1} />
+            {/* <MeshWithTexture geometry={nodes.mesh_palm.geometry} material-color={colors.leather2} material={materials['lambert1.004']} texture={textures.leather2} tsize={1} />
+            <MeshWithTexture geometry={nodes.polySurface12590.geometry} material-color={colors.leather2} material={materials['lambert1.004']} texture={textures.leather2} tsize={1} />
+            <MeshWithTexture geometry={nodes.polySurface12593.geometry} material-color={colors.leather2} material={materials['lambert1.004']} texture={textures.leather2} tsize={1} />
+            <MeshWithTexture geometry={nodes.polySurface12595.geometry} material-color={colors.leather2} material={materials['lambert1.004']} texture={textures.leather2} tsize={1} /> */}
+          </group>
+        </>
+      ):(
+        <>
+          <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
+            <mesh geometry={nodes.polySurface12591.geometry} material-color={colors.leather2} material={materials['lambert1.004']} />
+            {/* <mesh geometry={nodes.mesh_palm.geometry} material-color={colors.leather2} material={materials['lambert1.004']} />
+            <mesh geometry={nodes.polySurface12590.geometry} material-color={colors.leather2} material={materials['lambert1.004']} />
+            <mesh geometry={nodes.polySurface12593.geometry} material-color={colors.leather2} material={materials['lambert1.004']} />
+            <mesh geometry={nodes.polySurface12595.geometry} material-color={colors.leather2} material={materials['lambert1.004']} /> */}
+          </group>
+        </>  
+      )}
+
+      {/*Leather 3*/}
+      {textures.leather3 ? (
+        <>
+          <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
+            <MeshWithTexture geometry={nodes.polySurface12582.geometry} material-color={colors.leather3} material={materials['lambert1.005']} texture={textures.leather3} tsize={2} />
+          </group>
+        </>
+      ) : (
+        <>
+          <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
+            <mesh geometry={nodes.polySurface12582.geometry} material-color={colors.leather3} material={materials['lambert1.005']} />
+          </group>
+        </>
+      )}
+
+      {/*Leather 4*/}
+      {textures.leather4 ? (
+        <>
+          <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
+            <MeshWithTexture geometry={nodes.polySurface12580.geometry} material-color={colors.leather4} material={materials['lambert1.006']} texture={textures.leather4} tsize={2.5}/>
+          </group>
+        </>
+      ) : (
+        <>
+          <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
+            <mesh geometry={nodes.polySurface12580.geometry} material-color={colors.leather4} material={materials['lambert1.006']} />
+          </group>
+        </>
       )}
 
       {textures.binding ? (
@@ -451,7 +496,7 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
         <mesh geometry={nodes.bindings.geometry} material-color={colors.binding} material={materials['web2:binding1']} />
       )}
 
-      <mesh geometry={nodes.hole_cover.geometry} material={materials['web2:leather2']} />
+      
       <mesh geometry={nodes.inlay.geometry} material-color={colors["Web Crown"]} material={materials['web2:WebCrown1']} />
       
       {textures.wrist ? (
@@ -477,6 +522,12 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
 
       {textures.Stitches ? (
         <>
+          <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
+            <MeshWithTexture geometry={nodes.MASH3_ReproMesh.geometry} material-color={colors.Stitches} material={materials['web2:web1']} texture={textures.Stitches} tsize={1} />
+          </group>
+          <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
+            <MeshWithTexture geometry={nodes.MASH1_ReproMesh.geometry} material-color={colors.Stitches} material={materials['web2:web1']} texture={textures.Stitches} tsize={1}/>
+          </group>
           <MeshWithTexture geometry={nodes.Mesh007.geometry} material-color={colors.Stitches} material={materials['web2:stiches1']} texture={textures.Stitches} tsize={6} />
           <MeshWithTexture geometry={nodes.Mesh007_1.geometry} material-color={colors.Stitches} material={materials['web2:web1']} texture={textures.Stitches} tsize={6} />
         </>
@@ -525,4 +576,4 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
   )
 }
 
-useGLTF.preload("/wp-content/reactpress/apps/firstbaseminimitt/build/Model/untitled3-v2.glb")
+useGLTF.preload("/wp-content/reactpress/apps/firstbaseminimitt/build/Model/untitled-v1.glb")
