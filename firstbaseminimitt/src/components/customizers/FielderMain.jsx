@@ -904,7 +904,7 @@ export default function Main() {
     const screenshot = captureScreenshot();
 
     return {
-      "Glove Model": "Legend Edition",
+      "Glove Model": "Mini Mitt",
       "Glove Sport": "Baseball",
       "Glove Type": "First Baseman",
       "Price": price,
