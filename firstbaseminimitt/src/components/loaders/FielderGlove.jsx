@@ -121,7 +121,7 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
   
   useFrame(() => {
     if (rot === pos0) {
-      ref.current.rotation.y = rot
+      ref.current.rotation.y = -0.32
     }
     else if(rot === pos1) {
       ref.current.rotation.x = 1.839
