@@ -905,7 +905,7 @@ export default function Main() {
 
     return {
       "Glove Model": "Legend Edition",
-      "Glove Sport": "Baseball",
+      "Glove Sport": window.location.href.includes("-sf") ? "Softball" :"Baseball",
       "Glove Type": "First Baseman",
       "Price": price,
       ...enabledBaseOptions,
