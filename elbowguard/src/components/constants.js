@@ -532,219 +532,131 @@ export const colorOptions = {
   export const texturePalette = {"Shiny Silver": silvershiny, "Shiny Gold": goldshiny , "Shiny Red": redshiny , "Shiny Blue": blueshiny, "Royal Blue Metallic": royalbluemetallic,  "Blue Pink Tie": bluepinktie , "Green Camo": greencamo , "Gray Camo": graycamo , "Red Camo": redcamo , "Green Gradient": greengradient, "Shiny Chameleon": shinychameleon, "Reptile Skin": reptileskin , "Aligator Skin": alligatorskin, "Elephant Skin": elephantskin, "Lime Green Paint Spots": limegreenpaintspots, "Teal Art Spots": tealartspots, "Sky Blue Art Spots": skyblueartspots, "Pink Art Spots": pinkartspots, "Black Snake": snakeblack , "Gray Snake": snakegray , "White Snake": snakewhite, "Red Snake": snakered, "Blue Snake": snakelblue , "Blonde Snake": snakeblonde , "Brown Snake": snakebrown , "Pink Snake": snakepink , "Purple Snake": snakepurple , "Tan Snake": snaketan , "Teal Snake": snaketeal , "Pink Snakeskin Art Spots": pinksnakeskinartspots, "Hot Pink Snakeskin Art Spots": hotpinksnakeskinartspots, "Teal Snakeskin Art Spots": tealsnakeskinartspots, "White Vintage": whitevintage, "Black Vintage": blackvintage, "Gray Vintage": grayvintage, "Mint Vintage": mintvintage, "Red Vintage": redvintage, "Cross Pattern": crosspattern , "Stripe Pattern": stripepattern, "Midnight City Edition": midnightcityedition, "Furred Cow Skin": furredskincow, "Inverted Elephant Skin": invertedelephaantskin, "Red Elephant Skin": redelephantskin, "White Ostrich": whiteostrich, "New Snake Skin": newsnakeskin,}
 
   export const meshOptions = {
-  binding: {
-    colors: {"Black": "#1a1a1a", "Gray": "#84837E", "White": "#FFFFFF", "Blonde": "#FCD48F", "Yellow": "#EFD115", "Tan": "#E57E00", "Orange": "#FF6D1F", "Orange Tan": "#D3480F", "Oiled Chestnut": "#9B4E2B", "Brown": "#694E3B", "Red": "#D21E1E", "Maroon": "#943535", "Pink": "#F07693", "Purple": "#58357D", "Navy Blue": "#262740", "Royal Blue": "#2143BF", "Sky Blue": "#0BB4C7", "Forest Green": "#334F30", "Mint": "#65DDA3", "Light Gray": "#9D9D99", "Lime Green": "#29E600",},
-    textures: {"Shiny Silver": silvershiny, "Shiny Gold": goldshiny , "Shiny Red": redshiny , "Shiny Blue": blueshiny, "Royal Blue Metallic": royalbluemetallic,  },
-    exclusive_textures: null,
-  },
-  "Crown": {
+  "Arm Plate": {
     colors: {"Black": "#1a1a1a", "Gray": "#84837E", "White": "#FFFFFF", "Blonde": "#FCD48F", "Yellow": "#EFD115", "Tan": "#E57E00", "Orange": "#FF6D1F", "Orange Tan": "#D3480F", "Oiled Chestnut": "#9B4E2B", "Brown": "#694E3B", "Red": "#D21E1E", "Maroon": "#943535", "Pink": "#F07693", "Purple": "#58357D", "Navy Blue": "#262740", "Royal Blue": "#2143BF", "Sky Blue": "#0BB4C7", "Forest Green": "#334F30", "Mint": "#65DDA3", "Light Gray": "#9D9D99", "Lime Green": "#29E600",},
     textures: {},
     exclusive_textures: null,
   },
-  "Finger Hood": {
-    colors: {"Black": "#1a1a1a", "Gray": "#84837E", "White": "#FFFFFF", "Blonde": "#FCD48F", "Yellow": "#EFD115", "Tan": "#E57E00", "Orange": "#FF6D1F", "Orange Tan": "#D3480F", "Oiled Chestnut": "#9B4E2B", "Brown": "#694E3B", "Red": "#D21E1E", "Maroon": "#943535", "Pink": "#F07693", "Purple": "#58357D", "Navy Blue": "#262740", "Royal Blue": "#2143BF", "Sky Blue": "#0BB4C7", "Forest Green": "#334F30", "Mint": "#65DDA3", "Light Gray": "#9D9D99", "Lime Green": "#29E600",},
-    textures: {"Shiny Silver": silvershiny, "Shiny Gold": goldshiny , "Shiny Red": redshiny , "Shiny Blue": blueshiny, "Royal Blue Metallic": royalbluemetallic,  "Blue Pink Tie": bluepinktie , "Green Camo": greencamo , "Gray Camo": graycamo , "Red Camo": redcamo , "Green Gradient": greengradient, "Shiny Chameleon": shinychameleon, "Reptile Skin": reptileskin , "Aligator Skin": alligatorskin, "Elephant Skin": elephantskin, "Lime Green Paint Spots": limegreenpaintspots, "Teal Art Spots": tealartspots, "Sky Blue Art Spots": skyblueartspots, "Pink Art Spots": pinkartspots, "Black Snake": snakeblack , "Gray Snake": snakegray , "White Snake": snakewhite, "Red Snake": snakered, "Blue Snake": snakelblue , "Blonde Snake": snakeblonde , "Brown Snake": snakebrown , "Pink Snake": snakepink , "Purple Snake": snakepurple , "Tan Snake": snaketan , "Teal Snake": snaketeal , "Pink Snakeskin Art Spots": pinksnakeskinartspots, "Hot Pink Snakeskin Art Spots": hotpinksnakeskinartspots, "Teal Snakeskin Art Spots": tealsnakeskinartspots, "White Vintage": whitevintage, "Black Vintage": blackvintage, "Gray Vintage": grayvintage, "Mint Vintage": mintvintage, "Red Vintage": redvintage, "Cross Pattern": crosspattern , "Stripe Pattern": stripepattern, "Midnight City Edition": midnightcityedition,  },
-    exclusive_textures: {"Furred Cow Skin": furredskincow, "Inverted Elephant Skin": invertedelephaantskin, "Red Elephant Skin": redelephantskin, "White Ostrich": whiteostrich, },
-  },
-  "Finger Pad": {
-    colors: {"Black": "#1a1a1a", "Gray": "#84837E", "White": "#FFFFFF", "Blonde": "#FCD48F", "Yellow": "#EFD115", "Tan": "#E57E00", "Orange": "#FF6D1F", "Orange Tan": "#D3480F", "Oiled Chestnut": "#9B4E2B", "Brown": "#694E3B", "Red": "#D21E1E", "Maroon": "#943535", "Pink": "#F07693", "Purple": "#58357D", "Navy Blue": "#262740", "Royal Blue": "#2143BF", "Sky Blue": "#0BB4C7", "Forest Green": "#334F30", "Mint": "#65DDA3", "Light Gray": "#9D9D99", "Lime Green": "#29E600",},
-    textures: {"Shiny Silver": silvershiny, "Shiny Gold": goldshiny , "Shiny Red": redshiny , "Shiny Blue": blueshiny, "Royal Blue Metallic": royalbluemetallic,  "Blue Pink Tie": bluepinktie , "Green Camo": greencamo , "Gray Camo": graycamo , "Red Camo": redcamo , "Green Gradient": greengradient, "Shiny Chameleon": shinychameleon, "Reptile Skin": reptileskin , "Aligator Skin": alligatorskin, "Elephant Skin": elephantskin, "Lime Green Paint Spots": limegreenpaintspots, "Teal Art Spots": tealartspots, "Sky Blue Art Spots": skyblueartspots, "Pink Art Spots": pinkartspots, "Black Snake": snakeblack , "Gray Snake": snakegray , "White Snake": snakewhite, "Red Snake": snakered, "Blue Snake": snakelblue , "Blonde Snake": snakeblonde , "Brown Snake": snakebrown , "Pink Snake": snakepink , "Purple Snake": snakepurple , "Tan Snake": snaketan , "Teal Snake": snaketeal , "Pink Snakeskin Art Spots": pinksnakeskinartspots, "Hot Pink Snakeskin Art Spots": hotpinksnakeskinartspots, "Teal Snakeskin Art Spots": tealsnakeskinartspots, "White Vintage": whitevintage, "Black Vintage": blackvintage, "Gray Vintage": grayvintage, "Mint Vintage": mintvintage, "Red Vintage": redvintage, "Cross Pattern": crosspattern , "Stripe Pattern": stripepattern, "Midnight City Edition": midnightcityedition,  },
-    exclusive_textures: {"Furred Cow Skin": furredskincow, "Inverted Elephant Skin": invertedelephaantskin, "Red Elephant Skin": redelephantskin, "White Ostrich": whiteostrich, },
-  },
-  "Web Crown": {
+  "Arm Pad": {
     colors: {"Black": "#1a1a1a", "Gray": "#84837E", "White": "#FFFFFF", "Blonde": "#FCD48F", "Yellow": "#EFD115", "Tan": "#E57E00", "Orange": "#FF6D1F", "Orange Tan": "#D3480F", "Oiled Chestnut": "#9B4E2B", "Brown": "#694E3B", "Red": "#D21E1E", "Maroon": "#943535", "Pink": "#F07693", "Purple": "#58357D", "Navy Blue": "#262740", "Royal Blue": "#2143BF", "Sky Blue": "#0BB4C7", "Forest Green": "#334F30", "Mint": "#65DDA3", "Light Gray": "#9D9D99", "Lime Green": "#29E600",},
     textures: {},
     exclusive_textures: null,
   },
-  // "Web Crown": {
-  //   colors: {},
-  //   textures: {"Black Mesh": blackmesh},
-  //   exclusive_textures: null,
-  // },
-  laces: {
-    colors: {"Black": "#1a1a1a", "Gray": "#84837E", "White": "#FFFFFF", "Blonde": "#FCD48F", "Yellow": "#EFD115", "Tan": "#E57E00", "Orange": "#FF6D1F", "Brown": "#694E3B", "Red": "#D21E1E", "Maroon": "#943535", "Pink": "#F07693", "Purple": "#58357D", "Navy Blue": "#262740", "Royal Blue": "#2143BF", "Turquoise": "#06C7DE", "Forest Green": "#334F30", "Seatle Green": "#508E88", "Light Gray": "#9D9D99", "Lime Green": "#29E600",},
+  "Arm Stitch": {
+    colors: {"Black": "#1a1a1a", "Gray": "#84837E", "White": "#FFFFFF", "Blonde": "#FCD48F", "Yellow": "#EFD115", "Tan": "#E57E00", "Orange": "#FF6D1F", "Orange Tan": "#D3480F", "Oiled Chestnut": "#9B4E2B", "Brown": "#694E3B", "Red": "#D21E1E", "Maroon": "#943535", "Pink": "#F07693", "Purple": "#58357D", "Navy Blue": "#262740", "Royal Blue": "#2143BF", "Sky Blue": "#0BB4C7", "Forest Green": "#334F30", "Mint": "#65DDA3", "Light Gray": "#9D9D99", "Lime Green": "#29E600",},
     textures: {},
     exclusive_textures: null,
   },
-  leather1: {
+  "Arm Strap": {
     colors: {"Black": "#1a1a1a", "Gray": "#84837E", "White": "#FFFFFF", "Blonde": "#FCD48F", "Yellow": "#EFD115", "Tan": "#E57E00", "Orange": "#FF6D1F", "Orange Tan": "#D3480F", "Oiled Chestnut": "#9B4E2B", "Brown": "#694E3B", "Red": "#D21E1E", "Maroon": "#943535", "Pink": "#F07693", "Purple": "#58357D", "Navy Blue": "#262740", "Royal Blue": "#2143BF", "Sky Blue": "#0BB4C7", "Forest Green": "#334F30", "Mint": "#65DDA3", "Light Gray": "#9D9D99", "Lime Green": "#29E600",},
-    textures: {"Shiny Silver": silvershiny, "Shiny Gold": goldshiny , "Shiny Red": redshiny , "Shiny Blue": blueshiny, "Royal Blue Metallic": royalbluemetallic,  "Blue Pink Tie": bluepinktie , "Green Camo": greencamo , "Gray Camo": graycamo , "Red Camo": redcamo , "Green Gradient": greengradient, "Shiny Chameleon": shinychameleon, "Reptile Skin": reptileskin , "Aligator Skin": alligatorskin, "Elephant Skin": elephantskin, "Lime Green Paint Spots": limegreenpaintspots, "Teal Art Spots": tealartspots, "Sky Blue Art Spots": skyblueartspots, "Pink Art Spots": pinkartspots, "Black Snake": snakeblack , "Gray Snake": snakegray , "White Snake": snakewhite, "Red Snake": snakered, "Blue Snake": snakelblue , "Blonde Snake": snakeblonde , "Brown Snake": snakebrown , "Pink Snake": snakepink , "Purple Snake": snakepurple , "Tan Snake": snaketan , "Teal Snake": snaketeal , "Pink Snakeskin Art Spots": pinksnakeskinartspots, "Hot Pink Snakeskin Art Spots": hotpinksnakeskinartspots, "Teal Snakeskin Art Spots": tealsnakeskinartspots, "White Vintage": whitevintage, "Black Vintage": blackvintage, "Gray Vintage": grayvintage, "Mint Vintage": mintvintage, "Red Vintage": redvintage, "Cross Pattern": crosspattern , "Stripe Pattern": stripepattern, "Midnight City Edition": midnightcityedition, "New Snake Skin": newsnakeskin, },
-    exclusive_textures: {"Furred Cow Skin": furredskincow, "Inverted Elephant Skin": invertedelephaantskin, "Red Elephant Skin": redelephantskin, "White Ostrich": whiteostrich, },
+    textures: {},
+    exclusive_textures: null,
+  },
+  "Arm Binding": {
+    colors: {"Black": "#1a1a1a", "Gray": "#84837E", "White": "#FFFFFF", "Blonde": "#FCD48F", "Yellow": "#EFD115", "Tan": "#E57E00", "Orange": "#FF6D1F", "Orange Tan": "#D3480F", "Oiled Chestnut": "#9B4E2B", "Brown": "#694E3B", "Red": "#D21E1E", "Maroon": "#943535", "Pink": "#F07693", "Purple": "#58357D", "Navy Blue": "#262740", "Royal Blue": "#2143BF", "Sky Blue": "#0BB4C7", "Forest Green": "#334F30", "Mint": "#65DDA3", "Light Gray": "#9D9D99", "Lime Green": "#29E600",},
+    textures: {},
+    exclusive_textures: null,
+  },
+  "Elbow Pad": {
+    colors: {"Black": "#1a1a1a", "Gray": "#84837E", "White": "#FFFFFF", "Blonde": "#FCD48F", "Yellow": "#EFD115", "Tan": "#E57E00", "Orange": "#FF6D1F", "Orange Tan": "#D3480F", "Oiled Chestnut": "#9B4E2B", "Brown": "#694E3B", "Red": "#D21E1E", "Maroon": "#943535", "Pink": "#F07693", "Purple": "#58357D", "Navy Blue": "#262740", "Royal Blue": "#2143BF", "Sky Blue": "#0BB4C7", "Forest Green": "#334F30", "Mint": "#65DDA3", "Light Gray": "#9D9D99", "Lime Green": "#29E600",},
+    textures: {},
+    exclusive_textures: null,
+  },
+  "Elbow Strap": {
+    colors: {"Black": "#1a1a1a", "Gray": "#84837E", "White": "#FFFFFF", "Blonde": "#FCD48F", "Yellow": "#EFD115", "Tan": "#E57E00", "Orange": "#FF6D1F", "Orange Tan": "#D3480F", "Oiled Chestnut": "#9B4E2B", "Brown": "#694E3B", "Red": "#D21E1E", "Maroon": "#943535", "Pink": "#F07693", "Purple": "#58357D", "Navy Blue": "#262740", "Royal Blue": "#2143BF", "Sky Blue": "#0BB4C7", "Forest Green": "#334F30", "Mint": "#65DDA3", "Light Gray": "#9D9D99", "Lime Green": "#29E600",},
+    textures: {},
+    exclusive_textures: null,
+  }, 
+  "Elbow Binding": {
+    colors: {"Black": "#1a1a1a", "Gray": "#84837E", "White": "#FFFFFF", "Blonde": "#FCD48F", "Yellow": "#EFD115", "Tan": "#E57E00", "Orange": "#FF6D1F", "Orange Tan": "#D3480F", "Oiled Chestnut": "#9B4E2B", "Brown": "#694E3B", "Red": "#D21E1E", "Maroon": "#943535", "Pink": "#F07693", "Purple": "#58357D", "Navy Blue": "#262740", "Royal Blue": "#2143BF", "Sky Blue": "#0BB4C7", "Forest Green": "#334F30", "Mint": "#65DDA3", "Light Gray": "#9D9D99", "Lime Green": "#29E600",},
+    textures: {},
+    exclusive_textures: null,
+  },
+  "Elbow Stitch": {
+    colors: {"Black": "#1a1a1a", "Gray": "#84837E", "White": "#FFFFFF", "Blonde": "#FCD48F", "Yellow": "#EFD115", "Tan": "#E57E00", "Orange": "#FF6D1F", "Orange Tan": "#D3480F", "Oiled Chestnut": "#9B4E2B", "Brown": "#694E3B", "Red": "#D21E1E", "Maroon": "#943535", "Pink": "#F07693", "Purple": "#58357D", "Navy Blue": "#262740", "Royal Blue": "#2143BF", "Sky Blue": "#0BB4C7", "Forest Green": "#334F30", "Mint": "#65DDA3", "Light Gray": "#9D9D99", "Lime Green": "#29E600",},
+    textures: {},
+    exclusive_textures: null,
+  },
+  "Elbow Plate": {
+    colors: {"Black": "#1a1a1a", "Gray": "#84837E", "White": "#FFFFFF", "Blonde": "#FCD48F", "Yellow": "#EFD115", "Tan": "#E57E00", "Orange": "#FF6D1F", "Orange Tan": "#D3480F", "Oiled Chestnut": "#9B4E2B", "Brown": "#694E3B", "Red": "#D21E1E", "Maroon": "#943535", "Pink": "#F07693", "Purple": "#58357D", "Navy Blue": "#262740", "Royal Blue": "#2143BF", "Sky Blue": "#0BB4C7", "Forest Green": "#334F30", "Mint": "#65DDA3", "Light Gray": "#9D9D99", "Lime Green": "#29E600",},
+    textures: {},
+    exclusive_textures: null,
   },
   "Logo": {
-    colors: {"Black": "#1a1a1a", "Gray": "#84837E", "White": "#FFFFFF", "Blonde": "#FCD48F", "Yellow": "#EFD115", "Tan": "#E57E00", "Orange": "#FF6D1F", "Brown": "#694E3B", "Red": "#D21E1E", "Maroon": "#943535", "Pink": "#F07693", "Purple": "#58357D", "Navy Blue": "#262740", "Royal Blue": "#2143BF", "Turquoise": "#06C7DE", "Forest Green": "#334F30", "Seatle Green": "#508E88" , "Electric Green": "#96EB6B", "Light Gray": "#9D9D99", "Lime Green": "#29E600",},
-    textures: {},
-    exclusive_textures: null,
-  },
-  "Logo Border": {
-    colors: {"Black": "#1a1a1a", "Gray": "#84837E", "White": "#FFFFFF", "Blonde": "#FCD48F", "Yellow": "#EFD115", "Tan": "#E57E00", "Orange": "#FF6D1F", "Brown": "#694E3B", "Red": "#D21E1E", "Maroon": "#943535", "Pink": "#F07693", "Purple": "#58357D", "Navy Blue": "#262740", "Royal Blue": "#2143BF", "Turquoise": "#06C7DE", "Forest Green": "#334F30", "Seatle Green": "#508E88" , "Electric Green": "#96EB6B", "Light Gray": "#9D9D99", "Lime Green": "#29E600",},
-    textures: {},
-    exclusive_textures: null,
-  },
-  logo_outline_color: {
-    colors: {"Black": "#1a1a1a", "Gray": "#84837E", "White": "#FFFFFF", "Blonde": "#FCD48F", "Yellow": "#EFD115", "Gold": "#E1BE28", "Tan": "#E57E00", "Orange": "#FF6D1F", "Brown": "#694E3B", "Red": "#D21E1E", "Maroon": "#943535", "Pink": "#F07693", "Purple": "#58357D", "Navy Blue": "#262740", "Royal Blue": "#2143BF", "Turquoise": "#06C7DE", "Forest Green": "#334F30", "Seatle Green": "#508E88" , "Electric Green": "#96EB6B", "Light Gray": "#9D9D99", "Lime Green": "#29E600",},
-    textures: {},
-    exclusive_textures: null,
-  },
-  palm: {
     colors: {"Black": "#1a1a1a", "Gray": "#84837E", "White": "#FFFFFF", "Blonde": "#FCD48F", "Yellow": "#EFD115", "Tan": "#E57E00", "Orange": "#FF6D1F", "Orange Tan": "#D3480F", "Oiled Chestnut": "#9B4E2B", "Brown": "#694E3B", "Red": "#D21E1E", "Maroon": "#943535", "Pink": "#F07693", "Purple": "#58357D", "Navy Blue": "#262740", "Royal Blue": "#2143BF", "Sky Blue": "#0BB4C7", "Forest Green": "#334F30", "Mint": "#65DDA3", "Light Gray": "#9D9D99", "Lime Green": "#29E600",},
-    textures: {"Shiny Silver": silvershiny, "Shiny Gold": goldshiny , "Shiny Red": redshiny , "Shiny Blue": blueshiny, "Royal Blue Metallic": royalbluemetallic,  },
-    exclusive_textures: {"Furred Cow Skin": furredskincow, "Inverted Elephant Skin": invertedelephaantskin, "Red Elephant Skin": redelephantskin, "White Ostrich": whiteostrich, },
-  }, 
-  Stitches: {
-    colors: {"Black": "#1a1a1a", "Gray": "#84837E", "White": "#FFFFFF", "Blonde": "#FCD48F", "Yellow": "#EFD115", "Tan": "#E57E00", "Orange": "#FF6D1F", "Brown": "#694E3B", "Red": "#D21E1E", "Maroon": "#943535", "Pink": "#F07693", "Purple": "#58357D", "Navy Blue": "#262740", "Royal Blue": "#2143BF", "Turquoise": "#06C7DE", "Forest Green": "#334F30", "Seatle Green": "#508E88" , "Electric Green": "#96EB6B", "Light Gray": "#9D9D99", "Lime Green": "#29E600",},
-    textures: {"Rainbow": rainbow, },
-    exclusive_textures: null,
-  },
-  web: {
-    colors: {"Black": "#1a1a1a", "Gray": "#84837E", "White": "#FFFFFF", "Blonde": "#FCD48F", "Yellow": "#EFD115", "Tan": "#E57E00", "Orange": "#FF6D1F", "Orange Tan": "#D3480F", "Oiled Chestnut": "#9B4E2B", "Brown": "#694E3B", "Red": "#D21E1E", "Maroon": "#943535", "Pink": "#F07693", "Purple": "#58357D", "Navy Blue": "#262740", "Royal Blue": "#2143BF", "Sky Blue": "#0BB4C7", "Forest Green": "#334F30", "Mint": "#65DDA3", "Light Gray": "#9D9D99", "Lime Green": "#29E600",},
-    textures: {"Shiny Silver": silvershiny, "Shiny Gold": goldshiny , "Shiny Red": redshiny , "Shiny Blue": blueshiny, "Royal Blue Metallic": royalbluemetallic,  "Blue Pink Tie": bluepinktie , "Green Camo": greencamo , "Gray Camo": graycamo , "Red Camo": redcamo , "Green Gradient": greengradient, "Shiny Chameleon": shinychameleon, "Reptile Skin": reptileskin , "Aligator Skin": alligatorskin, "Elephant Skin": elephantskin, "Lime Green Paint Spots": limegreenpaintspots, "Teal Art Spots": tealartspots, "Sky Blue Art Spots": skyblueartspots, "Pink Art Spots": pinkartspots, "Black Snake": snakeblack , "Gray Snake": snakegray , "White Snake": snakewhite, "Red Snake": snakered, "Blue Snake": snakelblue , "Blonde Snake": snakeblonde , "Brown Snake": snakebrown , "Pink Snake": snakepink , "Purple Snake": snakepurple , "Tan Snake": snaketan , "Teal Snake": snaketeal , "Pink Snakeskin Art Spots": pinksnakeskinartspots, "Hot Pink Snakeskin Art Spots": hotpinksnakeskinartspots, "Teal Snakeskin Art Spots": tealsnakeskinartspots, "White Vintage": whitevintage, "Black Vintage": blackvintage, "Gray Vintage": grayvintage, "Mint Vintage": mintvintage, "Red Vintage": redvintage, "Cross Pattern": crosspattern , "Stripe Pattern": stripepattern, "Midnight City Edition": midnightcityedition,  },
-    exclusive_textures: {"Furred Cow Skin": furredskincow, "Inverted Elephant Skin": invertedelephaantskin, "Red Elephant Skin": redelephantskin, "White Ostrich": whiteostrich, },
-  },
-  wrist: {
-    colors: {"Black": "#1a1a1a", "Gray": "#84837E", "White": "#FFFFFF", "Blonde": "#FCD48F", "Yellow": "#EFD115", "Tan": "#E57E00", "Orange": "#FF6D1F", "Orange Tan": "#D3480F", "Oiled Chestnut": "#9B4E2B", "Brown": "#694E3B", "Red": "#D21E1E", "Maroon": "#943535", "Pink": "#F07693", "Purple": "#58357D", "Navy Blue": "#262740", "Royal Blue": "#2143BF", "Sky Blue": "#0BB4C7", "Forest Green": "#334F30", "Mint": "#65DDA3", "Light Gray": "#9D9D99", "Lime Green": "#29E600",},
-    textures: {"Shiny Silver": silvershiny, "Shiny Gold": goldshiny , "Shiny Red": redshiny , "Shiny Blue": blueshiny, "Royal Blue Metallic": royalbluemetallic,  "Blue Pink Tie": bluepinktie , "Green Camo": greencamo , "Gray Camo": graycamo , "Red Camo": redcamo , "Green Gradient": greengradient, "Shiny Chameleon": shinychameleon, "Reptile Skin": reptileskin , "Aligator Skin": alligatorskin, "Elephant Skin": elephantskin, "Lime Green Paint Spots": limegreenpaintspots, "Teal Art Spots": tealartspots, "Sky Blue Art Spots": skyblueartspots, "Pink Art Spots": pinkartspots, "Black Snake": snakeblack , "Gray Snake": snakegray , "White Snake": snakewhite, "Red Snake": snakered, "Blue Snake": snakelblue , "Blonde Snake": snakeblonde , "Brown Snake": snakebrown , "Pink Snake": snakepink , "Purple Snake": snakepurple , "Tan Snake": snaketan , "Teal Snake": snaketeal , "Pink Snakeskin Art Spots": pinksnakeskinartspots, "Hot Pink Snakeskin Art Spots": hotpinksnakeskinartspots, "Teal Snakeskin Art Spots": tealsnakeskinartspots, "White Vintage": whitevintage, "Black Vintage": blackvintage, "Gray Vintage": grayvintage, "Mint Vintage": mintvintage, "Red Vintage": redvintage, "Cross Pattern": crosspattern , "Stripe Pattern": stripepattern, "Midnight City Edition": midnightcityedition,  },
-    exclusive_textures: {"Furred Cow Skin": furredskincow, "Inverted Elephant Skin": invertedelephaantskin, "Red Elephant Skin": redelephantskin, "White Ostrich": whiteostrich, },
-  },
-  wristPlate: {
-    colors: {"Black": "#1a1a1a", "Gray": "#84837E", "White": "#FFFFFF", "Blonde": "#FCD48F", "Yellow": "#EFD115", "Tan": "#E57E00", "Orange": "#FF6D1F", "Orange Tan": "#D3480F", "Oiled Chestnut": "#9B4E2B", "Brown": "#694E3B", "Red": "#D21E1E", "Maroon": "#943535", "Pink": "#F07693", "Purple": "#58357D", "Navy Blue": "#262740", "Royal Blue": "#2143BF", "Sky Blue": "#0BB4C7", "Forest Green": "#334F30", "Mint": "#65DDA3", "Light Gray": "#9D9D99", "Lime Green": "#29E600",},
-    textures: {"Shiny Silver": silvershiny, "Shiny Gold": goldshiny , "Shiny Red": redshiny , "Shiny Blue": blueshiny, "Royal Blue Metallic": royalbluemetallic,  "Blue Pink Tie": bluepinktie , "Green Camo": greencamo , "Gray Camo": graycamo , "Red Camo": redcamo , "Green Gradient": greengradient, "Shiny Chameleon": shinychameleon, "Reptile Skin": reptileskin , "Aligator Skin": alligatorskin, "Elephant Skin": elephantskin, "Lime Green Paint Spots": limegreenpaintspots, "Teal Art Spots": tealartspots, "Sky Blue Art Spots": skyblueartspots, "Pink Art Spots": pinkartspots, "Black Snake": snakeblack , "Gray Snake": snakegray , "White Snake": snakewhite, "Red Snake": snakered, "Blue Snake": snakelblue , "Blonde Snake": snakeblonde , "Brown Snake": snakebrown , "Pink Snake": snakepink , "Purple Snake": snakepurple , "Tan Snake": snaketan , "Teal Snake": snaketeal , "Pink Snakeskin Art Spots": pinksnakeskinartspots, "Hot Pink Snakeskin Art Spots": hotpinksnakeskinartspots, "Teal Snakeskin Art Spots": tealsnakeskinartspots, "White Vintage": whitevintage, "Black Vintage": blackvintage, "Gray Vintage": grayvintage, "Mint Vintage": mintvintage, "Red Vintage": redvintage, "Cross Pattern": crosspattern , "Stripe Pattern": stripepattern, "Midnight City Edition": midnightcityedition,  },
-    exclusive_textures: {"Furred Cow Skin": furredskincow, "Inverted Elephant Skin": invertedelephaantskin, "Red Elephant Skin": redelephantskin, "White Ostrich": whiteostrich, },
-  },
-  "Wrist Guard":{
-    colors: {"Black": "#1a1a1a", "Gray": "#84837E", "White": "#FFFFFF", "Blonde": "#FCD48F", "Yellow": "#EFD115", "Tan": "#E57E00", "Orange": "#FF6D1F", "Brown": "#694E3B", "Red": "#D21E1E", "Maroon": "#943535", "Pink": "#F07693", "Purple": "#58357D", "Navy Blue": "#262740", "Royal Blue": "#2143BF", "Turquoise": "#06C7DE", "Forest Green": "#334F30", "Seatle Green": "#508E88" , "Electric Green": "#96EB6B", "Light Gray": "#9D9D99", "Lime Green": "#29E600",},
     textures: {},
     exclusive_textures: null,
   },
-  finger_hood: {
+  "Logo Outline": {
     colors: {"Black": "#1a1a1a", "Gray": "#84837E", "White": "#FFFFFF", "Blonde": "#FCD48F", "Yellow": "#EFD115", "Tan": "#E57E00", "Orange": "#FF6D1F", "Orange Tan": "#D3480F", "Oiled Chestnut": "#9B4E2B", "Brown": "#694E3B", "Red": "#D21E1E", "Maroon": "#943535", "Pink": "#F07693", "Purple": "#58357D", "Navy Blue": "#262740", "Royal Blue": "#2143BF", "Sky Blue": "#0BB4C7", "Forest Green": "#334F30", "Mint": "#65DDA3", "Light Gray": "#9D9D99", "Lime Green": "#29E600",},
-    textures: {"Shiny Silver": silvershiny, "Shiny Gold": goldshiny , "Shiny Red": redshiny , "Shiny Blue": blueshiny, "Royal Blue Metallic": royalbluemetallic,  "Blue Pink Tie": bluepinktie , "Green Camo": greencamo , "Gray Camo": graycamo , "Red Camo": redcamo , "Green Gradient": greengradient, "Shiny Chameleon": shinychameleon, "Reptile Skin": reptileskin , "Aligator Skin": alligatorskin, "Elephant Skin": elephantskin, "Lime Green Paint Spots": limegreenpaintspots, "Teal Art Spots": tealartspots, "Sky Blue Art Spots": skyblueartspots, "Pink Art Spots": pinkartspots, "Black Snake": snakeblack , "Gray Snake": snakegray , "White Snake": snakewhite, "Red Snake": snakered, "Blue Snake": snakelblue , "Blonde Snake": snakeblonde , "Brown Snake": snakebrown , "Pink Snake": snakepink , "Purple Snake": snakepurple , "Tan Snake": snaketan , "Teal Snake": snaketeal , "Pink Snakeskin Art Spots": pinksnakeskinartspots, "Hot Pink Snakeskin Art Spots": hotpinksnakeskinartspots, "Teal Snakeskin Art Spots": tealsnakeskinartspots, "White Vintage": whitevintage, "Black Vintage": blackvintage, "Gray Vintage": grayvintage, "Mint Vintage": mintvintage, "Red Vintage": redvintage, "Cross Pattern": crosspattern , "Stripe Pattern": stripepattern, "Midnight City Edition": midnightcityedition,  },
-    exclusive_textures: {"Furred Cow Skin": furredskincow, "Inverted Elephant Skin": invertedelephaantskin, "Red Elephant Skin": redelephantskin, "White Ostrich": whiteostrich, },
-  },
-  finger_pad: {
-    colors: {"Black": "#1a1a1a", "Gray": "#84837E", "White": "#FFFFFF", "Blonde": "#FCD48F", "Yellow": "#EFD115", "Tan": "#E57E00", "Orange": "#FF6D1F", "Orange Tan": "#D3480F", "Oiled Chestnut": "#9B4E2B", "Brown": "#694E3B", "Red": "#D21E1E", "Maroon": "#943535", "Pink": "#F07693", "Purple": "#58357D", "Navy Blue": "#262740", "Royal Blue": "#2143BF", "Sky Blue": "#0BB4C7", "Forest Green": "#334F30", "Mint": "#65DDA3", "Light Gray": "#9D9D99", "Lime Green": "#29E600",},
-    textures: {"Shiny Silver": silvershiny, "Shiny Gold": goldshiny , "Shiny Red": redshiny , "Shiny Blue": blueshiny, "Royal Blue Metallic": royalbluemetallic,  "Blue Pink Tie": bluepinktie , "Green Camo": greencamo , "Gray Camo": graycamo , "Red Camo": redcamo , "Green Gradient": greengradient, "Shiny Chameleon": shinychameleon, "Reptile Skin": reptileskin , "Aligator Skin": alligatorskin, "Elephant Skin": elephantskin, "Lime Green Paint Spots": limegreenpaintspots, "Teal Art Spots": tealartspots, "Sky Blue Art Spots": skyblueartspots, "Pink Art Spots": pinkartspots, "Black Snake": snakeblack , "Gray Snake": snakegray , "White Snake": snakewhite, "Red Snake": snakered, "Blue Snake": snakelblue , "Blonde Snake": snakeblonde , "Brown Snake": snakebrown , "Pink Snake": snakepink , "Purple Snake": snakepurple , "Tan Snake": snaketan , "Teal Snake": snaketeal , "Pink Snakeskin Art Spots": pinksnakeskinartspots, "Hot Pink Snakeskin Art Spots": hotpinksnakeskinartspots, "Teal Snakeskin Art Spots": tealsnakeskinartspots, "White Vintage": whitevintage, "Black Vintage": blackvintage, "Gray Vintage": grayvintage, "Mint Vintage": mintvintage, "Red Vintage": redvintage, "Cross Pattern": crosspattern , "Stripe Pattern": stripepattern, "Midnight City Edition": midnightcityedition,  },
-    exclusive_textures: {"Furred Cow Skin": furredskincow, "Inverted Elephant Skin": invertedelephaantskin, "Red Elephant Skin": redelephantskin, "White Ostrich": whiteostrich, },
-  },
-  "Square Patch": {
-    colors: {"Black": "#1a1a1a", "Gray": "#84837E", "White": "#FFFFFF", "Blonde": "#FCD48F", "Yellow": "#EFD115", "Tan": "#E57E00", "Orange": "#FF6D1F", "Brown": "#694E3B", "Red": "#D21E1E", "Maroon": "#943535", "Pink": "#F07693", "Purple": "#58357D", "Navy Blue": "#262740", "Royal Blue": "#2143BF", "Turquoise": "#06C7DE", "Forest Green": "#334F30", "Seatle Green": "#508E88" , "Electric Green": "#96EB6B", "Light Gray": "#9D9D99", "Lime Green": "#29E600",},
     textures: {},
     exclusive_textures: null,
   },
-  "Patch Inner Lines": {
-    colors: {"Black": "#1a1a1a", "Gray": "#84837E", "White": "#FFFFFF", "Blonde": "#FCD48F", "Yellow": "#EFD115", "Tan": "#E57E00", "Orange": "#FF6D1F", "Brown": "#694E3B", "Red": "#D21E1E", "Maroon": "#943535", "Pink": "#F07693", "Purple": "#58357D", "Navy Blue": "#262740", "Royal Blue": "#2143BF", "Turquoise": "#06C7DE", "Forest Green": "#334F30", "Seatle Green": "#508E88" , "Electric Green": "#96EB6B", "Light Gray": "#9D9D99", "Lime Green": "#29E600",},
-    textures: {},
-    exclusive_textures: null,
-  },
-  "Patch Outer Lines": {
-    colors: {"Black": "#1a1a1a", "Gray": "#84837E", "White": "#FFFFFF", "Blonde": "#FCD48F", "Yellow": "#EFD115", "Tan": "#E57E00", "Orange": "#FF6D1F", "Brown": "#694E3B", "Red": "#D21E1E", "Maroon": "#943535", "Pink": "#F07693", "Purple": "#58357D", "Navy Blue": "#262740", "Royal Blue": "#2143BF", "Turquoise": "#06C7DE", "Forest Green": "#334F30", "Seatle Green": "#508E88" , "Electric Green": "#96EB6B", "Light Gray": "#9D9D99", "Lime Green": "#29E600",},
-    textures: {},
-    exclusive_textures: null,
-  },
-  "Triangular Patch": {
-    colors: {"Black": "#1a1a1a", "Gray": "#84837E", "White": "#FFFFFF", "Blonde": "#FCD48F", "Yellow": "#EFD115", "Tan": "#E57E00", "Orange": "#FF6D1F", "Brown": "#694E3B", "Red": "#D21E1E", "Maroon": "#943535", "Pink": "#F07693", "Purple": "#58357D", "Navy Blue": "#262740", "Royal Blue": "#2143BF", "Turquoise": "#06C7DE", "Forest Green": "#334F30", "Seatle Green": "#508E88" , "Electric Green": "#96EB6B", "Light Gray": "#9D9D99", "Lime Green": "#29E600",},
-    textures: {},
-    exclusive_textures: null,
-  }
 }
 
 export const colorData = {
-    binding: "#fefefe",
-    "Finger Pad": "#fefefe",
-    "Web Crown": "#fefefe",
-    laces: "#fefefe",
-    leather1: "#fefefe",
-    "Logo": "#e0e0e0", //Webbing Logo
-    "Logo Border": "#fefefe",
-    logo_outline_color: "#DCDCDC",
-    palm: "#fefefe",
-    Stitches: "#fefefe",
-    web: "#fefefe",
-    wrist: "#fefefe",
-    wristPlate: "#fefefe",
-    "Wrist Guard": "#fefefe",
-    finger_hood: "#fefefe",
-    finger_pad: "#fefefe",
-    "Square Patch": "#fefefe",
-    "Patch Inner Lines": "#fefefe",
-    "Patch Outer Lines": "#fefefe",
-    "Triangular Patch": "#fefefe",
-    // logo4_replace: "#808080", //Palm Logo
-    // slice: "#f8f8f8", //Extension of Palm to Back
-    // blackPiece: "#f0f0f0", //Back Hole Cover
-    // logo_02: "#C0C0C0", //Wrist Logo
-    // logo_03: "#e0e0e0", //Side Logo
+  "Arm Plate": "#fefefe",
+  "Arm Pad": "#fefefe",
+  "Arm Stitch": "#fefefe",
+  "Arm Strap": "#fefefe",
+  "Arm Binding": "#fefefe",
+  "Elbow Pad": "#fefefe",
+  "Elbow Strap": "#fefefe", 
+  "Elbow Binding": "#fefefe",
+  "Elbow Stitch": "#fefefe",
+  "Elbow Plate": "#fefefe",
+  "Logo": "#dedede",
+  "Logo Outline": "#fefefe",
   };
 
   export const textureData = {
-    binding: null,
-    "Finger Pad": null,
-    "Web Crown": null,
-    laces: null,
-    leather1: null,
+    "Arm Plate": null,
+    "Arm Pad": null,
+    "Arm Stitch": null,
+    "Arm Strap": null,
+    "Arm Binding": null,
+    "Elbow Pad": null,
+    "Elbow Strap": null, 
+    "Elbow Binding": null,
+    "Elbow Stitch": null,
+    "Elbow Plate": null,
     "Logo": null,
-    "Logo Border": null, 
-    logo_outline_color: null,
-    palm: null,
-    Stitches: null,
-    web: null,
-    wrist: null,
-    wristPlate: null,
-    "Wrist Guard": null,
-    finger_hood: null,
-    finger_pad: null,
-    "Triangular Patch": null,
+    "Logo Outline": null,
   };
 
   export const colorStepsConfig= {
-    binding: true,
-    "Finger Pad": false,
-    "Web Crown": true,
-    laces: true,
-    leather1: true,
+    "Arm Plate": true,
+    "Arm Pad": true,
+    "Arm Stitch": true,
+    "Arm Strap": true,
+    "Arm Binding": true,
+    "Elbow Pad": true,
+    "Elbow Strap": true, 
+    "Elbow Binding": true,
+    "Elbow Stitch": true,
+    "Elbow Plate": true,
     "Logo": true,
-    "Logo Border": false,
-    logo_outline_color: false, 
-    palm: true,
-    Stitches: true,
-    web: true,
-    wrist: true,
-    wristPlate: false,
-    "Wrist Guard": false,
-    finger_hood: false,
-    finger_pad: false,
-    "Square Patch": false,
-    "Patch Inner Lines": false,
-    "Patch Outer Lines": false,
-    "Triangular Patch": false, 
+    "Logo Outline": true,
   }
 
   export const colorReq= {
-    binding: true,
-    "Finger Pad": true,
-    "Web Crown": true,
-    laces: true,
-    leather1: true,
-    "Logo": true, //Webbing Logo
-    "Logo Border": true,
-    logo_outline_color: true,
-    palm: true,
-    Stitches: true,
-    web: true,
-    wrist: true,
-    wristPlate: true,
-    "Wrist Guard": true,
-    finger_hood: true,
-    finger_pad: true,
-    "Square Patch": true,
-    "Patch Inner Lines": true,
-    "Patch Outer Lines": true,
-    "Triangular Patch": true,
+    "Arm Plate": true,
+    "Arm Pad": true,
+    "Arm Stitch": true,
+    "Arm Strap": true,
+    "Arm Binding": true,
+    "Elbow Pad": true,
+    "Elbow Strap": true, 
+    "Elbow Binding": true,
+    "Elbow Stitch": true,
+    "Elbow Plate": true,
+    "Logo": true,
+    "Logo Outline": true,
   }
 
   export const baseStepsConfig= {
     size: true,
+    "Batter Style": true,
     wrist_logo: false,
     embroidered_flag: false,
     logo_outline: false,
@@ -759,6 +671,7 @@ export const colorData = {
 
   export const baseReq = {
     size: false,
+    "Batter Style": false,
     wrist_logo: false,
     embroidered_flag: false,
     logo_outline: false,
@@ -772,7 +685,8 @@ export const colorData = {
   }
   
   export const baseOptions = {
-    size: "32.5",
+    size: "Adult",
+    "Batter Style": "Right Handed",
     wrist_logo: "Embroidered",
     embroidered_flag: "USA",
     logo_outline: null,
@@ -856,9 +770,15 @@ export const colorData = {
   export const Options = {
     size: {
       textbox: false,
-      options: ["Small", "Medium", "Large", "XL", "XXL", "Youth - Small", "Youth - Medium", "Youth - Large"],
+      options: ["Youth", "Adult"],
       icons: null,
       colors: null,
+    },
+    "Batter Style": {
+      textbox: false,
+      options: ["Right Handed", "Left Handed"],
+      icons: null,
+      colors: null, 
     },
     "Wrist Guard": {
       textbox: false,

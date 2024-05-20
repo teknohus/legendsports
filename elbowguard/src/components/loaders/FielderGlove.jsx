@@ -98,7 +98,7 @@ const BackFlag = ({ nodes, materials, position, rotation, scale, personalize }) 
 };
 
 export function New({rot, base, colors, personalize, personalizeConfig, xPosition, yPosition, zPosition, xRotation, yRotation, zRotation, textures }) {
-  const { nodes, materials } = useGLTF("/wp-content/reactpress/apps/firstbaselegend/build/Model/untitled.glb")
+  const { nodes, materials } = useGLTF("/wp-content/reactpress/apps/elbowguard/build/Model/untitled.glb")
 
   const ref = useRef();
 
@@ -106,16 +106,21 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
   const pos1 = 1 * (-Math.PI / 2);
   
   useFrame(() => {
-    if (rot === pos0) {
+    if (rot === pos1) {
       ref.current.rotation.z = 0
       ref.current.rotation.x = Math.PI / 2
     }
-    else if (rot === pos1) {
+    else if (rot === pos0) {
       ref.current.rotation.z = Math.PI
       ref.current.rotation.x = Math.PI / 2
     }
   })
 
+  
+  const matback = materials.elbowstich.clone()
+  const matback1 = materials.ElbowGuard.clone()
+  
+  
   const { viewport } = useThree();
   const width = viewport.width;
   const minWidth = 2.25;
@@ -137,22 +142,22 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
 
   return (
     <group dispose={null} ref={ref}>
-      <mesh geometry={nodes.Elbow_strap.geometry} material={materials.Elbow_Strap} />
-      <mesh geometry={nodes.ArmStrap.geometry} material={materials.ArmStrap} />
-      <mesh geometry={nodes.ElbowBindin.geometry} material-color={colors.binding} material={materials.ElbowBinding} />
-      <mesh geometry={nodes.Elbow_plate.geometry} material={materials.Elbow_plate} />
-      <mesh geometry={nodes.elbowstich.geometry} material-color={colors.Stitches} material={materials.elbowstich} />
+      <mesh geometry={nodes.Elbow_strap.geometry} material-color={colors["Elbow Strap"]} material={materials.Elbow_Strap} />
+      <mesh geometry={nodes.ArmStrap.geometry} material-color={colors["Arm Strap"]} material={materials.ArmStrap} />
+      <mesh geometry={nodes.ElbowBindin.geometry} material-color={colors["Elbow Binding"]} material={materials.ElbowBinding} />
+      <mesh geometry={nodes.Elbow_plate.geometry} material-color={colors["Elbow Plate"]} material={materials.Elbow_plate} />
+      <mesh geometry={nodes.elbowstich.geometry} material-color={colors["Elbow Stitch"]} material={materials.elbowstich} />
       <mesh geometry={nodes.logo.geometry} material-color={colors["Logo"]} material={materials.Logo} />
-      <mesh geometry={nodes.armPlate.geometry} material={materials.ArmPlate} />
-      <mesh geometry={nodes.arm_stich.geometry} material-color={colors.Stitches} material={materials['armstich.001']} />
-      <mesh geometry={nodes.armStich.geometry} material-color={colors.Stitches} material={materials.armStiches} />
-      <mesh geometry={nodes.arm_pad.geometry} material={materials.armPad} />
-      <mesh geometry={nodes.ArmBinding.geometry} material-color={colors.binding} material={materials.ArmBinding} />
-      <mesh geometry={nodes.Elbow_Guard.geometry} material={materials.ElbowGuard} />
-      <mesh geometry={nodes.Plane020.geometry} material={materials.ElbowGuard} />
-      <mesh geometry={nodes.Plane020_1.geometry} material-color={colors.Stitches} material={materials.elbowstich} />
+      <mesh geometry={nodes.armPlate.geometry} material-color={colors["Arm Plate"]} material={materials.ArmPlate} />
+      <mesh geometry={nodes.arm_stich.geometry} material-color={colors["Arm Stitch"]} material={materials['armstich.001']} />
+      <mesh geometry={nodes.armStich.geometry} material-color={colors["Arm Stitch"]} material={materials.armStiches} />
+      <mesh geometry={nodes.arm_pad.geometry} material-color={colors["Arm Pad"]} material={materials.armPad} />
+      <mesh geometry={nodes.ArmBinding.geometry} material-color={colors["Arm Binding"]} material={materials.ArmBinding} />
+      <mesh geometry={nodes.Elbow_Guard.geometry} material-color={colors["Elbow Guard"]} material={materials.ElbowGuard} />
+      <mesh geometry={nodes.Plane020.geometry} material-color={"#000"} material={materials.ElbowGuard} />
+      <mesh geometry={nodes.Plane020_1.geometry} material-color={"#000"} material={matback} />
     </group>
   )
 }
 
-useGLTF.preload("/wp-content/reactpress/apps/firstbaselegend/build/Model/untitled.glb")
+useGLTF.preload("/wp-content/reactpress/apps/elbowguard/build/Model/untitled.glb")

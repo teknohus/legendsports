@@ -934,10 +934,10 @@ export default function Main() {
     // Loop through and add each data as inputs
     for (const key in formData) {
       const input = document.createElement('input');
-    input.type = 'hidden';
-    input.name = key;
-    input.value = formData[key];
-    form.appendChild(input);  
+      input.type = 'hidden';
+      input.name = key;
+      input.value = formData[key];
+      form.appendChild(input);  
   }
 
     // Add the form to body

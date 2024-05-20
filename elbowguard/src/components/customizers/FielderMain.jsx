@@ -54,7 +54,7 @@ export default function Main() {
   const [currentTab, setCurrentTab] = useState(tabs[0]);
   const [isBarOpen, setIsBarOpen] = useState(false);
   const [searchText, setSearchText] = useState('');
-  const [currentMesh, setCurrentMesh] = useState("binding");
+  const [currentMesh, setCurrentMesh] = useState("Arm Plate");
   const [colors, setColors] = useState(colorData);
   const [textures, setTextures] = useState(textureData);
   const [colorSteps, setColorSteps] = useState(colorStepsConfig);
@@ -576,187 +576,6 @@ export default function Main() {
       [option]: value,
     }));
     
-    if(option === 'Wrist Guard' && value === "Wrist Guard (+$10)") {
-      console.log("here")
-      setColorSteps(prevSteps => ({
-        ...prevSteps,
-        "Wrist Guard": true
-      }));
-    } else if(option === 'Wrist Guard' && value !== "Wrist Guard (+$10)") {
-      setColorSteps(prevSteps => ({
-        ...prevSteps,  
-        "Wrist Guard": false
-      }));
-    }
-
-    if(option === 'wrist_logo' && value === 'Embroidered') {
-      setBaseSteps(prevSteps => ({
-        ...prevSteps,
-        logo_outline: true
-      }));
-    } else if(option === 'wrist_logo' && value !== 'Embroidered') {
-      setBaseSteps(prevSteps => ({
-        ...prevSteps,  
-        logo_outline: false
-      }));
-    }
-    if(option === 'wrist_logo' && value === "Circle Patch") {
-      setColorSteps(prevSteps => ({
-        ...prevSteps,
-        wristPlate: true
-      }));
-    } else if(option === 'wrist_logo' && value !== "Circle Patch") {
-      setColorSteps(prevSteps => ({
-        ...prevSteps,  
-        wristPlate: false
-      }));
-    }
-    if(option === 'wrist_logo' && value === "Square Patch") {
-      setColorSteps(prevSteps => ({
-        ...prevSteps,
-        "Square Patch": true,
-        "Patch Inner Lines": true,
-        "Patch Outer Lines": true
-      }));
-    } else if(option === 'wrist_logo' && value !== "Square Patch") {
-      setColorSteps(prevSteps => ({
-        ...prevSteps,  
-        "Square Patch": false,
-        "Patch Inner Lines": false,
-        "Patch Outer Lines": false
-      }));
-    }
-    if(option === 'wrist_logo' && value === "Triangular Patch") {
-      setColorSteps(prevSteps => ({
-        ...prevSteps,
-        "Triangular Patch": true,
-      }));
-    } else if(option === 'wrist_logo' && value !== "Triangular Patch") {
-      setColorSteps(prevSteps => ({
-        ...prevSteps,  
-        "Triangular Patch": false,
-      }));
-    }
-    if(option === 'wrist_logo' && value === "Thick Outline") {
-      setColorSteps(prevSteps => ({
-        ...prevSteps,
-        "Logo Border": true,
-      }));
-    } else if(option === 'wrist_logo' && value !== "Thick Outline") {
-      setColorSteps(prevSteps => ({
-        ...prevSteps,  
-        "Logo Border": false,
-      }));
-    }
-    if(option === 'wrist_logo' && value === 'Embriodered Flag (+$7)') {
-      setBaseSteps(prevSteps => ({
-        ...prevSteps,
-        embroidered_flag: true
-      }));
-    } else if(option === 'wrist_logo' && value !== 'Embriodered Flag (+$7)') {
-      setBaseSteps(prevSteps => ({
-        ...prevSteps,  
-        embroidered_flag: false
-      }));
-    }
-
-    if(option === 'finger_option' && value !== 'None') {
-      setBaseSteps(prevSteps => ({
-        ...prevSteps,
-        finger_pad_placement: true
-      }));
-    } else if(option === 'finger_option' && value === 'None') {
-      setBaseSteps(prevSteps => ({
-        ...prevSteps,  
-        finger_pad_placement: false
-      }));
-    }
-
-    if(option === 'Circle Logo' && value === 'Circle Logo') {
-      setColorSteps(prevSteps => ({
-        ...prevSteps,
-        "Circle Logo": true
-      }));
-    } else if(option === 'Circle Logo' && value !== 'Circle Logo') {
-      setColorSteps(prevSteps => ({
-        ...prevSteps,
-        "Circle Logo": false
-      }));
-    }
-
-    if(option === 'logo_outline' && value === 'Enable Logo Outline') {
-      setColorSteps(prevSteps => ({
-        ...prevSteps,
-        logo_outline_color: true
-      }));
-    } else if(option === 'logo_outline' && value === null) {
-      setColorSteps(prevSteps => ({
-        ...prevSteps,  
-        logo_outline_color: false
-      }));
-    }
-
-    if(option === 'finger_pad' && value === 'Hood') {
-      setColorSteps(prevSteps => ({
-        ...prevSteps,
-        "Finger Hood": true
-      }));
-    } else if(option === 'finger_pad' && value !== 'Hood') {
-      setColorSteps(prevSteps => ({
-        ...prevSteps,
-        "Finger Hood": false
-      }));
-    }
-
-    if(option === 'finger_pad' && value === 'Pad') {
-      setColorSteps(prevSteps => ({
-        ...prevSteps,
-        "Finger Pad": true
-      }));
-    } else if(option === 'finger_pad' && value !== 'Pad') {
-      setColorSteps(prevSteps => ({
-        ...prevSteps,
-        "Finger Pad": false
-      }));
-    }
-
-    if(option === 'inlay' && value === 'Inlay') {
-      setColorSteps(prevSteps => ({
-        ...prevSteps,
-        inlay: true,
-        wrist: false,
-      }));
-    } else if(option === 'inlay' && value !== 'Inlay') {
-      setColorSteps(prevSteps => ({
-        ...prevSteps,
-        inlay: false,
-        wrist: true,
-      }));
-    }
-
-
-    if(option === 'Glove Stiffness' && value !== null) {
-      setBaseRequired(prevSteps => ({
-        ...prevSteps,
-        "Glove Stiffness": false
-      }));
-    } else if(option === 'Glove Stiffness' && value === null) {
-      setBaseRequired(prevSteps => ({
-        ...prevSteps,
-        "Glove Stiffness": true
-      }));
-    }
-    if(option === 'throwing_hand' && value !== null) {
-      setBaseRequired(prevSteps => ({
-        ...prevSteps,
-        "throwing_hand": false
-      }));
-    } else if(option === 'throwing_hand' && value === null) {
-      setBaseRequired(prevSteps => ({
-        ...prevSteps,
-        "throwing_hand": true
-      }));
-    }
   }
 
   const resetConfig = () => {
@@ -906,7 +725,7 @@ export default function Main() {
     return {
       "Glove Model": "Legend Edition",
       "Glove Sport": "Baseball",
-      "Glove Type": "First Baseman",
+      "Glove Type": "Elbow Guard",
       "Price": price,
       ...enabledBaseOptions,
       ...enabledColorOptions,
@@ -968,7 +787,7 @@ export default function Main() {
                   type="button"
                   onClick={BarNavToggle}
                 >
-                  <img src={`/wp-content/reactpress/apps/firstbaselegend/build/images/menu.svg`} alt="Ham" />
+                  <img src={`/wp-content/reactpress/apps/elbowguard/build/images/menu.svg`} alt="Ham" />
                 </button>
                 <button type="button" className="btn" onClick={resetConfig}>
                   reset
@@ -1172,7 +991,7 @@ export default function Main() {
                           >
                             <img
                               className="me-1"
-                              src={`/wp-content/reactpress/apps/firstbaselegend/build/images/mandatory.svg`}
+                              src={`/wp-content/reactpress/apps/elbowguard/build/images/mandatory.svg`}
                               alt="Help"
                             />
                             Required
@@ -1269,7 +1088,7 @@ export default function Main() {
                           >
                             <img
                               className="me-1"
-                              src={`/wp-content/reactpress/apps/firstbaselegend/build/images/mandatory.svg`}
+                              src={`/wp-content/reactpress/apps/elbowguard/build/images/mandatory.svg`}
                               alt="Help"
                             />
                             Required
@@ -1381,7 +1200,7 @@ export default function Main() {
                           >
                             <img
                               className="me-1"
-                              src={`/wp-content/reactpress/apps/firstbaselegend/build/images/mandatory.svg`}
+                              src={`/wp-content/reactpress/apps/elbowguard/build/images/mandatory.svg`}
                               alt="Help"
                             />
                             Required
