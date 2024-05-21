@@ -1112,7 +1112,7 @@ export const meshOptions = {
     },
     "Special Instruction" : {
       textbox: true,
-      texttype: "text",
+      texttype: "long_text",
       options: [],
       icons: null,
       colors: null,

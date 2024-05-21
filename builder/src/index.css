@@ -944,3 +944,4 @@ border: 2px solid #333;
   .product-block .data-card{padding: 15px 10px;}
   .product-img-box .m-auto{height: 450px !important;}
 }
+.hb-text-area.rounded-full{height: auto !important; min-height: auto !important;}

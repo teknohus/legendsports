@@ -276,6 +276,12 @@ export default function Main() {
         [currentPersonlize]: value,
       }));
     }
+    else if (data[currentPersonlize].texttype === "long_text"){
+      setPersonlizeConfig((prevOption) => ({
+        ...prevOption,
+        [currentPersonlize + " Text"]: value,
+      }));
+    }
     else{
       if(value.length > 17) {
         value = value.slice(0, 17);
@@ -1383,6 +1389,17 @@ export default function Main() {
                                         type="text" 
                                         placeholder={currentPersonlize}
                                         maxLength="17"
+                                        minLength="0"
+                                        value= {personlizeConfig[currentPersonlize + " Text"]}
+                                        onChange={handlePeronalizeChangeText}
+                                      />
+                                    </>
+                                  )}
+                                  {data[currentPersonlize].texttype === "long_text" && (
+                                    <>
+                                      <input className = "rounded-full px-6 w-full focus:ring-0 border-gray-300 focus:border-gray-300 my-3" 
+                                        type="text" 
+                                        placeholder={currentPersonlize}
                                         minLength="0"
                                         value= {personlizeConfig[currentPersonlize + " Text"]}
                                         onChange={handlePeronalizeChangeText}
