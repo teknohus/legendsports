@@ -9,7 +9,7 @@ export default function Variant() {
           <div className="heading">
             <h2>Fielder - Infield</h2>
           </div>
-          <div className="row justify-content-center text-center hb-gap">
+          <div className="d-flex flex-wrap justify-content-center text-center hb-gap">
             {glovesData.map((glove, index) => (
               <div key={index} className="col-md-4 col-sm-6">
                 <div className="hb-content bg-white d-flex flex-column justify-content-between h-100">

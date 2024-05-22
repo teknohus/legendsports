@@ -20,7 +20,7 @@ export default function Product() {
         <div className="heading">
           <h2>Glove Builder</h2>
         </div>
-        <div className="row justify-content-center text-center mw-md-100">
+        <div className="d-flex flex-wrap justify-content-center text-center">
           <div className="col-lg-4 col-md-4 col-sm-6">
             <div className="hb-content bg-white ">
               <div className="hb-content-header">

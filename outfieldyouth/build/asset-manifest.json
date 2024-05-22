@@ -1,13 +1,15 @@
 {
   "files": {
-    "main.css": "/wp-content/reactpress/apps/outfieldyouth/build/static/css/main.a89dffba.css",
-    "main.js": "/wp-content/reactpress/apps/outfieldyouth/build/static/js/main.d6cb3f6b.js",
+    "main.css": "/wp-content/reactpress/apps/outfieldyouth/build/static/css/main.1f9d15dd.css",
+    "main.js": "/wp-content/reactpress/apps/outfieldyouth/build/static/js/main.08650814.js",
     "static/media/Hot Pink Snakeskin Art Spots.png": "/wp-content/reactpress/apps/outfieldyouth/build/static/media/Hot Pink Snakeskin Art Spots.5d024125c1f223c7321f.png",
+    "static/media/Midnight City Edition.png": "/wp-content/reactpress/apps/outfieldyouth/build/static/media/Midnight City Edition.523a0d1f1486d890d391.png",
     "static/media/Pink Snakeskin Art Spots.png": "/wp-content/reactpress/apps/outfieldyouth/build/static/media/Pink Snakeskin Art Spots.729afb2b28386d110305.png",
+    "static/media/a_skin.png": "/wp-content/reactpress/apps/outfieldyouth/build/static/media/a_skin.6ae4441bfceaefb76def.png",
     "static/media/Teal Snakeskin Art Spots.png": "/wp-content/reactpress/apps/outfieldyouth/build/static/media/Teal Snakeskin Art Spots.027269bef9d21274a9d2.png",
-    "static/media/a_skin.png": "/wp-content/reactpress/apps/outfieldyouth/build/static/media/a_skin.af62c3a717fc93adf4d3.png",
     "static/media/inlay_initialShadingGroup_Diffuse.png": "/wp-content/reactpress/apps/outfieldyouth/build/static/media/inlay_initialShadingGroup_Diffuse.a0f266f6c82f689be04d.png",
     "static/media/Teal Art Spots.png": "/wp-content/reactpress/apps/outfieldyouth/build/static/media/Teal Art Spots.62e02e030d99d1e59920.png",
+    "static/media/White Ostrich.png": "/wp-content/reactpress/apps/outfieldyouth/build/static/media/White Ostrich.f9ba1677e578ed1ba7e4.png",
     "static/media/Pink Art Spots.png": "/wp-content/reactpress/apps/outfieldyouth/build/static/media/Pink Art Spots.1d53d91989e51f3f4826.png",
     "static/media/Lime Green Paint Spots.png": "/wp-content/reactpress/apps/outfieldyouth/build/static/media/Lime Green Paint Spots.7455905e2cd43dc8708f.png",
     "static/media/Mint Vintage.png": "/wp-content/reactpress/apps/outfieldyouth/build/static/media/Mint Vintage.465df46dfbb3d26b180d.png",
@@ -15,7 +17,6 @@
     "static/media/Sky Blue Art Spots.png": "/wp-content/reactpress/apps/outfieldyouth/build/static/media/Sky Blue Art Spots.964e095d416cf0e63271.png",
     "static/media/snake skin brown.png": "/wp-content/reactpress/apps/outfieldyouth/build/static/media/snake skin brown.408b2e4cb640cb253b16.png",
     "static/media/Green Gradient.png": "/wp-content/reactpress/apps/outfieldyouth/build/static/media/Green Gradient.bc4b20d6ad67cd57d631.png",
-    "static/media/Midnight City Edition.png": "/wp-content/reactpress/apps/outfieldyouth/build/static/media/Midnight City Edition.cd5da6406d82cb964f48.png",
     "static/media/Gray Vintage.png": "/wp-content/reactpress/apps/outfieldyouth/build/static/media/Gray Vintage.e0a7283a51f4e3d5dcdc.png",
     "static/media/MetalGoldPaint002_COL_1K_METALNESS.png": "/wp-content/reactpress/apps/outfieldyouth/build/static/media/MetalGoldPaint002_COL_1K_METALNESS.330cf7582e56465161f4.png",
     "static/media/Black Vintage.png": "/wp-content/reactpress/apps/outfieldyouth/build/static/media/Black Vintage.270434826c21c7d5d25f.png",
@@ -27,7 +28,6 @@
     "static/media/snake skin pink.png": "/wp-content/reactpress/apps/outfieldyouth/build/static/media/snake skin pink.a4fa3479e6e8d6bfb061.png",
     "static/media/snake skin tan.png": "/wp-content/reactpress/apps/outfieldyouth/build/static/media/snake skin tan.bc2f2b179737bb0ed31e.png",
     "static/media/snake skin blonde.png": "/wp-content/reactpress/apps/outfieldyouth/build/static/media/snake skin blonde.6e615e54632b56e0a3fd.png",
-    "static/media/White Ostrich.png": "/wp-content/reactpress/apps/outfieldyouth/build/static/media/White Ostrich.f432760aa4e6e1fe7c02.png",
     "static/media/snake skin white.png": "/wp-content/reactpress/apps/outfieldyouth/build/static/media/snake skin white.8849f4f36043b04883aa.png",
     "static/media/Shiny Chameleon.png": "/wp-content/reactpress/apps/outfieldyouth/build/static/media/Shiny Chameleon.64cb9aa3b592617e41d4.png",
     "static/media/Royal Blue Metallic.png": "/wp-content/reactpress/apps/outfieldyouth/build/static/media/Royal Blue Metallic.8f7c4ab12fa66179a12b.png",
@@ -132,11 +132,11 @@
     "static/media/slick.ttf": "/wp-content/reactpress/apps/outfieldyouth/build/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/wp-content/reactpress/apps/outfieldyouth/build/static/media/slick.295183786cd8a1389865.woff",
     "static/media/check-list-icon.svg": "/wp-content/reactpress/apps/outfieldyouth/build/static/media/check-list-icon.6845dc6fcf127640e50d.svg",
-    "main.a89dffba.css.map": "/wp-content/reactpress/apps/outfieldyouth/build/static/css/main.a89dffba.css.map",
-    "main.d6cb3f6b.js.map": "/wp-content/reactpress/apps/outfieldyouth/build/static/js/main.d6cb3f6b.js.map"
+    "main.1f9d15dd.css.map": "/wp-content/reactpress/apps/outfieldyouth/build/static/css/main.1f9d15dd.css.map",
+    "main.08650814.js.map": "/wp-content/reactpress/apps/outfieldyouth/build/static/js/main.08650814.js.map"
   },
   "entrypoints": [
-    "static/css/main.a89dffba.css",
-    "static/js/main.d6cb3f6b.js"
+    "static/css/main.1f9d15dd.css",
+    "static/js/main.08650814.js"
   ]
 }
