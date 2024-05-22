@@ -278,7 +278,7 @@ export default function Main() {
 
   const handlePeronalizeChangeText = (e) => {
     let value = e.target.value;
-
+    
     if (data[currentPersonlize].texttype === "number"){
       if(value.length > 2) {
         value = value.slice(0, 2);
@@ -286,6 +286,12 @@ export default function Main() {
       setPersonlizeConfig((prevOption) => ({
         ...prevOption,
         [currentPersonlize]: value,
+      }));
+    }
+    else if (data[currentPersonlize].texttype === "long_text"){
+      setPersonlizeConfig((prevOption) => ({
+        ...prevOption,
+        [currentPersonlize + " Text"]: value,
       }));
     }
     else{
@@ -1411,7 +1417,7 @@ export default function Main() {
                                   ))}
                                 </>
                               )}
-                              {data[currentPersonlize].textbox && (
+                                                            {data[currentPersonlize].textbox && (
                                 <>
                                   {data[currentPersonlize].texttype === "number" && (
                                     <input className = "rounded-full px-6 w-full focus:ring-0 border-gray-300 focus:border-gray-300" 
@@ -1433,6 +1439,18 @@ export default function Main() {
                                         value= {personlizeConfig[currentPersonlize + " Text"]}
                                         onChange={handlePeronalizeChangeText}
                                       />
+                                    </>
+                                  )}
+                                  {data[currentPersonlize].texttype === "long_text" && (
+                                    <>
+                                      <textarea className = "hb-text-area rounded-full px-6 w-full focus:ring-0 border-gray-300 focus:border-gray-300 my-3" 
+                                        type="text" 
+                                        placeholder={currentPersonlize}
+                                        value= {personlizeConfig[currentPersonlize + " Text"]}
+                                        onChange={handlePeronalizeChangeText}
+                                        rows={"5.5"}
+                                      >
+                                        </textarea>
                                     </>
                                   )}
                                 <br/>

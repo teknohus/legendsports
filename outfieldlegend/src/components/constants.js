@@ -1099,12 +1099,12 @@ export const meshOptions = {
       colors: null,
     },
     "Special Instruction" : {
-      textbox: true,
-      texttype: "text",
-      options: [],
-      icons: null,
-      colors: null,
-    },
+          textbox: true,
+          texttype: "long_text",
+          options: [],
+          icons: null,
+          colors: null,
+        },
   }
   
   export const tabs = ["Base", "Color", "Personalize"];
