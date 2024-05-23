@@ -5,46 +5,7 @@ import Controls from "../controls"
 
 function usePricing(baseConfig, personalizeConfig) {
 
-  const [price, setPrice] = useState(225);
-
-  
-  useEffect(() => {
-    const priceAffectingOptions = {
-      logoStyle: baseConfig.wrist_logo,  
-      wristGuard: baseConfig["Wrist Guard"],
-      thumb: personalizeConfig["Thumb Logo/Graphic"]
-    }
-
-    let newPrice = 225;
-    
-    if(priceAffectingOptions.logoStyle === "Embriodered Flag (+$7)") {
-      newPrice += 7; 
-    }
-    if(priceAffectingOptions.wristGuard === "Wrist Guard (+$10)") {
-       newPrice += 10; 
-    }  
-    if(priceAffectingOptions.thumb === "Graphic (+$7)") {
-       newPrice += 7; 
-    }
-    if(priceAffectingOptions.thumb === "Premium Graphic (+$15)") {
-       newPrice += 15; 
-    }
-    if(priceAffectingOptions.thumb === "Jumbo Number (+$7)") {
-       newPrice += 7; 
-    }
-    if(priceAffectingOptions.thumb === "Stamped Flag (+$7)") {
-       newPrice += 7; 
-    }
-    if(priceAffectingOptions.thumb === "Thumb Flag (+$7)") {
-       newPrice += 7; 
-    }
-    if(priceAffectingOptions.thumb === "Custom Plate Number (+$7)") {
-       newPrice += 7; 
-    }
-
-    setPrice(newPrice);
-
-  }, [baseConfig, personalizeConfig])
+  const [price, setPrice] = useState(80);
 
   return { price }; // return price for usage
 
