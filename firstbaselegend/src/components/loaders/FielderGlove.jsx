@@ -98,7 +98,7 @@ const BackFlag = ({ nodes, materials, position, rotation, scale, personalize }) 
 };
 
 export function New({rot, base, colors, personalize, personalizeConfig, xPosition, yPosition, zPosition, xRotation, yRotation, zRotation, textures }) {
-  const { nodes, materials } = useGLTF("/wp-content/reactpress/apps/firstbaselegend/build/Model/untitled3-v2.glb")
+  const { nodes, materials } = useGLTF("/wp-content/reactpress/apps/firstbaselegend/build/Model/newparts1.glb")
 
   const matStitches = materials.lambert1.clone();
   const matLogo = materials.Default_Material.clone();
@@ -109,6 +109,7 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
   const matSquarePatchOuterLines = materials.lambert1.clone();
   const matPalm = materials.lambert1.clone();
   const matPalm2 = materials.Default_Material.clone();
+  const triangularPatch = materials.initialShadingGroup.clone();
 
   const ref = useRef();
 
@@ -527,8 +528,20 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
         <mesh geometry={nodes.Logo11.geometry} material={materials.Logo11} position={[0.11, 0.112, -0.01]} rotation={[1.857, -0.219, 2.422]} scale={0.011} />
       )}
       {/* <mesh geometry={nodes.single_stitch.geometry} material={materials.lambert1} /> */}
+
+      {base.wrist_logo === "Triangular Patch" && (
+        <>
+          <mesh geometry={nodes.group2_group1_MASH1_ReproMesh.geometry} material-color={colors.Stitches} material={materials.initialShadingGroup} rotation={[Math.PI / 2, 0, 0]} />
+          <mesh geometry={nodes.group2_group1_polySurface2.geometry} material-color={colors["Logo"]} material={materials['logo:Default_Material']} rotation={[Math.PI / 2, 0, 0]} />
+          <mesh geometry={nodes.group2_group1_polySurface5.geometry} material-color={colors["Logo"]} material={materials['logo:Default_Material']} rotation={[Math.PI / 2, 0, 0]} />
+          <mesh geometry={nodes.polySurface1_group2_group1.geometry} material-color={colors["Triangular Patch"]} material={triangularPatch} rotation={[Math.PI / 2, 0, 0]} />
+        </>
+      )}
+
+      {/* <mesh geometry={nodes.baseballglove_21st_baseman.geometry} material={materials['initialShadingGroup.001']} rotation={[Math.PI / 2, 0, 0]} /> */}
+
   </group>
   )
 }
 
-useGLTF.preload("/wp-content/reactpress/apps/firstbaselegend/build/Model/untitled3-v2.glb")
+useGLTF.preload("/wp-content/reactpress/apps/firstbaselegend/build/Model/newparts1.glb")

@@ -156,7 +156,7 @@ const EmbroideredLogo = ({ geometry, material, color, position, rotation, scale,
 export function New({rot, base, colors, personalize, personalizeConfig, xPosition, yPosition, zPosition, xRotation, yRotation, zRotation, textures }) {
   const ref = useRef();
 
-  const { nodes, materials } = useGLTF("/wp-content/reactpress/apps/builder/build/Model/untitled.glb")
+  const { nodes, materials } = useGLTF("/wp-content/reactpress/apps/builder/build/Model/baseman.glb")
   
   // const myFont = new FontLoader().parse(fontArrayBuffer);
 
@@ -1363,4 +1363,4 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
   )
 }
 
-useGLTF.preload("/wp-content/reactpress/apps/builder/build/Model/untitled.glb")
+useGLTF.preload("/wp-content/reactpress/apps/builder/build/Model/baseman.glb")

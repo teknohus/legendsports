@@ -868,7 +868,7 @@ export const colorData = {
     },
     wrist_logo: {
       textbox: false,
-      options: ["Embroidered", "Circle Patch", "Square Patch", "Embriodered Flag (+$7)"],
+      options: ["Embroidered", "Circle Patch", "Square Patch", "Triangular Patch", "Embriodered Flag (+$7)",],
       icons: null,
       colors: null,
     },
