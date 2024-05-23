@@ -9,7 +9,7 @@ export default function Product() {
     window.location.href = 'https://legendsportspro.com/softball/';
   }
   const handleElbowGuard = () => {
-     window.location.href = 'https://legendsportspro.com/elbowguard/';
+     window.location.href = 'https://legendsportspro.com/elbow-guard/';
   }
 
    return(
@@ -71,7 +71,7 @@ export default function Product() {
                 </div>
               </div>
               <div className="image-box my-3">
-              <img src={`/wp-content/reactpress/apps/products/build/images/fielder.png`} className="mx-auto" alt="layer-45" />
+              <img src={`/wp-content/reactpress/apps/products/build/images/elbowguard.png`} className="mx-auto" alt="layer-45" />
               </div>
               <div className="btn-box text-center">
                 <button onClick={handleElbowGuard} className="btn">Select</button>
