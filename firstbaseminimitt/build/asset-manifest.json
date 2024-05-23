@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/wp-content/reactpress/apps/firstbaseminimitt/build/static/css/main.fc721ff7.css",
-    "main.js": "/wp-content/reactpress/apps/firstbaseminimitt/build/static/js/main.9714fbb7.js",
+    "main.js": "/wp-content/reactpress/apps/firstbaseminimitt/build/static/js/main.1c895717.js",
     "static/media/Hot Pink Snakeskin Art Spots.png": "/wp-content/reactpress/apps/firstbaseminimitt/build/static/media/Hot Pink Snakeskin Art Spots.5d024125c1f223c7321f.png",
     "static/media/Midnight City Edition.png": "/wp-content/reactpress/apps/firstbaseminimitt/build/static/media/Midnight City Edition.523a0d1f1486d890d391.png",
     "static/media/Pink Snakeskin Art Spots.png": "/wp-content/reactpress/apps/firstbaseminimitt/build/static/media/Pink Snakeskin Art Spots.729afb2b28386d110305.png",
@@ -134,10 +134,10 @@
     "static/media/slick.woff": "/wp-content/reactpress/apps/firstbaseminimitt/build/static/media/slick.295183786cd8a1389865.woff",
     "static/media/check-list-icon.svg": "/wp-content/reactpress/apps/firstbaseminimitt/build/static/media/check-list-icon.de00f8427d14a7d63cef.svg",
     "main.fc721ff7.css.map": "/wp-content/reactpress/apps/firstbaseminimitt/build/static/css/main.fc721ff7.css.map",
-    "main.9714fbb7.js.map": "/wp-content/reactpress/apps/firstbaseminimitt/build/static/js/main.9714fbb7.js.map"
+    "main.1c895717.js.map": "/wp-content/reactpress/apps/firstbaseminimitt/build/static/js/main.1c895717.js.map"
   },
   "entrypoints": [
     "static/css/main.fc721ff7.css",
-    "static/js/main.9714fbb7.js"
+    "static/js/main.1c895717.js"
   ]
 }
