@@ -98,7 +98,7 @@ const BackFlag = ({ nodes, materials, position, rotation, scale, personalize }) 
 };
 
 export function New({rot, base, colors, personalize, personalizeConfig, xPosition, yPosition, zPosition, xRotation, yRotation, zRotation, textures }) {
-  const { nodes, materials } = useGLTF("/wp-content/reactpress/apps/elbowguard/build/Model/untitled.glb")
+  const { nodes, materials } = useGLTF("/wp-content/reactpress/apps/elbowguard/build/Model/outlinr.glb")
 
   const ref = useRef();
 
@@ -142,12 +142,43 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
 
   return (
     <group dispose={null} ref={ref}>
+
+    {personalize["Custom Text"] && (
+      <Text
+        font={fonts[personalize["Text Font"]]}
+        position={[-0.103, 0.318, -1.072]}
+        rotation={[Math.PI*-0.5, Math.PI*0, Math.PI*0.3]}
+        color={personalize["Custom Text Color"]}
+        scale={
+          personalize["Custom Text Text"]?.length > 12
+            ? 0.242 - 0.0100 * (personalize["Custom Text Text"]?.length - 12)
+            : 0.232
+        }
+
+      >
+        {personalize["Custom Text Text"]}
+      </Text>
+    )}
+    {personalize["Custom Number"] && (
+      <Text
+        font={fonts[personalize["Text Font"]]}
+        position={[0.3, 0.318, 0]}
+        rotation={[Math.PI*-0.5, Math.PI*0, Math.PI*0]}
+        color={personalize["Custom Number Color"]}
+        scale={0.3}
+
+      >
+        {personalize["Custom Number Text"]}
+      </Text>
+    )}
+
       <mesh geometry={nodes.Elbow_strap.geometry} material-color={colors["Elbow Strap"]} material={materials.Elbow_Strap} />
       <mesh geometry={nodes.ArmStrap.geometry} material-color={colors["Arm Strap"]} material={materials.ArmStrap} />
       <mesh geometry={nodes.ElbowBindin.geometry} material-color={colors["Elbow Binding"]} material={materials.ElbowBinding} />
       <mesh geometry={nodes.Elbow_plate.geometry} material-color={colors["Elbow Plate"]} material={materials.Elbow_plate} />
       <mesh geometry={nodes.elbowstich.geometry} material-color={colors["Elbow Stitch"]} material={materials.elbowstich} />
-      <mesh geometry={nodes.logo.geometry} material-color={colors["Logo"]} material={materials.Logo} />
+      <mesh geometry={nodes.logo.geometry} material-color={colors["Logo Outline"]} material={materials.Logo} />
+      <mesh geometry={nodes.logo001.geometry} material-color={colors["Logo"]} material={materials['Logo.001']} scale={1.02} />
       <mesh geometry={nodes.armPlate.geometry} material-color={colors["Arm Plate"]} material={materials.ArmPlate} />
       <mesh geometry={nodes.arm_stich.geometry} material-color={colors["Arm Stitch"]} material={materials['armstich.001']} />
       <mesh geometry={nodes.armStich.geometry} material-color={colors["Arm Stitch"]} material={materials.armStiches} />

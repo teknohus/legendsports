@@ -66,7 +66,7 @@ export default function Main() {
   const [personilzeSteps, setPersonalizeSteps] = useState(personlizationConfig);
   const [personlizeConfig, setPersonlizeConfig] = useState(personlizationOptions);
   const [personalizedRequired, setPersonalizedRequired] = useState(personlizationReq);
-  const [currentPersonlize, setCurrentPersonlize] = useState("Thumb Logo/Graphic");
+  const [currentPersonlize, setCurrentPersonlize] = useState("Custom Text");
   const [data, setData] = useState(Options)
   const [screenshots, setScreenshots] = useState([]);
   const {price} = usePricing(baseConfig, personlizeConfig);  
@@ -116,88 +116,28 @@ export default function Main() {
 
   
   useEffect(() =>{
-    if (personlizeConfig["Thumb Text"] === "Thumb Text" && personlizeConfig["Thumb Text Text"] !== ""){
+    if (personlizeConfig["Custom Text"] === "Custom Text" && personlizeConfig["Custom Text Text"] !== ""){
       setPersonalizedRequired(prevState => ({
         ...prevState,  
-        "Thumb Text": false
+        "Custom Text": false
       }));
     }
-    if (personlizeConfig["Thumb Text"] === "Thumb Text" && personlizeConfig["Thumb Text Text"] === ""){
+    if (personlizeConfig["Custom Text"] === "Custom Text" && personlizeConfig["Custom Text Text"] === ""){
       setPersonalizedRequired(prevState => ({
         ...prevState,  
-        "Thumb Text": true
+        "Custom Text": true
       }));
     }
-    if (personlizeConfig["Index Text"] === "Index Text" && personlizeConfig["Index Text Text"] !== ""){
+    if (personlizeConfig["Custom Number"] === "Custom Number" && personlizeConfig["Custom Number Text"] !== "" ){
       setPersonalizedRequired(prevState => ({
         ...prevState,  
-        "Index Text": false
+        "Custom Number": false
       }));
     }
-    if (personlizeConfig["Index Text"] === "Index Text" && personlizeConfig["Index Text Text"] === ""){
+    if (personlizeConfig["Custom Number"] === "Custom Number" && personlizeConfig["Custom Number Text"] === "" ){
       setPersonalizedRequired(prevState => ({
         ...prevState,  
-        "Index Text": true
-      }));
-    }
-    if (personlizeConfig["Pinky Text"] === "Pinky Text" && personlizeConfig["Pinky Text Text"] !== ""){
-      setPersonalizedRequired(prevState => ({
-        ...prevState,  
-        "Pinky Text": false
-      }));
-    }
-    if (personlizeConfig["Pinky Text"] === "Pinky Text" && personlizeConfig["Pinky Text Text"] === ""){
-      setPersonalizedRequired(prevState => ({
-        ...prevState,  
-        "Pinky Text": true
-      }));
-    }
-    if (personlizeConfig["Palm Text"] === "Palm Text" && personlizeConfig["Palm Text Text"] !== ""){
-      setPersonalizedRequired(prevState => ({
-        ...prevState,  
-        "Palm Text": false
-      }));
-    }
-    if (personlizeConfig["Palm Text"] === "Palm Text" && personlizeConfig["Palm Text Text"] === ""){
-      setPersonalizedRequired(prevState => ({
-        ...prevState,  
-        "Palm Text": true
-      }));
-    }
-    if (personlizeConfig["Thumb Logo/Graphic"] === "Jumbo Number (+$7)" && personlizeConfig["Jumbo Number"] !== ""){
-      setPersonalizedRequired(prevState => ({
-        ...prevState,  
-        "Jumbo Number": false
-      }));
-    }
-    if (personlizeConfig["Thumb Logo/Graphic"] === "Jumbo Number (+$7)" && personlizeConfig["Jumbo Number"] === ""){
-      setPersonalizedRequired(prevState => ({
-        ...prevState,  
-        "Jumbo Number": true
-      }));
-    }
-    if (personlizeConfig["Thumb Logo/Graphic"] === "Custom Plate Number (+$7)" && personlizeConfig["Custom Plate Number"] !== ""){
-      setPersonalizedRequired(prevState => ({
-        ...prevState,  
-        "Custom Plate Number": false
-      }));
-    }
-    if (personlizeConfig["Thumb Logo/Graphic"] === "Custom Plate Number (+$7)" && personlizeConfig["Custom Plate Number"] === ""){
-      setPersonalizedRequired(prevState => ({
-        ...prevState,  
-        "Custom Plate Number": true
-      }));
-    }
-    if (personlizeConfig["Palm Stamp"] === "Custom Number" && personlizeConfig["Palm Custom Number"] !== ""){
-      setPersonalizedRequired(prevState => ({
-        ...prevState,  
-        "Palm Custom Number": false
-      }));
-    }
-    if (personlizeConfig["Palm Stamp"] === "Custom Number" && personlizeConfig["Palm Custom Number"] === ""){
-      setPersonalizedRequired(prevState => ({
-        ...prevState,  
-        "Palm Custom Number": true
+        "Custom Number": true
       }));
     }
   },[personlizeConfig])
@@ -285,7 +225,7 @@ export default function Main() {
       }
       setPersonlizeConfig((prevOption) => ({
         ...prevOption,
-        [currentPersonlize]: value,
+        [currentPersonlize + " Text"]: value,
       }));
     }
     else{
@@ -312,258 +252,63 @@ export default function Main() {
       // If clicking on already selected option, set to null 
       value = null; 
     }
-    if (option === 'Thumb Text'){
-      const thumbText = data["Thumb Text"];
+    
+    if (option === 'Custom Text'){
+      const indexText = data["Custom Text"];
       setData(prevState => ({
         ...prevState,
-        "Thumb Text": {
-          ...thumbText, 
-          textbox: value === "Thumb Text",
-          colors: value === "Thumb Text" ? allColors : null
-        } 
-      }))  
-    }
-    if (option === 'Index Text'){
-      const indexText = data["Index Text"];
-      setData(prevState => ({
-        ...prevState,
-        "Index Text": {
+        "Custom Text": {
           ...indexText, 
-          textbox: value === "Index Text",
-          colors: value === "Index Text" ? allColors : null
+          textbox: value === "Custom Text",
+          colors: value === "Custom Text" ? allColors : null
         } 
       }))
     }
-    if (option === 'Pinky Text'){
-      const pinkyText = data["Pinky Text"];
+    if (option === 'Custom Number'){
+      const pinkyText = data["Custom Number"];
       setData(prevState => ({
         ...prevState,
-        "Pinky Text": {
+        "Custom Number": {
           ...pinkyText, 
-          textbox: value === "Pinky Text",
-          colors: value === "Pinky Text" ? allColors : null
+          textbox: value === "Custom Number",
+          colors: value === "Custom Number" ? allColors : null
         } 
       }))  
     }
-    if (option === 'Palm Text'){
-      const palmText = data["Palm Text"];
-      setData(prevState => ({
-        ...prevState,
-        "Palm Text": {
-          ...palmText, 
-          textbox: value === "Palm Text",
-          colors: value === "Palm Text" ? allColors : null
-        } 
-      }))  
-    }
-    
 
-    if (option === 'Thumb Logo/Graphic' && value === null){
-      value = 'Circle Logo'; 
-    }
-    if (option === 'Stamped Flag' && value === null){
-      value = 'USA'; 
-    }
+    
 
     setPersonlizeConfig((prevOption) => ({
       ...prevOption,
       [option]: value,
     }));
 
-    if(option === 'Index Text' && value === 'Index Text') {
-      setPersonalizeSteps(prevSteps => ({
-        ...prevSteps,
-        "Flag": false
-      }));  
-    } else if(option === 'Index Text' && value !== 'Index Text') {
-      setPersonalizeSteps(prevSteps => ({
-        ...prevSteps,
-        "Flag": true
-      }));  
-    }
-    if(option === 'Thumb Logo/Graphic' && value === 'Circle Logo') {
-      setColorSteps(prevSteps => ({
-        ...prevSteps,
-        "Circle Logo": true
-      }));
-    } else if(option === 'Thumb Logo/Graphic' && value !== 'Circle Logo') {
-      setColorSteps(prevSteps => ({
-        ...prevSteps,
-        "Circle Logo": false
-      }));
-    }
-    if(option === 'Thumb Logo/Graphic' && value === 'Custom Plate Number (+$7)') {
-      setColorSteps(prevSteps => ({
-        ...prevSteps,
-        "Circle Logo": true
-      }));
+
+    if (option === 'Custom Text' && value === null){
       setPersonalizedRequired(prevSteps => ({
         ...prevSteps,
-        "Custom Plate Number": true
+        "Custom Text": false
       }));
-    } else if(option === 'Thumb Logo/Graphic' && value !== 'Custom Plate Number (+$7)') {
-      setColorSteps(prevSteps => ({
-        ...prevSteps,
-        "Circle Logo": false
-      }));
+    }
+    else if (option === 'Custom Text' && value === "Custom Text"){
       setPersonalizedRequired(prevSteps => ({
         ...prevSteps,
-        "Custom Plate Number": false
+        "Custom Text": true
+      }));
+    }
+    if (option === 'Custom Number' && value === null){
+      setPersonalizedRequired(prevSteps => ({
+        ...prevSteps,
+        "Custom Number": false
+      }));
+    }
+    else if (option === 'Custom Number' && value === "Custom Number"){
+      setPersonalizedRequired(prevSteps => ({
+        ...prevSteps,
+        "Custom Number": true
       }));
     }
 
-    if(option === 'Thumb Logo/Graphic' && value === 'Graphic (+$7)') {
-      setPersonalizeSteps(prevSteps => ({
-        ...prevSteps,
-       "Thumb Graphic": true
-      }));
-    } else if(option === 'Thumb Logo/Graphic' && value !== 'Graphic (+$7)') {
-      setPersonalizeSteps(prevSteps => ({
-        ...prevSteps,
-       "Thumb Graphic": false
-      }));
-    }
-    if(option === 'Thumb Logo/Graphic' && value === 'Premium Graphic (+$15)') {
-      setPersonalizeSteps(prevSteps => ({
-        ...prevSteps,
-       "Premium Graphic": true
-      }));
-    } else if(option === 'Thumb Logo/Graphic' && value !== 'Premium Graphic (+$15)') {
-      setPersonalizeSteps(prevSteps => ({
-        ...prevSteps,
-       "Premium Graphic": false
-      }));
-    }
-    if(option === 'Thumb Logo/Graphic' && value === 'Jumbo Number (+$7)') {
-      setPersonalizeSteps(prevSteps => ({
-        ...prevSteps,
-       "Jumbo Number": true
-      }));
-      setPersonalizedRequired(prevSteps => ({
-        ...prevSteps,
-        "Jumbo Number": true
-      }));
-    } else if(option === 'Thumb Logo/Graphic' && value !== 'Jumbo Number (+$7)') {
-      setPersonalizeSteps(prevSteps => ({
-        ...prevSteps,
-       "Jumbo Number": false
-      }));
-      setPersonalizedRequired(prevSteps => ({
-        ...prevSteps,
-        "Jumbo Number": false
-      }));
-    }
-    if(option === 'Thumb Logo/Graphic' && value === 'Stamped Flag (+$7)') {
-      setPersonalizeSteps(prevSteps => ({
-        ...prevSteps,
-       "Stamped Flag": true
-      }));
-    } else if(option === 'Thumb Logo/Graphic' && value !== 'Stamped Flag (+$7)') {
-      setPersonalizeSteps(prevSteps => ({
-        ...prevSteps,
-       "Stamped Flag": false
-      }));
-    }
-    if(option === 'Thumb Logo/Graphic' && value === 'Thumb Flag (+$7)') {
-      setPersonalizeSteps(prevSteps => ({
-        ...prevSteps,
-       "Thumb Flag": true
-      }));
-    } else if(option === 'Thumb Logo/Graphic' && value !== 'Thumb Flag (+$7)') {
-      setPersonalizeSteps(prevSteps => ({
-        ...prevSteps,
-       "Thumb Flag": false
-      }));
-    }
-    if(option === 'Thumb Logo/Graphic' && value === 'Custom Plate Number (+$7)') {
-      setPersonalizeSteps(prevSteps => ({
-        ...prevSteps,
-       "Custom Plate Number": true
-      }));
-    } else if(option === 'Thumb Logo/Graphic' && value !== 'Custom Plate Number (+$7)') {
-      setPersonalizeSteps(prevSteps => ({
-        ...prevSteps,
-       "Custom Plate Number": false
-      }));
-    }
-    if(option === 'Palm Stamp' && value === 'Custom Number') {
-      setPersonalizeSteps(prevSteps => ({
-        ...prevSteps,
-       "Palm Custom Number": true
-      }));
-      setPersonalizedRequired(prevSteps => ({
-        ...prevSteps,
-        "Palm Custom Number": true
-      }));
-    } else if(option === 'Palm Stamp' && value !== 'Custom Number') {
-      setPersonalizeSteps(prevSteps => ({
-        ...prevSteps,
-       "Palm Custom Number": false
-      }));
-      setPersonalizedRequired(prevSteps => ({
-        ...prevSteps,
-        "Palm Custom Number": false
-      }));
-    }
-    if(option === 'Palm Stamp' && value === 'Graphic') {
-      setPersonalizeSteps(prevSteps => ({
-        ...prevSteps,
-       "Palm Graphic": true
-      }));
-    } else if(option === 'Palm Stamp' && value !== 'Graphic') {
-      setPersonalizeSteps(prevSteps => ({
-        ...prevSteps,
-       "Palm Graphic": false
-      }));
-    }
-    if (option === 'Thumb Text' && value === null){
-      setPersonalizedRequired(prevSteps => ({
-        ...prevSteps,
-        "Thumb Text": false
-      }));
-    }
-    else if (option === 'Thumb Text' && value === "Thumb Text"){
-      setPersonalizedRequired(prevSteps => ({
-        ...prevSteps,
-        "Thumb Text": true
-      }));
-    }
-    if (option === 'Index Text' && value === null){
-      setPersonalizedRequired(prevSteps => ({
-        ...prevSteps,
-        "Index Text": false
-      }));
-    }
-    else if (option === 'Index Text' && value === "Index Text"){
-      setPersonalizedRequired(prevSteps => ({
-        ...prevSteps,
-        "Index Text": true
-      }));
-    }
-    if (option === 'Pinky Text' && value === null){
-      setPersonalizedRequired(prevSteps => ({
-        ...prevSteps,
-        "Pinky Text": false
-      }));
-    }
-    else if (option === 'Pinky Text' && value === "Pinky Text"){
-      setPersonalizedRequired(prevSteps => ({
-        ...prevSteps,
-        "Pinky Text": true
-      }));
-    }
-    if (option === 'Palm Text' && value === null){
-      setPersonalizedRequired(prevSteps => ({
-        ...prevSteps,
-        "Palm Text": false
-      }));
-    }
-    else if (option === 'Palm Text' && value === "Palm Text"){
-      setPersonalizedRequired(prevSteps => ({
-        ...prevSteps,
-        "Palm Text": true
-      }));
-    }
   }
 
   const handleBaseChange = (option, value) => {
@@ -1233,12 +978,12 @@ export default function Main() {
                               {data[currentPersonlize].textbox && (
                                 <>
                                   {data[currentPersonlize].texttype === "number" && (
-                                    <input className = "rounded-full px-6 w-full focus:ring-0 border-gray-300 focus:border-gray-300" 
+                                    <input className = "rounded-full px-6 w-full focus:ring-0 border-gray-300 focus:border-gray-300 my-3" 
                                       type="number" 
                                       placeholder={currentPersonlize}
                                       max="99"
                                       min="0"
-                                      value= {personlizeConfig[currentPersonlize]}
+                                      value= {personlizeConfig[currentPersonlize + " Text"]}
                                       onChange={handlePeronalizeChangeText}
                                     />
                                   )}
