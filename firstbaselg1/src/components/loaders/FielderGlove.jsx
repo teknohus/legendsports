@@ -110,6 +110,7 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
   const matPalm = materials.lambert1.clone();
   const matPalm2 = materials.Default_Material.clone();
   const triangularPatch = materials.initialShadingGroup.clone();
+  const matLeather4 = materials['initialShadingGroup.001'].clone();
 
   const ref = useRef();
 
@@ -347,6 +348,8 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
           </>
         )}
       </group>
+
+
       <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
         {base["Web Style"] === "2-Piece Web" && (
           <group position={[0.309, 0.241, -0.947]} scale={0.959}>
@@ -407,10 +410,67 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
           </>
         )}
       </group>
+
+      {base.finger_pad === "Pad" && (
+        <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
+          {textures.Stitches ? (
+            <MeshWithTexture geometry={nodes.MASH2_ReproMesh.geometry} material-color={colors.Stitches} material={matStitches} texture={textures.Stitches} tsize={6}/>
+          ) : (
+            <mesh geometry={nodes.MASH2_ReproMesh.geometry} material-color={colors.Stitches} material={matStitches} />
+          ) }
+          {textures["Finger Pad"] ? (
+            <MeshWithTexture geometry={nodes.polySurface12579.geometry} material-color={colors["Finger Pad"]} material={materials['lambert1.003']} texture={textures["Finger Pad"]} tsize={0.5}/>
+          ) : (
+           <mesh geometry={nodes.polySurface12579.geometry} material-color={colors["Finger Pad"]} material={materials['lambert1.003']} />
+          )}
+        </group>
+      )}
+
+
+      {/*Leather 3*/}
+      {textures.leather3 ? (
+        <>
+          <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
+            <MeshWithTexture geometry={nodes.polySurface12582.geometry} material-color={colors.leather3} material={materials['lambert1.005']} texture={textures.leather3} tsize={2} />
+          </group>
+        </>
+      ) : (
+        <>
+          <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
+            <mesh geometry={nodes.polySurface12582.geometry} material-color={colors.leather3} material={materials['lambert1.005']} />
+          </group>
+        </>
+      )}
+
+      {textures.leather2 ? (
+        <>
+            <MeshWithTexture geometry={nodes.baseballglove_21st_baseman.geometry} material={matLeather4} rotation={[Math.PI / 2, 0, 0]} texture={textures.leather2} tsize={2.5}/>
+        </>
+      ) : (
+        <>
+            <mesh geometry={nodes.baseballglove_21st_baseman.geometry} material-color={colors.leather2} material={matLeather4} rotation={[Math.PI / 2, 0, 0]} />
+        </>
+      )}
+
       {/* <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
         <mesh geometry={nodes.MASH1_ReproMesh.geometry} material={materials.lambert1} />
         <mesh geometry={nodes.polySurface12580.geometry} material={materials.lambert1} />
       </group> */}
+
+      {/*Leather 4*/}
+      {textures.leather4 ? (
+        <>
+          <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
+            <MeshWithTexture geometry={nodes.polySurface12580.geometry} material-color={colors.leather4} material={materials['lambert1.006']} texture={textures.leather4} tsize={2.5}/>
+          </group>
+        </>
+      ) : (
+        <>
+          <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
+            <mesh geometry={nodes.polySurface12580.geometry} material-color={colors.leather4} material={materials['lambert1.006']} />
+          </group>
+        </>
+      )}
       
       {/* <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
         <mesh geometry={nodes.mesh_palm.geometry} material={materials.lambert1} />
@@ -486,11 +546,17 @@ export function New({rot, base, colors, personalize, personalizeConfig, xPositio
         <>
           <MeshWithTexture geometry={nodes.Mesh007.geometry} material-color={colors.Stitches} material={materials['web2:stiches1']} texture={textures.Stitches} tsize={6} />
           <MeshWithTexture geometry={nodes.Mesh007_1.geometry} material-color={colors.Stitches} material={materials['web2:web1']} texture={textures.Stitches} tsize={6} />
+          <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
+            <MeshWithTexture geometry={nodes.MASH1_ReproMesh.geometry} material={materials.lambert1} texture={textures.Stitches}/>
+          </group>
         </>
       ) : (
         <>
           <mesh geometry={nodes.Mesh007.geometry} material-color={colors.Stitches} material={materials['web2:stiches1']} />
           <mesh geometry={nodes.Mesh007_1.geometry} material-color={colors.Stitches} material={materials['web2:web1']} />
+          <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
+            <mesh geometry={nodes.MASH1_ReproMesh.geometry}  material-color={colors.Stitches} material={materials.lambert1} />
+          </group>
         </>
       )}
 
